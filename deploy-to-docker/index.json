@@ -2,6 +2,7 @@
   "pathwayTitle": "StorageOS",
   "icon": "fa-storageos",
   "title": "Deploy StorageOS to Docker",
+  "time": "2 minutes",
   "description": "Learn how to deploy a StorageOS cluster to Docker",
   "details": {
     "steps": [
