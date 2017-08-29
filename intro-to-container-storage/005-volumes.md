@@ -20,13 +20,24 @@ In addition, volumes are often a better choice than persisting data in a contain
 `
 docker run -d \
   -it \
-  --name devtest \
-  --mount source=myvol2,target=/data \
+  --name voltest \
+  --mount source=myvol,target=/data \
   busybox sh
 `{{execute}}
 
-docker run -d \
-  -it \
-  --name tmptest \
-  --mount type=tmpfs,destination=/app \
-  busybox sh
+`docker container inspect voltest`{{execute}}
+
+"Mounts": [
+    {
+        "Type": "volume",
+        "Name": "myvol",
+        "Source": "/var/lib/docker/volumes/myvol/_data",
+        "Destination": "/data",
+        "Driver": "local",
+        "Mode": "",
+        "RW": false,
+        "Propagation": ""
+    }
+],
+
+`ls /var/lib/docker/volumes`{{execute}}

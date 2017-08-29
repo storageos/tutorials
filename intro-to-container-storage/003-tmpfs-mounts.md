@@ -7,10 +7,16 @@ To give the container access to the data without writing it anywhere permanently
 ```
 docker run -d \
   -it \
-  --name tmptest \
+  --name tmpfstest \
   --mount type=tmpfs,destination=/data \
   busybox sh
 ```{{execute}}
+
+`docker inspect tmpfstest`{{execute}}
+
+"Tmpfs": {
+    "/data": ""
+},
 
 
 ### Limitations of tmpfs containers

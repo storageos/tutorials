@@ -11,10 +11,24 @@ The file or directory does not need to exist on the Docker host already. It is c
 ```
 docker run -d \
   -it \
-  --name devtest \
+  --name bindtest \
   --mount type=bind,source="$(pwd)"/target,target=/data \
   busybox sh
 ```{{execute}}
+
+`docker inspect bindtest`{{execute}}
+
+
+"Mounts": [
+    {
+        "Type": "bind",
+        "Source": "/tmp/source/target",
+        "Destination": "/data",
+        "Mode": "",
+        "RW": true,
+        "Propagation": "rprivate"
+    }
+],
 
 ### Limitations
 
