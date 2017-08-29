@@ -11,10 +11,6 @@
         "text": "001-containers-images-layers.md"
       },
       {
-        "title": "Step 2: Data container",
-        "text": "002-data-container.md"
-      },
-      {
         "title": "Step 2: Mounts",
         "text": "002-mounts.md"
       },

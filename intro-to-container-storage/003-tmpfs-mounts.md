@@ -20,6 +20,9 @@ docker run -d \
 }
 `
 
+### Good use cases for tmpfs mounts
+tmpfs mounts are best used for cases when you do not want the data to persist either on the host machine or within the container. This may be for security reasons or to protect the performance of the container when your application needs to write a large volume of non-persistent state data.
+
 ### Limitations of tmpfs containers
 * tmpfs mounts cannot be shared among containers.
 * tmpfs mounts only work on Linux containers, and not on Windows containers.
