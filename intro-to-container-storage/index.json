@@ -2,33 +2,37 @@
   "pathwayTitle": "StorageOS",
   "icon": "fa-storageos",
   "title": "Introduction to container storage",
-  "time": "30 minutes",
+  "time": "20 minutes",
   "description": "Understanding Docker and state",
   "details": {
     "steps": [
       {
-        "title": "Step 1: Containers, images and layers",
-        "text": "001-containers-images-layers.md"
+        "title": "Step 1: Images and layers",
+        "text": "001-images-layers.md"
       },
       {
-        "title": "Step 2: Mounts",
-        "text": "002-mounts.md"
+        "title": "Step 2: Container layer",
+        "text": "002-container-layer.md"
       },
       {
-        "title": "Step 3: Tmpfs mounts",
-        "text": "003-tmpfs-mounts.md"
+        "title": "Step 3: Volumes",
+        "text": "003-volumes.md"
       },
       {
-        "title": "Step 4: Bind mounts",
-        "text": "004-bind-mounts.md"
+        "title": "Step 4: Mounting volumes",
+        "text": "004-mounting-volumes.md"
       },
       {
-        "title": "Step 5: Volumes",
-        "text": "005-volumes.md"
+        "title": "Step 5: Mounting volumes continued",
+        "text": "005-mounting-volumes-continued.md"
       },
       {
-        "title": "Step 7: Volume drivers",
-        "text": "007-volume-drivers.md"
+        "title": "Step 6: Data containers",
+        "text": "005-data-containers.md"
+      },
+      {
+        "title": "Step 7: Limitations of volumes",
+        "text": "007-limitations-of-volumes.md"
       }
     ],
     "intro": {
