@@ -2,17 +2,37 @@
   "pathwayTitle": "StorageOS",
   "icon": "fa-storageos",
   "title": "Introduction to container storage",
-  "time": "10 minutes",
-  "description": "Understanding Docker volumes, data containers, and volume plugins",
+  "time": "30 minutes",
+  "description": "Understanding ",
   "details": {
     "steps": [
       {
-        "title": "Step 1: Containers and state",
-        "text": "001-overview.md"
+        "title": "Step 1: Docker containers",
+        "text": "001-containers-and-state.md"
       },
       {
-        "title": "Step 2: Containers and state",
-        "text": "002-containers-and-state.md"
+        "title": "Step 2: Mounts",
+        "text": "002-mounts.md"
+      },
+      {
+        "title": "Step 3: Tmpfs mounts",
+        "text": "003-tmpfs-mounts.md"
+      },
+      {
+        "title": "Step 4: Bind mounts",
+        "text": "004-bind-mounts.md"
+      },
+      {
+        "title": "Step 5: Volumes",
+        "text": "005-volumes.md"
+      },
+      {
+        "title": "Step 6: Data container",
+        "text": "006-data-container.md"
+      },
+      {
+        "title": "Step 7: Volume drivers",
+        "text": "007-volume-drivers.md"
       }
     ],
     "intro": {
@@ -29,6 +49,6 @@
     "uimessage1": "\u001b[32mYour Interactive Bash Terminal. A safe place to learn and execute commands.\u001b[m\r\n"
   },
   "backend": {
-    "imageid": "storageos-docker"
+    "imageid": "docker"
   }
 }
