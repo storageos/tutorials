@@ -3,7 +3,7 @@
   "icon": "fa-storageos",
   "title": "Introduction to container storage",
   "time": "20 minutes",
-  "description": "Understanding Docker and state",
+  "description": "Building stateful containers",
   "details": {
     "steps": [
       {
@@ -28,7 +28,7 @@
       },
       {
         "title": "Step 6: Data containers",
-        "text": "005-data-containers.md"
+        "text": "006-data-containers.md"
       },
       {
         "title": "Step 7: Limitations of volumes",
