@@ -3,12 +3,16 @@
   "icon": "fa-storageos",
   "title": "Introduction to container storage",
   "time": "30 minutes",
-  "description": "Understanding ",
+  "description": "Understanding Docker and state",
   "details": {
     "steps": [
       {
-        "title": "Step 1: Docker containers",
-        "text": "001-containers-and-state.md"
+        "title": "Step 1: Containers, images and layers",
+        "text": "001-containers-images-layers.md"
+      },
+      {
+        "title": "Step 2: Data container",
+        "text": "002-data-container.md"
       },
       {
         "title": "Step 2: Mounts",
@@ -25,10 +29,6 @@
       {
         "title": "Step 5: Volumes",
         "text": "005-volumes.md"
-      },
-      {
-        "title": "Step 6: Data container",
-        "text": "006-data-container.md"
       },
       {
         "title": "Step 7: Volume drivers",

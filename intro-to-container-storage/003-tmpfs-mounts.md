@@ -14,10 +14,11 @@ docker run -d \
 
 `docker inspect tmpfstest`{{execute}}
 
+`
 "Tmpfs": {
     "/data": ""
-},
-
+}
+`
 
 ### Limitations of tmpfs containers
 * tmpfs mounts cannot be shared among containers.
