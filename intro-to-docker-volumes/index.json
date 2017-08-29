@@ -1,0 +1,34 @@
+{
+  "pathwayTitle": "StorageOS",
+  "icon": "fa-storageos",
+  "title": "Introduction to container storage",
+  "time": "60 minutes",
+  "description": "Understanding Docker volumes, data containers, and volume plugins",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1: Introduction",
+        "text": "001-introduction.md"
+      },
+      {
+        "title": "Step 2: Containers and state",
+        "text": "002-containers-and-state.md"
+      },
+    ],
+    "intro": {
+      "text": "intro.md",
+      "courseData": "courseBase.sh",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal. A safe place to learn and execute commands.\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "storageos-docker"
+  }
+}
