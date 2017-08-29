@@ -2,13 +2,13 @@
   "pathwayTitle": "StorageOS",
   "icon": "fa-storageos",
   "title": "Introduction to container storage",
-  "time": "60 minutes",
+  "time": "10 minutes",
   "description": "Understanding Docker volumes, data containers, and volume plugins",
   "details": {
     "steps": [
       {
-        "title": "Step 1: Introduction",
-        "text": "001-introduction.md"
+        "title": "Step 1: Containers and state",
+        "text": "001-overview.md"
       },
       {
         "title": "Step 2: Containers and state",
@@ -16,7 +16,7 @@
       }
     ],
     "intro": {
-      "text": "intro.md",
+      "text": "000-introduction.md",
       "courseData": "courseBase.sh",
       "credits": ""
     },
