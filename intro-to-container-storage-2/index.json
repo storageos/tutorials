@@ -5,16 +5,24 @@
   "time": "20 minutes",
   "description": "Managing storage with volume plugins",
   "details": {
+    "intro": {
+      "text": "000-introduction.md",
+      "credits": "[Cheryl Hung](cheryl.hung@storageos.com)"
+    },
     "steps": [
       {
         "title": "Step 1: Volume plugins",
         "text": "001-volume-plugins.md"
+      },
+      {
+        "title": "Step 2: Install plugin",
+        "text": "002-install-plugin.md"
+      },
+      {
+        "title": "Step 3: Create volumes",
+        "text": "003-create-volumes.md"
       }
     ],
-    "intro": {
-      "text": "000-introduction.md",
-      "credits": "[Cheryl Hung](mailto:cheryl.hung@storageos.com)"
-    },
     "finish": {
       "text": "finish.md"
     }
