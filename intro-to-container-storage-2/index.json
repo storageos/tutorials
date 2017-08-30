@@ -1,0 +1,30 @@
+{
+  "pathwayTitle": "StorageOS",
+  "icon": "fa-storageos",
+  "title": "Introduction to container storage - part 2",
+  "time": "20 minutes",
+  "description": "Managing storage with volume plugins",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1: Images and layers",
+        "text": "001-images-layers.md"
+      }
+    ],
+    "intro": {
+      "text": "000-introduction.md",
+      "courseData": "courseBase.sh",
+      "credits": "Cheryl Hung (cheryl.hung@storageos.com)"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal-terminal",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal. A safe place to learn and execute commands.\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "docker"
+  }
+}

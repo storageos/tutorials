@@ -1,9 +1,9 @@
 {
   "pathwayTitle": "StorageOS",
   "icon": "fa-storageos",
-  "title": "Introduction to container storage",
+  "title": "Introduction to container storage - part 1",
   "time": "20 minutes",
-  "description": "Building stateful containers",
+  "description": "Containers, images, layers and volumes",
   "details": {
     "steps": [
       {
@@ -38,7 +38,7 @@
     "intro": {
       "text": "000-introduction.md",
       "courseData": "courseBase.sh",
-      "credits": ""
+      "credits": "Cheryl Hung (cheryl.hung@storageos.com)"
     },
     "finish": {
       "text": "finish.md"
