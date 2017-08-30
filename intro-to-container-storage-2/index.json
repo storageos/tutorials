@@ -13,8 +13,7 @@
     ],
     "intro": {
       "text": "000-introduction.md",
-      "courseData": "install-storageos.sh",
-      "credits": "Cheryl Hung (cheryl.hung@storageos.com)"
+      "credits": "[Cheryl Hung](mailto:cheryl.hung@storageos.com)"
     },
     "finish": {
       "text": "finish.md"
