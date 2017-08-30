@@ -7,13 +7,13 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1: Images and layers",
-        "text": "001-images-layers.md"
+        "title": "Step 1: Volume plugins",
+        "text": "001-volume-plugins.md"
       }
     ],
     "intro": {
       "text": "000-introduction.md",
-      "courseData": "courseBase.sh",
+      "courseData": "install-storageos.sh",
       "credits": "Cheryl Hung (cheryl.hung@storageos.com)"
     },
     "finish": {
