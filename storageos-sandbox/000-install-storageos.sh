@@ -40,5 +40,3 @@ docker -H host03:2345 run -d --name storageos \
     -v /var/lib/storageos:/var/lib/storageos:rshared \
     -v /run/docker/plugins:/run/docker/plugins \
     storageos/node server
-
-# Your StorageOS sandbox installed successfully.

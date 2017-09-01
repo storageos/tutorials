@@ -9,4 +9,4 @@ Try the following commands:
 
 The volumes themselves are stored on the host under `/var/lib/docker`.
 
-`sudo ls /var/lib/docker/volumes`{{execute}}
+`ls /var/lib/docker/volumes`{{execute}}
