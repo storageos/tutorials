@@ -14,7 +14,7 @@ docker -H host01:2345 run -d --name storageos \
     --device /dev/fuse \
     -v /var/lib/storageos:/var/lib/storageos:rshared \
     -v /run/docker/plugins:/run/docker/plugins \
-    soegarots/node:uuid-bc403991 server
+    storageos/node:0.8.1 server
 `{{execute}}
 
 `
@@ -29,7 +29,7 @@ docker -H host02:2345 run -d --name storageos \
     --device /dev/fuse \
     -v /var/lib/storageos:/var/lib/storageos:rshared \
     -v /run/docker/plugins:/run/docker/plugins \
-    soegarots/node:uuid-bc403991 server
+    storageos/node:0.8.1 server
 `{{execute}}
 
 `
@@ -44,7 +44,7 @@ docker -H host03:2345 run -d --name storageos \
     --device /dev/fuse \
     -v /var/lib/storageos:/var/lib/storageos:rshared \
     -v /run/docker/plugins:/run/docker/plugins \
-    soegarots/node:uuid-bc403991 server
+    storageos/node:0.8.1 server
 `{{execute}}
 
 `storageos node ls`{{execute}}
