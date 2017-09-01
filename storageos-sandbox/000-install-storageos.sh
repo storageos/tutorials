@@ -2,8 +2,7 @@ export STORAGEOS_USERNAME=storageos STORAGEOS_PASSWORD=storageos STORAGEOS_HOST=
 
 CLUSTER_ID=$(storageos cluster create --size 3)
 
-docker -H storage-01:2345 run -d --name storageos \
-    -e HOSTNAME=storage-01 \
+docker -H host01:2345 run -d --name storageos \
     -e ADVERTISE_IP=[[HOST_IP]] \
     -e CLUSTER_ID=$CLUSTER_ID \
     --net=host \
@@ -15,8 +14,7 @@ docker -H storage-01:2345 run -d --name storageos \
     -v /run/docker/plugins:/run/docker/plugins \
     storageos/node server
 
-docker -H storage-02:2345 run -d --name storageos \
-    -e HOSTNAME=storage-02 \
+docker -H host02:2345 run -d --name storageos \
     -e ADVERTISE_IP=[[HOST2_IP]] \
     -e CLUSTER_ID=$CLUSTER_ID \
     --net=host \
@@ -28,8 +26,7 @@ docker -H storage-02:2345 run -d --name storageos \
     -v /run/docker/plugins:/run/docker/plugins \
     storageos/node server
 
-docker -H storage-03:2345 run -d --name storageos \
-    -e HOSTNAME=storage-03 \
+docker -H host03:2345 run -d --name storageos \
     -e ADVERTISE_IP=[[HOST3_IP]] \
     -e CLUSTER_ID=$CLUSTER_ID \
     --net=host \
