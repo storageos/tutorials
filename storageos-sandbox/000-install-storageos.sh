@@ -1,6 +1,6 @@
 export STORAGEOS_USERNAME=storageos STORAGEOS_PASSWORD=storageos STORAGEOS_HOST=[[HOST_IP]]
 
-TOKEN=$(storageos cluster create --size 3 | tr -s ':'| cut -d ':' -f 2 | xargs)
+TOKEN=$(storageos cluster create --size 3)
 
 docker -H host01:2345 run -d --name storageos \
     -e HOSTNAME=storage-01 \
