@@ -14,6 +14,6 @@ faefbf4d7e6d: Download complete
 
 Each layer is represents an instruction in the image’s Dockerfile and all are read-only except the very last one. Each of these layers is stored in its own directory under `/var/lib/docker` on the host. To examine the layers on the filesystem:
 
-`ls /var/lib/docker/aufs/layers`{{execute}}
+`sudo ls /var/lib/docker/aufs/layers`{{execute}}
 
 Since all layers are read-only, multiple containers can share access to the same underlying image, making images smaller.

@@ -4,4 +4,4 @@ Modern web-scale applications are expected to be horizontally scalable, resilien
 * Mapping containers to specific hosts (for data) is undesirable, as containers are expected to be portable and lightweight across hosts.
 * Storage needs to tightly integrate with containers and orchestration platforms, with APIs to minimize operator overhead.
 
-Licensed under the Apache License 2.0,  [feedback and corrections welcome.](https://github.com/storageos/tutorials/issues/new)
+Licensed under the Apache License 2.0,  [contributions welcome](https://github.com/storageos/tutorials).

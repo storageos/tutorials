@@ -1,7 +1,7 @@
 {
   "pathwayTitle": "StorageOS",
   "icon": "fa-storageos",
-  "title": "Introduction to container storage - part 1",
+  "title": "Docker and persistent storage",
   "time": "20 minutes",
   "description": "Containers, images, layers and volumes",
   "details": {
@@ -9,7 +9,7 @@
       "text": "000-introduction.md",
       "courseData": "courseBase.sh",
       "credits": "[Cheryl Hung](mailto:cheryl.hung@storageos.com)"
-    },    
+    },
     "steps": [
       {
         "title": "Step 1: Images and layers",
@@ -38,6 +38,10 @@
       {
         "title": "Step 7: Limitations of volumes",
         "text": "007-limitations-of-volumes.md"
+      },
+      {
+        "title": "Step 8: Volume plugins",
+        "text": "007-volume-plugins.md"
       }
     ],
     "finish": {

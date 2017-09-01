@@ -1,9 +1,9 @@
 {
   "pathwayTitle": "StorageOS",
   "icon": "fa-storageos",
-  "title": "Introduction to container storage - part 2",
+  "title": "Docker volume plugins",
   "time": "20 minutes",
-  "description": "Managing storage with volume plugins",
+  "description": "Managing storage across a cluster",
   "details": {
     "intro": {
       "text": "000-introduction.md",
