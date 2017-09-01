@@ -15,7 +15,7 @@ docker -H host01:2345 run -d --name storageos \
     --device /dev/fuse \
     -v /var/lib/storageos:/var/lib/storageos:rshared \
     -v /run/docker/plugins:/run/docker/plugins \
-    storageos:node server}}
+    storageos/node server}}
 
 docker -H host02:2345 run -d --name storageos \
     -e HOSTNAME=storage-02 \
@@ -28,7 +28,7 @@ docker -H host02:2345 run -d --name storageos \
     --device /dev/fuse \
     -v /var/lib/storageos:/var/lib/storageos:rshared \
     -v /run/docker/plugins:/run/docker/plugins \
-    storageos:node server
+    storageos/node server
 
 docker -H host03:2345 run -d --name storageos \
     -e HOSTNAME=storage-03 \
@@ -41,4 +41,4 @@ docker -H host03:2345 run -d --name storageos \
     --device /dev/fuse \
     -v /var/lib/storageos:/var/lib/storageos:rshared \
     -v /run/docker/plugins:/run/docker/plugins \
-    storageos:node server
+    storageos/node server
