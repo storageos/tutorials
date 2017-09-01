@@ -1,6 +1,4 @@
-# NDB and /var/lib/storageos are already done
-
-export STORAGEOS_USERNAME=storageos STORAGEOS_PASSWORD=storageos
+export STORAGEOS_USERNAME=storageos STORAGEOS_PASSWORD=storageos STORAGEOS_HOST=[[HOST_IP]]
 
 TOKEN=$(storageos cluster create --size 3 | tr -s ':'| cut -d ':' -f 2 | xargs)
 
@@ -42,3 +40,8 @@ docker -H host03:2345 run -d --name storageos \
     -v /var/lib/storageos:/var/lib/storageos:rshared \
     -v /run/docker/plugins:/run/docker/plugins \
     storageos/node server
+
+`ssh root@host02`{{execute T2}}
+`ssh root@host03`{{execute T3}}
+
+# Your StorageOS sandbox installed successfully.

@@ -10,7 +10,7 @@ To contribute, you should fork the repo and submit updates as pull requests for 
 
 `index.json` is the key file for defining the scenario in each directory.
 Setting `"imageid": "docker-direct"` enables sudo access.
-`"imageid": "storageos-docker-3node"` is our custom environment, a three node StorageOS cluster.
+`"imageid": "storageos-docker-3node"` is our custom environment, defined in the [Packer script here](https://github.com/katacoda-scenarios/storageos-tutorials/blob/master/environments/docker/packer.json).
 
 ### Content guidelines
 
