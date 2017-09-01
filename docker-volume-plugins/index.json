@@ -1,9 +1,9 @@
 {
   "pathwayTitle": "StorageOS",
   "icon": "fa-storageos",
-  "title": "Docker volume plugins",
+  "title": "Persisting data across hosts",
   "time": "20 minutes",
-  "description": "Managing storage across a cluster",
+  "description": "Managing storage with Docker volume plugins",
   "details": {
     "intro": {
       "text": "000-introduction.md",
@@ -16,7 +16,7 @@
       },
       {
         "title": "Step 2: Install plugin",
-        "text": "002-install-plugin.md"
+        "text": "002-install-storageos.md"
       },
       {
         "title": "Step 3: Create volumes",
@@ -32,6 +32,6 @@
     "uimessage1": "\u001b[32mYour Interactive Bash Terminal. A safe place to learn and execute commands.\u001b[m\r\n"
   },
   "backend": {
-    "imageid": "storageos-docker-3node"
+    "imageid": "docker-direct"
   }
 }

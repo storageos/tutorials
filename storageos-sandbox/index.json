@@ -1,7 +1,7 @@
 {
   "pathwayTitle": "StorageOS",
   "icon": "fa-storageos",
-  "title": "StorageOS Quick start",
+  "title": "StorageOS sandbox",
   "time": "20 minutes",
   "description": "A fully configured three node install of StorageOS",
   "details": {
@@ -11,16 +11,8 @@
     },
     "steps": [
       {
-        "title": "Step 1: Volume plugins",
-        "text": "001-volume-plugins.md"
-      },
-      {
-        "title": "Step 2: Install plugin",
-        "text": "002-install-plugin.md"
-      },
-      {
-        "title": "Step 3: Create volumes",
-        "text": "003-create-volumes.md"
+        "title": "StorageOS sandbox",
+        "text": "001-storageos-sandbox.md"
       }
     ],
     "finish": {
@@ -28,7 +20,7 @@
     }
   },
   "environment": {
-    "uilayout": "terminal-terminal",
+    "uilayout": "terminal",
     "uimessage1": "\u001b[32mYour Interactive Bash Terminal. A safe place to learn and execute commands.\u001b[m\r\n"
   },
   "backend": {

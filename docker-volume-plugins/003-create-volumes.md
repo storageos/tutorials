@@ -1,9 +1,5 @@
-Now you can create a volume using the StorageOS volume driver:
+Passing `--driver` tells Docker to use StorageOS to manage the volume. To create the volume, use:
 
-`docker volume create --driver storageos testvol`{{execute HOST1}}
+`docker volume create --driver storageos testvol`{{execute}}
 
-Passing `--driver` tells Docker to use StorageOS to manage the volume. Under the hood, StorageOS has created a storage pool across the cluster so that the test volume is visible on all hosts:
-
-`docker volume ls`{{execute HOST1}}
-`docker volume ls`{{execute HOST2}}
-`docker volume ls`{{execute HOST3}}
+`docker volume ls`{{execute}}

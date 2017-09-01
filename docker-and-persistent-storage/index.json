@@ -1,9 +1,9 @@
 {
   "pathwayTitle": "StorageOS",
   "icon": "fa-storageos",
-  "title": "Docker and persistent storage",
+  "title": "Persistent storage with containers",
   "time": "20 minutes",
-  "description": "Containers, images, layers and volumes",
+  "description": "Understanding how containers are built and using volumes",
   "details": {
     "intro": {
       "text": "000-introduction.md",
