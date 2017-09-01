@@ -16,9 +16,12 @@ Notes:
 Each scenario should be self contained, without dependencies on other scenarios.
 
 High priority tutorials:
-* [Install StorageOS with Docker Swarm](http://docs.storageos.com/docs/install/schedulers/dockerswarm)
-* [Install StorageOS with Kubernetes](http://docs.storageos.com/docs/install/schedulers/kubernetes)
+* [Deploy StorageOS with Docker Swarm](http://docs.storageos.com/docs/install/schedulers/dockerswarm)
+* [Deploy StorageOS with Kubernetes](http://docs.storageos.com/docs/install/schedulers/kubernetes)
 * [High availability volumes](http://docs.storageos.com/docs/manage/features/replication)
+* [Managing users and policies](http://docs.storageos.com/docs/manage/users/)
+* [Policy engine](http://docs.storageos.com/docs/operations/rules)
+* [Installing databases](http://docs.storageos.com/docs/applications/databases/)
 
 Use short, readable, but full English sentences throughout.
 

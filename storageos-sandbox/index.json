@@ -2,6 +2,7 @@
   "pathwayTitle": "StorageOS",
   "icon": "fa-storageos",
   "title": "StorageOS sandbox",
+  "time": "5-60 minutes",
   "description": "A fully configured three node install of StorageOS",
   "details": {
     "intro": {
