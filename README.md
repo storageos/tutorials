@@ -13,12 +13,14 @@ Notes:
 
 ### Content guidelines
 
-Each scenario should be self contained, without dependencies on other scenarios.
+Each tutorial should be self contained, without dependencies on other tutorials.
 
 High priority tutorials:
 * [Deploy StorageOS with Docker Swarm](http://docs.storageos.com/docs/install/schedulers/dockerswarm)
 * [Deploy StorageOS with Kubernetes](http://docs.storageos.com/docs/install/schedulers/kubernetes)
 * [High availability volumes](http://docs.storageos.com/docs/manage/features/replication)
+* [Managing storage with namespaces](http://docs.storageos.com/docs/manage/volumes/namespaces)
+* [Managing storage with labels](http://docs.storageos.com/docs/manage/volumes/labels)
 * [Managing users and policies](http://docs.storageos.com/docs/manage/users/)
 * [Policy engine](http://docs.storageos.com/docs/operations/rules)
 * [Installing databases](http://docs.storageos.com/docs/applications/databases/)
@@ -27,7 +29,7 @@ Use short, readable, but full English sentences throughout.
 
 ### Testing changes
 
-The best way to test scenarios is to create your own Katacoda account and link it to your Github fork. Once you're happy with the fork, pull request to upstream and once merged, Katacoda will automatically update.
+The best way to test tutorials is to create your own Katacoda account and link it to your Github fork. Once you're happy with the fork, pull request to upstream and once merged, Katacoda will automatically update.
 
 ## Getting help
 
