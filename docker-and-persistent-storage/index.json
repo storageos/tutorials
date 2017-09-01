@@ -1,10 +1,15 @@
 {
   "pathwayTitle": "StorageOS",
   "icon": "fa-storageos",
-  "title": "Introduction to container storage",
+  "title": "Persistent storage with containers",
   "time": "20 minutes",
-  "description": "Building stateful containers",
+  "description": "Understanding how containers are built and using volumes",
   "details": {
+    "intro": {
+      "text": "000-introduction.md",
+      "courseData": "courseBase.sh",
+      "credits": "[Cheryl Hung](mailto:cheryl.hung@storageos.com)"
+    },
     "steps": [
       {
         "title": "Step 1: Images and layers",
@@ -33,13 +38,12 @@
       {
         "title": "Step 7: Limitations of volumes",
         "text": "007-limitations-of-volumes.md"
+      },
+      {
+        "title": "Step 8: Volume plugins",
+        "text": "008-volume-plugins.md"
       }
     ],
-    "intro": {
-      "text": "000-introduction.md",
-      "courseData": "courseBase.sh",
-      "credits": ""
-    },
     "finish": {
       "text": "finish.md"
     }

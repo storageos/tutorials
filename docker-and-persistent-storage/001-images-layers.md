@@ -1,8 +1,11 @@
 Containers are stateless by design. To understand what that means, let's revise how images are built.
 
+When you pull down an image, say Ubuntu:
+
 `docker pull ubuntu:17.04`{{execute}}
 
-When you pull the Ubuntu image from a repository, you can see that the image is made of multiple layers stacked together.
+You can see that the image is made of multiple layers stacked together.
+
 `
 17.04: Pulling from library/ubuntu
 e8a74323e913: Pull complete
