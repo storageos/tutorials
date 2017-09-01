@@ -1,9 +1,9 @@
 {
   "pathwayTitle": "StorageOS",
   "icon": "fa-storageos",
-  "title": "Docker volume plugins",
+  "title": "StorageOS Quick start",
   "time": "20 minutes",
-  "description": "Managing storage across a cluster",
+  "description": "A fully configured three node install of StorageOS",
   "details": {
     "intro": {
       "text": "000-introduction.md",
