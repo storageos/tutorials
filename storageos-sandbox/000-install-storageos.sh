@@ -41,7 +41,4 @@ docker -H host03:2345 run -d --name storageos \
     -v /run/docker/plugins:/run/docker/plugins \
     storageos/node server
 
-`ssh root@host02`{{execute T2}}
-`ssh root@host03`{{execute T3}}
-
 # Your StorageOS sandbox installed successfully.
