@@ -1,0 +1,15 @@
+{
+  "title": "Container Camp London",
+  "icon": "fa-storageos",
+  "description": "Learn StorageOS at Container Camp London",
+  "courses": [
+    {
+      "course_id": "storageos-sandbox",
+      "pathway_id": "storageos",
+      "id": "storageos-sandbox",
+      "title": "StorageOS Sandbox",
+      "description": "A fully configured three node install of StorageOS",
+      "environment": "storageos-docker-3node"
+    }
+  ]
+}
