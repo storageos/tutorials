@@ -1,5 +1,10 @@
 export STORAGEOS_USERNAME=storageos STORAGEOS_PASSWORD=storageos STORAGEOS_HOST=[[HOST_IP]]
 
+ssh root@host01 "curl -LO http://assets.joinscrapbook.com/storageos/storageos_linux_amd64 > /usr/local/bin/storageos"
+ssh root@host02 "curl -LO http://assets.joinscrapbook.com/storageos/storageos_linux_amd64 > /usr/local/bin/storageos"
+ssh root@host03 "curl -LO http://assets.joinscrapbook.com/storageos/storageos_linux_amd64 > /usr/local/bin/storageos"
+
+
 CLUSTER_ID=$(storageos cluster create --size 3)
 
 docker -H host01:2345 run -d --name storageos \
