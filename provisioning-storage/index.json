@@ -40,6 +40,7 @@
         "chmod": "+x"
       }
     ]
+    }
   },
   "environment": {
     "uilayout": "terminal",
