@@ -1,7 +1,7 @@
 {
   "pathwayTitle": "StorageOS",
   "icon": "fa-storageos",
-  "title": "Provisioning volumes with StorageOS",
+  "title": "Provisioning storage",
   "time": "10 minutes",
   "description": "Learn how to provision StorageOS volumes and access them from containers.",
   "details": {
