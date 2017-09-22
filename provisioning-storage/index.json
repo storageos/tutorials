@@ -32,6 +32,13 @@
         "title": "Accessing storage across hosts",
         "text": "005-global-namespace.md"
       }
+    ],
+    "assets": {
+      "host01": [{
+        "file": "verify-healthy.sh",
+        "target": "/root/",
+        "chmod": "+x"
+      }
     ]
   },
   "environment": {
