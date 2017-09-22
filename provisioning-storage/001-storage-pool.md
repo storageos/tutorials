@@ -8,8 +8,7 @@ Take a look at the nodes in this cluster:
 On start-up, StorageOS nodes communicate with each other to discover the overall
 status of the cluster and establish consensus.
 
-Once the cluster is established, StorageOS creates a single storage pool called
-`default` from all the nodes in the cluster.
+Once the cluster is established, StorageOS creates a default storage pool from all the nodes in the cluster.
 
 Look at the pool:
 
@@ -17,6 +16,6 @@ Look at the pool:
 
 The total is an estimate, but should be approximately the sum of the storage from three nodes.
 
-Inspect the pool for more detail:
+Inspect the pool for the JSON configuration:
 
 `storageos pool inspect default`{{execute}}
