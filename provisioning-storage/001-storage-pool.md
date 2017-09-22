@@ -3,7 +3,7 @@ already installed; run `storageos --help`{{execute}} to see available options.
 
 Take a look at the nodes in this cluster:
 
-`storageos node ls --format "{{.Name}} {{.Capacity}}"`{{execute}}
+`storageos node ls --format "table {{.Name}} {{.Address}} {{.Capacity}} {{.CapacityUsed}}"`{{execute}}
 
 On start-up, StorageOS nodes communicate with each other to discover the overall
 status of the cluster and establish consensus.
@@ -12,10 +12,10 @@ Once the cluster is established, StorageOS creates a default storage pool from a
 
 Look at the pool:
 
-`storageos pool ls --format "{{.Name}} {{.Nodes}} {{.Total}}"`{{execute}}
+`storageos pool ls --format "table {{.Name}} {{.Nodes}} {{.Total}} {{.CapacityUsed}}"`{{execute}}
 
 The total is an estimate, but should be approximately the sum of the storage from three nodes.
 
-Inspect the pool for the JSON configuration:
+Inspect the pool for the full JSON configuration:
 
 `storageos pool inspect default`{{execute}}
