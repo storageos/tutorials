@@ -15,6 +15,22 @@
       {
         "title": "Storage pool",
         "text": "001-storage-pool.md"
+      },
+      {
+        "title": "Provisioning storage using volumes",
+        "text": "002-provision-storage.md"
+      },
+      {
+        "title": "Mounting volumes using containers",
+        "text": "003-mount-volume.md"
+      },
+      {
+        "title": "Persistence",
+        "text": "004-persistence.md"
+      },
+      {
+        "title": "Accessing storage across hosts",
+        "text": "004-global-namespace.md"
       }
     ]
   },
