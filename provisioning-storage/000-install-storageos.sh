@@ -1,5 +1,5 @@
 export STORAGEOS_USERNAME=storageos STORAGEOS_PASSWORD=storageos STORAGEOS_HOST=[[HOST_IP]]
-CLUSTER_ID=$(storageos cluster create --size 3)
+CLUSTER_ID=$(ssh root@host01 "storageos cluster create --size 3")
 
 docker -H host01:2345 run -d --name storageos \
     -e HOSTNAME=host01 \

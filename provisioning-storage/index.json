@@ -3,7 +3,7 @@
   "icon": "fa-storageos",
   "title": "Provisioning volumes with StorageOS",
   "time": "10 minutes",
-  "description": "Global volume namespace",
+  "description": "Learn how to provision StorageOS volumes and access them from containers.",
   "details": {
     "intro": {
       "text": "000-introduction.md",
@@ -13,13 +13,10 @@
     },
     "steps": [
       {
-        "title": "StorageOS sandbox",
+        "title": "Storage pool",
         "text": "001-storageos-sandbox.md"
       }
-    ],
-    "finish": {
-      "text": "finish.md"
-    }
+    ]
   },
   "environment": {
     "uilayout": "terminal",

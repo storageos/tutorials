@@ -15,10 +15,7 @@
         "title": "StorageOS sandbox",
         "text": "001-storageos-sandbox.md"
       }
-    ],
-    "finish": {
-      "text": "finish.md"
-    }
+    ]
   },
   "environment": {
     "uilayout": "terminal",
