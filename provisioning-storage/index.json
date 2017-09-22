@@ -2,7 +2,7 @@
   "pathwayTitle": "StorageOS",
   "icon": "fa-storageos",
   "title": "Provisioning volumes with StorageOS",
-  "time": "5-60 minutes",
+  "time": "10 minutes",
   "description": "Global volume namespace",
   "details": {
     "intro": {
