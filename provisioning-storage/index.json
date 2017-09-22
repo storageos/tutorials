@@ -2,7 +2,7 @@
   "pathwayTitle": "StorageOS",
   "icon": "fa-storageos",
   "title": "Provisioning storage",
-  "time": "10 minutes",
+  "time": "20 minutes",
   "description": "Learn how to provision StorageOS volumes and access them from containers.",
   "details": {
     "intro": {
@@ -21,7 +21,7 @@
         "text": "002-provision-storage.md"
       },
       {
-        "title": "Mounting volumes using containers",
+        "title": "Mounting volumes on containers",
         "text": "003-mount-volume.md"
       },
       {
