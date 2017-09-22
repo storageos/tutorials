@@ -36,7 +36,7 @@
     "assets": {
       "host01": [{
         "file": "verify-healthy.sh",
-        "target": "/root/",
+        "target": "/root/.verify-healthy.sh",
         "chmod": "+x"
       }
     ]
