@@ -6,9 +6,9 @@ Since you didn't specify any specific size or storage features for your new
 volume, StorageOS uses the default settings. To find out what these
 settings are:
 
-`storageos volume ls  --format "table {{.Name}} {{.Size}} {{.Location}}"`{{execute}}
+`storageos volume ls  --format "table {{.Name}}\t{{.Size}}\t{{.Location}}"`{{execute}}
 
-`NAMESPACE/NAME`: Namespaces help different projects or teams share a StorageOS cluster. StorageOS has created a default namespace for myvol. Note that default here refer to the default namespace, not the default pool.
+`NAMESPACE/NAME`: Namespaces help different projects or teams share a StorageOS cluster. Note that default refers to the default namespace that StorageOS created for myvol, rather than the default pool.
 
 `SIZE`: The default volume size is 5GB.
 
