@@ -1,4 +1,4 @@
-In this tutorial, you will learn how to provision StorageOS volumes and access them from containers.
+In this tutorial, you will learn how to provision replicated StorageOS volumes for high availability.
 
 StorageOS has already been installed on a three node cluster for you.
 

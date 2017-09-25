@@ -1,9 +1,9 @@
 {
   "pathwayTitle": "StorageOS",
   "icon": "fa-storageos",
-  "title": "Provisioning storage",
+  "title": "High availability",
   "time": "20 minutes",
-  "description": "Learn how to provision StorageOS volumes and access them from containers.",
+  "description": "Learn how to provision replicated StorageOS volumes for high availability.",
   "details": {
     "intro": {
       "text": "000-introduction.md",
@@ -13,24 +13,20 @@
     },
     "steps": [
       {
-        "title": "Storage pool",
-        "text": "001-storage-pool.md"
+        "title": "Working with labels",
+        "text": "001-labels.md"
       },
       {
-        "title": "Provisioning storage using volumes",
-        "text": "002-provision-storage.md"
+        "title": "Replicated volumes",
+        "text": "002-replicated-volume.md"
       },
       {
-        "title": "Mounting volumes to containers",
-        "text": "003-mount-volume.md"
+        "title": "Master and replicas",
+        "text": "003-master-replicas.md"
       },
       {
-        "title": "Persistence",
-        "text": "004-persistence.md"
-      },
-      {
-        "title": "Accessing storage across hosts",
-        "text": "005-global-namespace.md"
+        "title": "Failover",
+        "text": "004-failover.md"
       }
     ],
     "assets": {
