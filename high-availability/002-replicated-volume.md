@@ -1,5 +1,5 @@
-`storageos volume create --namespace default --label storageos.feature.replicas=2 volume-name`{{execute}}
+`storageos volume create --label storageos.feature.replicas=1 replicated`{{execute}}
 
-`storageos volume ls --format "table {{.Name}}\t{{.Size}}\t{{.Location}}"`{{execute}}
+`storageos volume ls --format "table {{.Name}}\t{{.Size}}\t{{.Replicas}}\t{{.Location}}"`{{execute}}
 
-`storageos volume inspect default/volume-name`{{execute}}
+`storageos node ls --format "table {{.Name}}\t{{.Address}}\t{{.Volumes}}"`{{execute}}
