@@ -1,3 +1,9 @@
+`ssh root@host02`{{execute T2}}
+`export STORAGEOS_USERNAME=storageos STORAGEOS_PASSWORD=storageos STORAGEOS_HOST=localhost`{{execute T2}}
+`ssh root@host03`{{execute T3}}
+`export STORAGEOS_USERNAME=storageos STORAGEOS_PASSWORD=storageos STORAGEOS_HOST=localhost`{{execute T3}}
+
+
 For this tutorial we will use the StorageOS CLI to explore the cluster. This is
 already installed; run `storageos --help`{{execute}} to see available options.
 
