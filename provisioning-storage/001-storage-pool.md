@@ -10,7 +10,7 @@ Once the cluster is established, StorageOS creates a default storage pool from a
 
 `storageos pool ls --format "table {{.Name}}\t{{.Nodes}}\t{{.Total}}\t{{.CapacityUsed}}"`{{execute}}
 
-Note that the total size of the pool is an estimate, but should be approximately the sum of the storage from three nodes.
+The pool's capacity should be about the three nodes' aggregated capacity.
 
 Inspect the pool for the full JSON configuration:
 

@@ -1,4 +1,4 @@
-To use StorageOS volumes with containers, you use the standard Docker run command with some additional flats. Let's run a container with a shell so we can run commands inside the container.
+To use StorageOS volumes with containers, you use the standard Docker run command with some additional flags. Let's run a container with a shell so we can run commands inside the container.
 
 `docker run -it --volume-driver storageos --volume myvol:/data busybox sh`{{execute}}
 
