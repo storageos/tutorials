@@ -8,7 +8,8 @@
     "intro": {
       "text": "000-introduction.md",
       "credits": "[Cheryl Hung](cheryl.hung@storageos.com)",
-      "code": "000-install-storageos.sh"
+      "code": "000-verify-healthy.md",
+      "courseData": "000-install-storageos.sh"
     },
     "steps": [
       {
