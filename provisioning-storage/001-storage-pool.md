@@ -1,12 +1,13 @@
+For this tutorial we will use the StorageOS CLI to explore the cluster. This is
+already installed; run `storageos --help`{{execute}} to see available options.
+
+SSH into the other hosts, and check that the StorageOS containers are running:
+
 `ssh root@host02`{{execute T2}}
 `export STORAGEOS_USERNAME=storageos STORAGEOS_PASSWORD=storageos STORAGEOS_HOST=localhost`{{execute T2}}
 `ssh root@host03`{{execute T3}}
 `export STORAGEOS_USERNAME=storageos STORAGEOS_PASSWORD=storageos STORAGEOS_HOST=localhost`{{execute T3}}
 `docker ps`
-
-
-For this tutorial we will use the StorageOS CLI to explore the cluster. This is
-already installed; run `storageos --help`{{execute}} to see available options.
 
 On start-up, StorageOS nodes communicate with each other to discover the overall
 status of the cluster and establish consensus. List the nodes in this cluster:
