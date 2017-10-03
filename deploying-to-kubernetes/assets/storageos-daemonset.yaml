@@ -1,0 +1,47 @@
+---
+apiVersion: extensions/v1beta1
+kind: DaemonSet
+metadata:
+  name: storageos
+spec:
+  template:
+    metadata:
+      labels:
+        name: storageos
+    spec:
+      hostPID: true
+      containers:
+      - name: storageos
+        image: storageos/node:0.8
+        args:
+        - server
+        env:
+        - name: HOSTNAME
+          value: "office"
+        - name: CLUSTER_ID
+          value: "726d0216-a2d7-4481-a836-bd777c016bdb"
+        - name: ADVERTISE_IP
+          valueFrom:
+            fieldRef:
+              fieldPath: status.podIP
+        ports:
+        - containerPort: 5705
+          name: api
+        volumeMounts:
+        - name: fuse
+          mountPath: /dev/fuse
+        - name: state
+          mountPath: /var/lib/storageos
+          mountPropagation: Bidirectional
+        securityContext:
+          privileged: true
+          capabilities:
+            add:
+            - SYS_ADMIN
+      volumes:
+        - name: fuse
+          hostPath:
+            path: /dev/fuse
+        - name: state
+          hostPath:
+            path: /var/lib/storageos
