@@ -12,7 +12,7 @@ spec:
       hostPID: true
       containers:
       - name: storageos
-        image: storageos/node:0.8
+        image: storageos/node:0.8.1
         args:
         - server
         env:
