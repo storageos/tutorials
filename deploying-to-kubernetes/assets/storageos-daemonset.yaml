@@ -10,6 +10,7 @@ spec:
         name: storageos
     spec:
       hostPID: true
+      hostNetwork: true
       containers:
       - name: storageos
         image: storageos/node:0.8.1
@@ -17,7 +18,9 @@ spec:
         - server
         env:
         - name: HOSTNAME
-          value: "office"
+          valueFrom:
+            fieldRef:
+              fieldPath: spec.nodeName
         - name: CLUSTER_ID
           value: "726d0216-a2d7-4481-a836-bd777c016bdb"
         - name: ADVERTISE_IP
