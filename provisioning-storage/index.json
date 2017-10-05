@@ -21,10 +21,6 @@
         "text": "002-provision-storage.md"
       },
       {
-        "title": "Using databases with containers",
-        "text": "postgres.md"
-      },
-      {
         "title": "Mounting volumes to containers",
         "text": "003-mount-volume.md"
       },

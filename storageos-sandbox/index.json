@@ -8,12 +8,20 @@
     "intro": {
       "text": "000-introduction.md",
       "credits": "[Cheryl Hung](cheryl.hung@storageos.com)",
-      "code": "000-install-storageos.sh"
+      "code": "000-verify-healthy.sh",
+      "courseData": "000-install-storageos.sh"
     },
     "steps": [
       {
         "title": "StorageOS sandbox",
         "text": "001-storageos-sandbox.md"
+      }
+    ],
+    "assets": {
+      "host01": [{
+        "file": "verify-healthy.sh",
+        "target": "/opt/",
+        "chmod": "+x"
       }
     ]
   },
