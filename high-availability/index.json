@@ -21,12 +21,16 @@
         "text": "002-replicated-volume.md"
       },
       {
-        "title": "Master and replicas",
+        "title": "Architecture: Master and replicas",
         "text": "003-master-replicas.md"
       },
       {
+        "title": "Node failure",
+        "text": "004-node-failure.md"
+      },
+      {
         "title": "Failover",
-        "text": "004-failover.md"
+        "text": "005-failover.md"
       }
     ],
     "assets": {

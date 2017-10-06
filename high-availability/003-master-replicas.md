@@ -1,15 +1,7 @@
-Now we'll look at failover.
+StorageOS is based on a hybrid architecture, with a single master (which ensures deterministic performance) and distributed replicas (for high availability).
 
-Find the node that has the master volume for replicated:
+See where StorageOS scheduled the master and replica to:
 
-`storageos volume ls --format "table {{.Name}}\t{{.Size}}\t{{.Replicas}}\t{{.Location}}"`{{execute}}
+`storageos node ls --format "table {{.Name}}\t{{.Address}}\t{{.Volumes}}"`{{execute}}
 
- To SSH into other hosts:
-
-`ssh root@host02`{{execute T2}}
-`export STORAGEOS_USERNAME=storageos STORAGEOS_PASSWORD=storageos STORAGEOS_HOST=localhost`{{execute T2}}
-`ssh root@host03`{{execute T3}}
-`export STORAGEOS_USERNAME=storageos STORAGEOS_PASSWORD=storageos STORAGEOS_HOST=localhost`{{execute T3}}
-
-Kill the StorageOS container to simulate the node going offline:
-`docker rm -f /storageos`{{execute}}
+You can set 0-5 replicas per volume, which enables data to be protected against 0-5 node failures. Typically one replica is sufficient for testing or small deployments.
