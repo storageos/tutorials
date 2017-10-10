@@ -1,9 +1,9 @@
 {
   "pathwayTitle": "StorageOS",
   "icon": "fa-storageos",
-  "title": "Deploy with Docker",
+  "title": "Install StorageOS with Docker",
   "time": "10 minutes",
-  "description": "Learn how to deploy StorageOS and the CLI",
+  "description": "Learn how to deploy StorageOS with Docker and the CLI",
   "details": {
     "intro": {
       "text": "000-introduction.md",
