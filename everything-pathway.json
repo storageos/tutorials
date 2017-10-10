@@ -3,9 +3,9 @@
   "description": "",
   "courses": [
     {
-      "external_link": "https://storageos.com/docs/katacoda/some-link",
+      "external_link": "https://my.storageos.com/main/high-availability",
       "course_id": "high-availability",
-      "title": "High availability"
+      "title": "Provision replicated volumes for HA"
     }
   ]
 }

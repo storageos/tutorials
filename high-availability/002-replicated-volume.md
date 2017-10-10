@@ -6,4 +6,4 @@ If this node goes down, `default/testvol` will be unavailable. You can replicate
 
 Replication is controlled by a special label, `storageos.feature.replicas`. Create a single replica using the label:
 
-`storageos volume update --label storageos.feature.replicas=1 default/testvol`{{execute}}
+`storageos volume update --label-add storageos.feature.replicas=1 default/testvol`{{execute}}
