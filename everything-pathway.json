@@ -6,6 +6,11 @@
       "external_link": "https://my.storageos.com/main/high-availability",
       "course_id": "high-availability",
       "title": "Provision replicated volumes for HA"
+    },
+    {
+      "external_link": "https://my.storageos.com/main/install-with-docker",
+      "course_id": "install-with-docker",
+      "title": "Install StorageOS with Docker"
     }
   ]
 }
