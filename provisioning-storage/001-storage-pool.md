@@ -5,7 +5,7 @@ Open terminals on the second and third hosts, and check that the StorageOS conta
 
 `ssh root@host02`{{execute T2}}
 `ssh root@host03`{{execute T3}}
-`docker ps`
+`docker ps`{{execute}}
 
 On start-up, StorageOS nodes communicate with each other to discover the overall
 status of the cluster and establish consensus. List the nodes in this cluster:
