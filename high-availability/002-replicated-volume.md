@@ -4,6 +4,6 @@ Right now `default/testvol` resides on one node. You can find out the location:
 
 If this node goes down, `default/testvol` will be unavailable. You can replicate the data to different nodes to ensure that `default/testvol` will still be available even if nodes fail.
 
-Replication is controlled by a special label, `storageos.feature.replicas`. Create a single replica using the label:
+You can add, update or remove labels at any time. Replication is controlled by a special label, `storageos.feature.replicas`. Add a replica to testvol:
 
 `storageos volume update --label-add storageos.feature.replicas=1 default/testvol`{{execute}}

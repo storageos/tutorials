@@ -9,7 +9,3 @@ Create a volume labelled env=prod:
 Inspect the volume to see the labels:
 
 `storageos volume inspect default/testvol`{{execute}}
-
-You can add, update or remove labels at any time. Try updating the environment to dev:
-
-`storageos volume update --label-add env=dev default/testvol`{{execute}}
