@@ -16,4 +16,4 @@ You will need to run each prerequisites on each host, in any order:
 
 `curl -sSL https://github.com/storageos/go-cli/releases/download/0.0.13/storageos_linux_amd64 > /usr/local/bin/storageos`{{execute}}
 `chmod +x /usr/local/bin/storageos`{{execute}}
-`export STORAGEOS_USERNAME=storageos STORAGEOS_PASSWORD=storageos STORAGEOS_HOST=localhost`
+`export STORAGEOS_USERNAME=storageos STORAGEOS_PASSWORD=storageos STORAGEOS_HOST=localhost`{{execute}}
