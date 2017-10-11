@@ -2,7 +2,7 @@ Labels are a mechanism for applying metadata to StorageOS objects. You can use t
 
 A label is a key-value pair that is stored as a string.
 
-Create a volume labelled env=prod:
+Create a volume expected to run in a production environment:
 
 `storageos volume create --label env=prod testvol`{{execute}}
 

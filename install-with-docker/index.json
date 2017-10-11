@@ -28,8 +28,8 @@
         "text": "004-install-containers.md"
       },
       {
-        "title": "Install CLI",
-        "text": "005-install-cli.md"
+        "title": "Cluster health",
+        "text": "005-cluster-health.md"
       }
     ]
   },
