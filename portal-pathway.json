@@ -3,27 +3,27 @@
   "description": "",
   "courses": [
     {
-      "external_link": "https://my.storageos.com/main/install-with-docker",
+      "external_link": "../install-with-docker",
       "course_id": "install-with-docker",
       "title": "Install StorageOS with Docker"
     },
     {
-      "external_link": "https://my.storageos.com/main/provisioning-storage",
+      "external_link": "../provisioning-storage",
       "course_id": "provisioning-storage",
       "title": "Provision StorageOS volumes"
     },
     {
-      "external_link": "https://my.storageos.com/main/high-availability",
+      "external_link": "../high-availability",
       "course_id": "high-availability",
       "title": "Provision replicated volumes for HA"
     },
     {
-      "external_link": "https://my.storageos.com/main/docker-sandbox",
+      "external_link": "../docker-sandbox",
       "course_id": "docker-sandbox",
       "title": "Sandbox - Docker cluster"
     },
     {
-      "external_link": "https://my.storageos.com/main/k8s-sandbox",
+      "external_link": "../k8s-sandbox",
       "course_id": "k8s-sandbox",
       "title": "Sandbox - Kubernetes cluster"
     }

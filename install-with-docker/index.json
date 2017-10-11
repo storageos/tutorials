@@ -12,8 +12,8 @@
     },
     "steps": [
       {
-        "title": "Three node environment",
-        "text": "001-three-node.md"
+        "title": "Environment",
+        "text": "001-environment.md"
       },
       {
         "title": "Prerequisites",
