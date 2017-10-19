@@ -7,7 +7,6 @@
   "details": {
     "intro": {
       "text": "000-introduction.md",
-      "credits": "",
       "code": "000-install-storageos.sh"
     },
     "steps": [
