@@ -1,1 +1,1 @@
-In this tutorial, you will learn how to provision StorageOS volumes and access them from containers on a three node cluster.
+In this tutorial, you will learn how to create users, assign them to groups and create policies to control access to namespaces.

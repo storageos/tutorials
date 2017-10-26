@@ -1,6 +1,7 @@
-Policies are a simple Attribute-Based Access Control records that are used to permission users (or groups) to namespaces. As an admin, you can enable all users in the test group to access the restricted namespace:
+Policies are a simple Attribute-Based Access Control records that are used to permission users (or groups) to namespaces. As an admin, you can enable to `dev` group to access the `restricted` namespace:
 
 `storageos policy create --group dev --namespace restricted`{{execute}}
+`storageos policy ls`
 
 To log in as different users, set the `--username` and `--password` flags on any command.
 

@@ -1,0 +1,43 @@
+{
+  "pathwayTitle": "StorageOS",
+  "icon": "fa-storageos",
+  "title": "Microsoft SQL Server",
+  "time": "10 minutes",
+  "description": "Run containerized Microsoft SQL Server with persistent volumes",
+  "details": {
+    "intro": {
+      "text": "000-introduction.md",
+      "code": "000-verify-healthy.sh",
+      "courseData": "000-install-storageos.sh"
+    },
+    "steps": [
+      {
+        "title": "Install SQL Server",
+        "text": "001-install.md"
+      },
+      {
+        "title": "Insert test data",
+        "text": "002-test-data.md"
+      },
+      {
+        "title": "Failover",
+        "text": "003-failover.md"
+      }
+    ],
+    "assets": {
+      "host01": [{
+        "file": "verify-healthy.sh",
+        "target": "/opt/",
+        "chmod": "+x"
+      }
+    ]
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal. A safe place to learn and execute commands.\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "storageos-docker-3node"
+  }
+}
