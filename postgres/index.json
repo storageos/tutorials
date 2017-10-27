@@ -1,9 +1,9 @@
 {
   "pathwayTitle": "StorageOS",
   "icon": "fa-storageos",
-  "title": "Microsoft SQL Server",
+  "title": "Postgres",
   "time": "10 minutes",
-  "description": "Run Microsoft SQL Server with StorageOS volumes",
+  "description": "Run Postgres with StorageOS volumes",
   "details": {
     "intro": {
       "text": "000-introduction.md",

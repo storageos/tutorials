@@ -7,3 +7,7 @@ Run Postgres with StorageOS volumes:
 -v pgdata:/var/lib/postgresql/data \
 -e PGDATA=/var/lib/postgresql/data/pgdata \
 -e POSTGRES_PASSWORD=storageos postgres`{{execute}}
+
+Confirm Postgres is up and running:
+
+`docker logs postgres-dev`{{execute}}
