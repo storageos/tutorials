@@ -2,7 +2,7 @@ Using StorageOS volumes to a database is easy, just add `--volume-driver=storage
 
 Run Postgres with StorageOS volumes:
 
-`docker run -d --name postgres \
+`docker run -d --name postgres-dev \
 --volume-driver=storageos \
 -v pgdata:/var/lib/postgresql/data \
 -e PGDATA=/var/lib/postgresql/data/pgdata \
