@@ -3,7 +3,7 @@
   "icon": "fa-storageos",
   "title": "Microsoft SQL Server",
   "time": "10 minutes",
-  "description": "Run Microsoft SQL Server with StorageOS volumes",
+  "description": "Learn how to run Micosoft SQL Server with StorageOS volumes for high availability",
   "details": {
     "intro": {
       "text": "000-introduction.md",
@@ -38,6 +38,6 @@
     "uimessage1": "\u001b[32mYour Interactive Bash Terminal. A safe place to learn and execute commands.\u001b[m\r\n"
   },
   "backend": {
-    "imageid": "storageos-docker-3node"
+    "imageid": "storageos-docker-3node-highmemory"
   }
 }

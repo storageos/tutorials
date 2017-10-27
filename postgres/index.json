@@ -3,7 +3,7 @@
   "icon": "fa-storageos",
   "title": "Postgres",
   "time": "10 minutes",
-  "description": "Run Postgres with StorageOS volumes",
+  "description": "Learn how to run Postgres with StorageOS volumes for high availability",
   "details": {
     "intro": {
       "text": "000-introduction.md",
