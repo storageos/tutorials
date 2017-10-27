@@ -6,6 +6,10 @@ Create a new namespace:
 
 `storageos namespace create restricted`{{execute}}
 
-Create volume in the new namespace:
+To create a volume in the new namespace, set the `--namespace` flag:
 
 `storageos volume create --namespace restricted vol`{{execute}}
+
+View the new volume:
+
+`storageos volume ls`{{execute}}

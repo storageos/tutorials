@@ -1,13 +1,8 @@
-User accounts facilitate granular permissioning of acceptable actions by users and groups.
+Policies are a simple Attribute-Based Access Control records that are used to permission users (or groups) to namespaces.
 
-StorageOS creates one administrator on initial startup, the `storageos` user. As you are logged in as `storageos`, you can perform any action within the system, including creating new users (you will need to set a password):
+Create a policy to enable the `dev` group to access the `restricted` namespace:
 
-`storageos user create --role user devUser`{{execute}}
+ `storageos policy create --group dev --namespace restricted`{{execute}}
+ `storageos policy ls`{{execute}}
 
-assigning them to groups:
-
-`storageos user update --groups dev,test devUser`{{execute}}
-
-and viewing all users:
-
- `storageos user ls`{{execute}}
+Policies can only be created by an administrator user. StorageOS creates one admin on initial startup, the `storageos` user. As you are logged in as `storageos`, you can perform any action within the system.

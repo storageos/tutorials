@@ -1,11 +1,18 @@
-Policies are a simple Attribute-Based Access Control records that are used to permission users (or groups) to namespaces. As an admin, you can enable to `dev` group to access the `restricted` namespace:
+Admins can create users (pick a password when prompted):
 
-`storageos policy create --group dev --namespace restricted`{{execute}}
-`storageos policy ls`
+`storageos user create --role user devUser`{{execute}}
 
-To log in as different users, set the `--username` and `--password` flags on any command.
+assign them to groups:
 
-Check that devUser can create and list volumes in the restricted namespace:
+`storageos user update --groups dev,test devUser`{{execute}}
 
-`storageos volume --username=devUser --password=[Enter password] create --namespace restricted myvol`{{execute}}
-`storageos volume --username=devUser --password=[Enter password] ls`{{execute}}
+and view all users:
+
+`storageos user ls`{{execute}}
+
+Note that devUser with a `user` role, which means they only have the ability to change their password and have access to the namespaces granted to them via policies. The policy we created allows the `dev` group to create and list volumes in the restricted namespace:
+
+`storageos -u devUser -p [...] volume  create --namespace restricted myvol`{{execute}}
+`storageos -u devUser -p [...] volume ls`{{execute}}
+
+Note that you can run commands as a specific user by passing their username and password as flags.
