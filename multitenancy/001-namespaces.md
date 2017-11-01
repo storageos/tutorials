@@ -2,7 +2,7 @@ Namespaces help different projects or teams share a StorageOS cluster by isolati
 
 `storageos namespace ls`{{execute}}
 
-You can create new namespace with the `storageos namespace` command:
+You can create new namespaces with the `storageos namespace` command:
 
 `storageos namespace create restricted`{{execute}}
 
@@ -10,6 +10,6 @@ To create a volume in the new namespace, set the `--namespace` flag:
 
 `storageos volume create --namespace restricted vol`{{execute}}
 
-View the new volume:
+and view the namespaced volume:
 
 `storageos volume ls`{{execute}}

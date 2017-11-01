@@ -1,10 +1,17 @@
-Policies are a simple Attribute-Based Access Control records that are used to permission users (or groups) to namespaces.
+Administrators manage access to namespaces via users and groups. One admin is
+created on initial startup, the `storageos` user. As you are logged in as
+`storageos`, you can perform any action within the system, including creating
+users (pick a password when prompted):
 
-Create a policy to enable the `dev` group to access the `restricted` namespace:
+`storageos user create --role user devUser`{{execute}}
 
- `storageos policy create --group dev --namespace restricted`{{execute}}
+ assigning them to groups:
 
-Policies can only be created by an administrator user. StorageOS creates one admin on initial startup, the `storageos` user. As you are logged in as `storageos`, you can perform any action within the system, including creating and viewing namespaces and policies:
+`storageos user update --groups dev,test devUser`{{execute}}
 
-`storageos namespace ls`{{execute}}
-`storageos policy ls`{{execute}}
+and viewing all users:
+
+`storageos user ls`{{execute}}
+
+Users with the `user` role can only access namespaces granted to them, and
+change their own password.

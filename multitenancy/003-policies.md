@@ -1,18 +1,15 @@
-Admins can create users (pick a password when prompted):
+Admins can create simple Attribute-Based Access Controls called policies.
 
-`storageos user create --role user devUser`{{execute}}
+Grant `dev` groups access to the `restricted` namespace:
 
-assign them to groups:
+`storageos policy create --group dev --namespace restricted`{{execute}}
 
-`storageos user update --groups dev,test devUser`{{execute}}
+Since `devUser` is in the `dev` group, they can create and list volumes in the
+restricted namespace:
 
-and view all users:
-
-`storageos user ls`{{execute}}
-
-Note that devUser with a `user` role, which means they only have the ability to change their password and have access to the namespaces granted to them via policies. The policy we created allows the `dev` group to create and list volumes in the restricted namespace:
-
-`storageos -u devUser -p [...] volume create --namespace restricted myvol`{{execute}}
+`storageos -u devUser -p [...] volume create --namespace restricted
+myvol`{{execute}}
 `storageos -u devUser -p [...] volume ls`{{execute}}
 
-Note that you can run commands as a specific user by passing their username and password as flags.
+Note that you can run commands as a specific user by passing their username and
+password as flags.
