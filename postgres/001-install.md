@@ -1,4 +1,4 @@
-Using StorageOS volumes to a database is easy, just add `--volume-driver=storageos` to your standard docker run command.
+It's straightforward to run Postgres with StorageOS volumes with the `--volume-driver=storageos` flag:
 
 Run Postgres with StorageOS volumes:
 

@@ -13,4 +13,4 @@ Connect to the database and insert some more data:
 `INSERT INTO FRUIT (ID,INVENTORY,QUANTITY) VALUES (4, 'Peaches', 203);`{{execute T2}}
 `SELECT * FROM FRUIT;`{{execute T2}}
 
-All records should be persisted.
+You should see all four fruits in the database.

@@ -1,8 +1,11 @@
 Connect to Postgres and create a test database:
 
 `docker exec -it postgres-dev bash`{{execute}}
-`psql -U postgres`
+
+`psql -U postgres`{{execute}}
+
 `CREATE DATABASE testdb;`{{execute}}
+
 `\c testdb;`{{execute}}
 
 Your prompt will switch to `root@[container-id]`, then `postgres=#`, `then testdb=#`.
@@ -22,5 +25,7 @@ Insert sample data:
 Quit and kill the Postgres container:
 
 `\q`{{execute}}
+
 `exit`{{execute}}
+
 `docker kill postgres-dev`{{execute}}
