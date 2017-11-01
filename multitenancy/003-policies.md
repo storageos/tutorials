@@ -9,7 +9,7 @@ Since `devUser` is in the `dev` group, you can login as `devUser`:
 
 `storageos login localhost`{{execute}}
 
-and create and list volumes in the restricted namespace:
+and create and list volumes in `restricted`:
 
 `storageos volume create --namespace restricted myvol`{{execute}}
 `storageos volume ls`{{execute}}
