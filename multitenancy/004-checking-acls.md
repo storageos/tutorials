@@ -1,8 +1,10 @@
 Now, as the admin user again, remove devUser from the dev group:
 
-`storageos user update --remove-groups dev devUser`{{execute}}
-`storageos user ls`{{execute}}
+`storageos -u storageos -p storageos user update --remove-groups dev devUser`{{execute}}
 
-Check devUser can no longer create volumes in the restricted namespace:
+Note that you can run commands as a specific user by passing their username and
+password as flags.
 
-`storageos -u devUser -p [...] volume create --namespace restricted shouldFail`{{execute}}
+Now you should no longer be able to create volumes in the restricted namespace:
+
+`storageos volume create --namespace restricted shouldFail`{{execute}}

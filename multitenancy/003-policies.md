@@ -4,12 +4,11 @@ Grant `dev` groups access to the `restricted` namespace:
 
 `storageos policy create --group dev --namespace restricted`{{execute}}
 
-Since `devUser` is in the `dev` group, they can create and list volumes in the
-restricted namespace:
+Since `devUser` is in the `dev` group, you can login as `devUser`:
 
-`storageos -u devUser -p [...] volume create --namespace restricted
-myvol`{{execute}}
-`storageos -u devUser -p [...] volume ls`{{execute}}
+`storageos login localhost`
 
-Note that you can run commands as a specific user by passing their username and
-password as flags.
+and create and list volumes in the restricted namespace:
+
+`storageos volume create --namespace restricted myvol`{{execute}}
+`storageos volume ls`{{execute}}
