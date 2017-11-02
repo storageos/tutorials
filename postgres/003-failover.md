@@ -8,7 +8,7 @@ Switch to another node with `ssh root@host02`{{execute T2}} and start a new Post
 `docker run -d --name postgres-dev -v pgdata:/var/lib/postgresql/data --volume-driver=storageos \
 -e POSTGRES_PASSWORD=storageos -e PGDATA=/var/lib/postgresql/data/pgdata postgres`{{execute T2}}
 
-Connect to your table and insert more data:
+Connect to your test database:
 
 `docker exec -it postgres-dev bash`{{execute T2}}
 
@@ -16,7 +16,8 @@ Connect to your table and insert more data:
 
 `\c testdb`{{execute T2}}
 
+Insert more data, then check that there are four records in the table:
+
 `INSERT INTO FRUIT (ID,INVENTORY,QUANTITY) VALUES (4, 'Peaches', 203);`{{execute T2}}
 
-There should now be four records in the table:
 `SELECT * FROM FRUIT;`{{execute T2}}
