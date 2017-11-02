@@ -4,17 +4,18 @@ Connect to Postgres and create a test database (your prompt will change):
 
 `psql -U postgres;`{{execute}}
 
-`CREATE DATABASE testdb1;`{{execute}}
+`CREATE DATABASE testdb;`{{execute}}
 
 Now connect to the database and insert some sample data:
 
-`\c testdb1;`{{execute}}
+`\c testdb;`{{execute}}
+
 `CREATE TABLE FRUIT(
   ID INT PRIMARY KEY      NOT NULL,
   INVENTORY      CHAR(25) NOT NULL,
   QUANTITY       INT      NOT NULL
 );`{{execute}}
-`\d`{{execute}}
+
 `INSERT INTO FRUIT (ID,INVENTORY,QUANTITY) VALUES (1, 'Bananas', 132), (2, 'Apples', 165), (3, 'Oranges', 219);`{{execute}}
 
 Check your commands succeeded:

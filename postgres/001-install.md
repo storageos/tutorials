@@ -6,7 +6,7 @@ with many concurrent users.
 In this tutorial, we'll look at how to configure it with StorageOS for high
 availability and failover.
 
-Start a Postgres container with the `--volume-driver=storageos` flag:
+Start a Postgres container specifying StorageOS as the volume driver:
 
 `docker run -d --name postgres-dev \
 --volume-driver=storageos \
@@ -14,5 +14,5 @@ Start a Postgres container with the `--volume-driver=storageos` flag:
 -e PGDATA=/var/lib/postgresql/data/pgdata \
 -e POSTGRES_PASSWORD=storageos postgres`{{execute}}
 
-Note that StorageOS has created the new volume `pgdata`. This is known as dynamic provisioning:
+Note that StorageOS has dynamically provisioned the new volume `pgdata`:
 `storageos volume ls`{{execute}}
