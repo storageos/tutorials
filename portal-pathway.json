@@ -18,6 +18,16 @@
       "title": "Provision replicated volumes for HA"
     },
     {
+      "external_link": "https://my.storageos.com/main/multitenancy",
+      "course_id": "multitenancy",
+      "title": "Share a cluster among teams using policies"
+    },
+    {
+      "external_link": "https://my.storageos.com/main/postgres",
+      "course_id": "postgres",
+      "title": "Run Postgres with StorageOS volumes for high availability"
+    },
+    {
       "external_link": "https://my.storageos.com/main/docker-sandbox",
       "course_id": "docker-sandbox",
       "title": "Sandbox - Docker cluster"

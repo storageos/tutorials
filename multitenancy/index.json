@@ -3,7 +3,7 @@
   "icon": "fa-storageos",
   "title": "Multi-tenancy",
   "time": "10 minutes",
-  "description": "Learn how to share a cluster among teams via ACLs",
+  "description": "Learn how to share a cluster among teams using policies",
   "details": {
     "intro": {
       "text": "000-introduction.md",
