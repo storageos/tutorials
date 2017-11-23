@@ -31,11 +31,6 @@
       "external_link": "https://my.storageos.com/main/docker-sandbox",
       "course_id": "docker-sandbox",
       "title": "Sandbox - Docker cluster"
-    },
-    {
-      "external_link": "https://my.storageos.com/main/k8s-sandbox",
-      "course_id": "k8s-sandbox",
-      "title": "Sandbox - Kubernetes cluster"
     }
   ]
 }
