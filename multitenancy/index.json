@@ -35,11 +35,10 @@
         "chmod": "+x"
         },
         {
-        "host01": {
         "file": "storageos_linux_amd64",
         "target": "/opt/",
         }
-    }]
+    ]
     }
   },
   "environment": {
