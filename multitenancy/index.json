@@ -33,11 +33,7 @@
         "file": "verify-healthy.sh",
         "target": "/opt/",
         "chmod": "+x"
-        },
-        {
-        "file": "storageos_linux_amd64",
-        "target": "/opt/",
-        }
+      }
     ]
     }
   },
