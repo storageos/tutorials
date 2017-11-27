@@ -10,6 +10,6 @@ but improves performance significantly.
 
 Open terminals for the second and third hosts and enable the module on each
 terminal in turn
-`sudo modprobe nbd nbds_max=1024`{{execute HOST1}}
-`sudo modprobe nbd nbds_max=1024`{{execute HOST2}}
-`sudo modprobe nbd nbds_max=1024`{{execute HOST3}}
+`sudo modprobe nbd nbds_max=1024`{{execute T1}}
+`sudo modprobe nbd nbds_max=1024`{{execute T2}}
+`sudo modprobe nbd nbds_max=1024`{{execute T3}}
