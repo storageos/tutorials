@@ -11,24 +11,16 @@
     },
     "steps": [
       {
-        "title": "Environment",
-        "text": "001-environment.md"
-      },
-      {
         "title": "Prerequisites",
-        "text": "002-prerequisites.md"
+        "text": "001-prerequites.md"
       },
       {
-        "title": "Cluster id",
-        "text": "003-cluster-id.md"
-      },
-      {
-        "title": "Install containers",
-        "text": "004-install-containers.md"
+        "title": "Installation",
+        "text": "002-installation.md"
       },
       {
         "title": "Cluster health",
-        "text": "005-cluster-health.md"
+        "text": "003-cluster-health.md"
       }
     ]
   },
