@@ -1,17 +1,17 @@
-Now you can install the StorageOS plugin on each host.
+Now you can install the StorageOS node container on each host.
 
 In the first terminal:
 
-`docker plugin install --alias storageos storageos/plugin:0.9.0 --grant-all-permissions ADVERTISE_IP=[[HOST_IP]] JOIN=[[HOST_IP]],[[HOST2_IP]],[[HOST3_IP]]`{{execute T1}}
+`docker run -d --name storageos -e HOSTNAME=host01 -e ADVERTISE_IP=[[HOST_IP]] -e JOIN=[[HOST_IP]] --net=host --pid=host --privileged --cap-add SYS_ADMIN --device /dev/fuse -v /var/lib/storageos:/var/lib/storageos:rshared -v /run/docker/plugins:/run/docker/plugins storageos/node:0.9.0 server `{{execute T1}}
 
 In the second terminal:
 
-`docker plugin install --alias storageos storageos/plugin:0.9.0 --grant-all-permissions ADVERTISE_IP=[[HOST2_IP]] JOIN=[[HOST_IP]],[[HOST2_IP]],[[HOST3_IP]]`{{execute T2}}
+`docker run -d --name storageos -e HOSTNAME=host01 -e ADVERTISE_IP=[[HOST2_IP]] -e JOIN=[[HOST_IP]] --net=host --pid=host --privileged --cap-add SYS_ADMIN --device /dev/fuse -v /var/lib/storageos:/var/lib/storageos:rshared -v /run/docker/plugins:/run/docker/plugins storageos/node:0.9.0 server `{{execute T2}}
 
 In the third terminal:
 
-`docker plugin install --alias storageos storageos/plugin:0.9.0 --grant-all-permissions ADVERTISE_IP=[[HOST3_IP]] JOIN=[[HOST_IP]],[[HOST2_IP]],[[HOST3_IP]]`{{execute T3}}
+`docker run -d --name storageos -e HOSTNAME=host01 -e ADVERTISE_IP=[[HOST3_IP]] -e JOIN=[[HOST_IP]] --net=host --pid=host --privileged --cap-add SYS_ADMIN --device /dev/fuse -v /var/lib/storageos:/var/lib/storageos:rshared -v /run/docker/plugins:/run/docker/plugins storageos/node:0.9.0 server `{{execute T1}}
 
 Confirm that the installation was successful:
 
-`docker plugin ls`{{execute}}
+`docker ps`{{execute}}
