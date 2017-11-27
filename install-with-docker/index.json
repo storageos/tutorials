@@ -12,7 +12,7 @@
     "steps": [
       {
         "title": "Prerequisites",
-        "text": "001-prerequites.md"
+        "text": "001-prerequisites.md"
       },
       {
         "title": "Installation",
