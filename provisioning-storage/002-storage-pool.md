@@ -4,8 +4,8 @@ Once the cluster is established, StorageOS creates a default storage pool from a
 
 Each node contributes about 15GB to the pool, so the pool has 45GB of total capacity.
 
-Inspect the pool for the full JSON configuration:
+You can see more detail about the pool by inspecting the JSON configuration:
 
 `storageos pool inspect default`{{execute}}
 
-`host01`, `host02` and `host03` are in the storage pool under `controllerNames`.
+The storage pool contains `host01`, `host02` and `host03` under `controllerNames`.

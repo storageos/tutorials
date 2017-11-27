@@ -9,6 +9,6 @@ Open terminals on the second and third hosts (type `yes` when prompted):
 Use `docker ps`{{execute}} to check that the StorageOS container is running on all three nodes.
 
 On start-up, StorageOS nodes communicate with each other to discover the overall
-status of the cluster and establish consensus. List the nodes in this cluster:
+status of the cluster and establish consensus. Check out the nodes in this cluster:
 
 `storageos node ls --format "table {{.Name}}\t{{.Address}}\t{{.Capacity}}"`{{execute}}
