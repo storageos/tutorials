@@ -1,8 +1,15 @@
 In this tutorial, you will install StorageOS on a three node Docker cluster.
+Open up terminals for the second and third host (type `yes` where prompted):
 
-NBD (Network Block Device) is a default Linux kernel module that allows block devices to be run in userspace. It is not a requirement for StorageOS to run, but improves performance significantly.
+`ssh root@host02`{{execute T2}}
+`ssh root@host03`{{execute T3}}
 
-Open terminals for the second and third hosts and enable the module on each terminal in turn:
+NBD (Network Block Device) is a default Linux kernel module that allows block
+devices to be run in userspace. It is not a requirement for StorageOS to run,
+but improves performance significantly.
+
+Open terminals for the second and third hosts and enable the module on each
+terminal in turn
 `sudo modprobe nbd nbds_max=1024`{{execute HOST1}}
 `sudo modprobe nbd nbds_max=1024`{{execute HOST2}}
 `sudo modprobe nbd nbds_max=1024`{{execute HOST3}}
