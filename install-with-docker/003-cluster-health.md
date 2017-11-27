@@ -12,4 +12,4 @@ Check on the status of the different components:
 
 If they are any problems, check the Docker logs:
 
-`journalctl docker`
+`journalctl docker`{{execute}}
