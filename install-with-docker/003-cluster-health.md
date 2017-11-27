@@ -4,7 +4,7 @@ To confirm that the nodes can contact each other, install the StorageOS CLI:
 
 and set the environment variables so you can connect to the cluster:
 
-`export STORAGEOS_USERNAME=storageos STORAGEOS_PASSWORD=storageos STORAGEOS_HOST=localhost`{{execute}}
+`export STORAGEOS_USERNAME=storageos STORAGEOS_PASSWORD=storageos STORAGEOS_HOST=[[HOST_IP]]`{{execute}}
 
 Check on the status of the different components:
 
