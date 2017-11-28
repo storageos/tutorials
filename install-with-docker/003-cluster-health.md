@@ -12,4 +12,4 @@ Check on the status of the different components:
 
 If they are any problems, check the Docker logs:
 
-`journalctl -u docker`{{execute}}
+`docker logs storageos`{{execute}}
