@@ -1,4 +1,4 @@
-See nodes:
+Verify that you have a master and a worker (`node01`) node running:
 
 `kubectl get nodes`{{execute}}
 
@@ -16,10 +16,6 @@ Check that a one-node StorageOS cluster has started successfully:
 
 Create API secret:
 
-`echo -n "tcp:/[[HOST2_IP]]:5705" | base64`{{execute}}
-
-Replace `apiAddress` field in storageos-secret.yaml with the encoded value.
-
 `kubectl create -f storageos-secret.yaml`{{execute}}
 
 Create StorageClass:
@@ -34,7 +30,8 @@ Create Redis pod:
 
 `kubectl create -f storageos-pod.yaml`{{execute}}
 
+============================================================
 
-Everything:
+All files:
 
 `kubectl apply -f storageos-pvc.yaml -f storageos-service.yaml -f storageos-pod.yaml -f storageos-secret.yaml -f storageos-storageclass.yaml`{{execute}}
