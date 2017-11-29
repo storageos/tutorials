@@ -10,10 +10,8 @@ Verify service has started:
 
 `kubectl get svc kubernetes`{{execute}}
 
-Download StorageOS:
+Check that a one-node StorageOS cluster has started successfully:
 
-`curl -sSLo storageos https://github.com/storageos/go-cli/releases/download/0.9.1/storageos_linux_amd64 && chmod +x storageos && sudo mv storageos /usr/local/bin/`{{execute}}
-`export STORAGEOS_USERNAME=storageos STORAGEOS_PASSWORD=storageos STORAGEOS_HOST=[[HOST2_IP]]`{{execute}}
 `storageos node ls`{{execute}}
 
 Create API secret:
