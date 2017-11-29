@@ -15,7 +15,8 @@ Start service:
 
 Verify service has started:
 
-`kubectl get svc kubernetes`{{execute}}
+`kubectl get svc storageos-api`{{execute}}
+`kubectl get pods`{{execute}}
 
 Check that a one-node StorageOS cluster has started successfully:
 
