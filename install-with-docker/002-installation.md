@@ -2,7 +2,7 @@ Now you can install the StorageOS node container on each host.
 
 Create a cluster token to allow the nodes to find each other:
 
-`CLUSTER_ID=storageos cluster create --size 3`{{execute T1}}
+`CLUSTER_ID=$(storageos cluster create --size 3)`{{execute T1}}
 
 Install on three nodes in turn:
 
