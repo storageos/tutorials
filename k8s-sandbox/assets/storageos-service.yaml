@@ -11,3 +11,5 @@ spec:
   type: LoadBalancer
   selector:
     name: storageos
+  externalIPs:
+  - 80.11.12.10
