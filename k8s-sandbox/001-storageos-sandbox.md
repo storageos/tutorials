@@ -1,4 +1,4 @@
-Verify that you have a master and a worker (`node01`) node running:
+Verify that you have a master and a worker node (`node01`) running:
 
 `kubectl get nodes`{{execute}}
 
