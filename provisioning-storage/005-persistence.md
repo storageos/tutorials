@@ -5,6 +5,9 @@ Check that the data was persisted by mounting the volume on the host and reading
 `ls /mnt`{{execute}}
 
 `cat /mnt/myfile`{{execute}}
-You should see `I'm writing some data to a StorageOS volume` which you just wrote.
+
+You should see the string you just wrote: `I'm writing some data to a StorageOS volume`.
+
+Now unmount the volume again:
 
 `storageos volume unmount default/myvol`{{execute}}

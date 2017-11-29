@@ -5,8 +5,7 @@ Start by removing the Postgres container:
 
 Switch to another node with `ssh root@host02`{{execute T2}} and start a new Postgres instance with `pgdata` mounted:
 
-`docker run -d --name postgres-dev -v pgdata:/var/lib/postgresql/data --volume-driver=storageos \
--e POSTGRES_PASSWORD=storageos -e PGDATA=/var/lib/postgresql/data/pgdata postgres`{{execute T2}}
+`docker run -d --name postgres-dev -v pgdata:/var/lib/postgresql/data --volume-driver=storageos -e POSTGRES_PASSWORD=storageos -e PGDATA=/var/lib/postgresql/data/pgdata postgres`{{execute T2}}
 
 Connect to your test database:
 

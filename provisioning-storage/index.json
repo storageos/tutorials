@@ -12,24 +12,28 @@
     },
     "steps": [
       {
-        "title": "Storage pool",
-        "text": "001-storage-pool.md"
+        "title": "Introduction",
+        "text": "001-hosts-and-nodes.md"
+      },
+      {
+        "title": "Storage pools",
+        "text": "002-storage-pool.md"
       },
       {
         "title": "Provisioning storage using volumes",
-        "text": "002-provision-storage.md"
+        "text": "003-provision-storage.md"
       },
       {
         "title": "Mounting volumes to containers",
-        "text": "003-mount-volume.md"
+        "text": "004-mount-volume.md"
       },
       {
         "title": "Persistence",
-        "text": "004-persistence.md"
+        "text": "005-persistence.md"
       },
       {
         "title": "Accessing storage across hosts",
-        "text": "005-global-namespace.md"
+        "text": "006-global-namespace.md"
       }
     ],
     "assets": {

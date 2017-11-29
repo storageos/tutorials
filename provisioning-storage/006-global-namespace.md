@@ -1,6 +1,6 @@
 StorageOS volumes are globally namespaced, meaning that any host can access the volumes.
 
-Mount myvol to a different host:
+Switch to the second host and mount `myvol` again:
 
 `docker run -it --volume-driver storageos --volume myvol:/data busybox sh`{{execute T2}}
 

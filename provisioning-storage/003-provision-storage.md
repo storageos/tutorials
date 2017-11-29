@@ -12,7 +12,7 @@ settings are:
 
 `SIZE`: The default volume size is 5GB.
 
-`LOCATION`: Which host StorageOS provisioned the volume to.
+`LOCATION`: The host that StorageOS provisioned the volume on.
 
 StorageOS volumes are thin provisioned, so storage is dynamically allocated to
 volumes as it is used. You can even provision volumes that are larger than the

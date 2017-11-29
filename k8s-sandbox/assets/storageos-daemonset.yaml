@@ -13,7 +13,7 @@ spec:
       hostNetwork: true
       containers:
       - name: storageos
-        image: storageos/node:0.8.1
+        image: storageos/node:0.9.0
         args:
         - server
         env:
@@ -21,8 +21,10 @@ spec:
           valueFrom:
             fieldRef:
               fieldPath: spec.nodeName
-        - name: CLUSTER_ID
-          value: "726d0216-a2d7-4481-a836-bd777c016bdb"
+        - name: JOIN
+          valueFrom:
+            fieldRef:
+              fieldPath: status.podIP
         - name: ADVERTISE_IP
           valueFrom:
             fieldRef:
