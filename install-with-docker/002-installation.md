@@ -15,3 +15,6 @@ Install on three nodes in turn:
 Confirm that the installation was successful:
 
 `docker ps`{{execute}}
+
+<div>This is in a div</div>
+<span>This is in a div</span>
