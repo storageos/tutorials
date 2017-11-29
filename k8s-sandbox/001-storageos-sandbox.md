@@ -1,3 +1,7 @@
+See nodes:
+
+`kubectl get nodes`{{execute}}
+
 Create daemonset:
 
 `kubectl apply -f storageos-daemonset.yaml`{{execute}}
@@ -10,6 +14,7 @@ Download StorageOS:
 
 `curl -sSLo storageos https://github.com/storageos/go-cli/releases/download/0.9.1/storageos_linux_amd64 && chmod +x storageos && sudo mv storageos /usr/local/bin/`{{execute}}
 `export STORAGEOS_USERNAME=storageos STORAGEOS_PASSWORD=storageos STORAGEOS_HOST=[[HOST2_IP]]`{{execute}}
+`storageos node ls`{{execute}}
 
 Create API secret:
 

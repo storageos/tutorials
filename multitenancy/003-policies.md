@@ -7,9 +7,9 @@ Create a policy to allow the `dev` group to access the `restricted` namespace:
 
 Since `devUser` is in the `dev` group, you can login as `devUser`:
 
-`storageos login localhost`{{execute}}
+`storageos login [[HOST_IP]]`{{execute}}
 
 and create and list volumes in `restricted`:
 
 `storageos volume create --namespace restricted myvol`{{execute}}
-`storageos volume ls`{{execute}}
+`storageos volume ls --namespace restricted`{{execute}}
