@@ -1,4 +1,4 @@
-See nodes:
+Verify that you have a master and a worker node (`node01`) running:
 
 `kubectl get nodes`{{execute}}
 
@@ -6,22 +6,25 @@ Create daemonset:
 
 `kubectl apply -f storageos-daemonset.yaml`{{execute}}
 
-Verify service has started:
+You should have one pod running on `node1`:
+`kubectl get pods`{{execute}}
 
-`kubectl get svc kubernetes`{{execute}}
+Start service:
 
-Download StorageOS:
+`kubectl apply -f storageos-service.yaml`{{execute}}
 
-`curl -sSLo storageos https://github.com/storageos/go-cli/releases/download/0.9.1/storageos_linux_amd64 && chmod +x storageos && sudo mv storageos /usr/local/bin/`{{execute}}
-`export STORAGEOS_USERNAME=storageos STORAGEOS_PASSWORD=storageos STORAGEOS_HOST=[[HOST2_IP]]`{{execute}}
+and verify that it is service running:
+
+`kubectl get svc storageos-api`{{execute}}
+
+
+Check that a one-node StorageOS cluster has started successfully:
+
 `storageos node ls`{{execute}}
 
-Create API secret:
+Encode the api address and create secret:
 
-`echo -n "tcp:/[[HOST2_IP]]:5705" | base64`{{execute}}
-
-Replace `apiAddress` field in storageos-secret.yaml with the encoded value.
-
+`APIADDRESS=$(echo -n "tcp:/[[HOST2_IP]]:5705" | base64); sed -i "s/REPLACE/$APIADDRESS/g" storageos-secret.yaml`{{execute}}
 `kubectl create -f storageos-secret.yaml`{{execute}}
 
 Create StorageClass:
@@ -36,7 +39,10 @@ Create Redis pod:
 
 `kubectl create -f storageos-pod.yaml`{{execute}}
 
+============================================================
 
-Everything:
+All files:
 
 `kubectl apply -f storageos-pvc.yaml -f storageos-service.yaml -f storageos-pod.yaml -f storageos-secret.yaml -f storageos-storageclass.yaml`{{execute}}
+
+`ssh root@node01`{{execute}}
