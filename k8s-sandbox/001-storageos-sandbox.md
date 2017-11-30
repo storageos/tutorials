@@ -29,10 +29,14 @@ Create PersistentVolumeClaim which references the `fast` StorageClass:
 Create a Redis pod which references `fast0001`:
 
 `kubectl create -f storageos-pod.yaml`{{execute}}
-`kubectl get pods`{{execute}}
+
+Check StorageOS created the volume successfully:
+
+`export STORAGEOS_USERNAME=storageos STORAGEOS_PASSWORD=storageos STORAGEOS_HOST=[[HOST2_IP]]`{{execute}}
+`storageos volume ls`{{execute}}
 
 ============================================================
 
-Alternatively, you can apply all files at once:
+Alternatively, you can apply all files at once (you will still need to encode the API address above):
 
 `kubectl apply -f storageos-pvc.yaml -f storageos-pod.yaml -f storageos-secret.yaml -f storageos-storageclass.yaml`{{execute}}
