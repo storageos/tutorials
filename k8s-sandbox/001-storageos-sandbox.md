@@ -8,6 +8,7 @@ Create daemonset:
 
 Check that a one-node StorageOS cluster has started successfully:
 
+`kubectl get pods`{{execute}}
 `storageos node ls`{{execute}}
 
 Encode the api address and create secret:
