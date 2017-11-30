@@ -6,10 +6,6 @@ Create daemonset:
 
 `kubectl apply -f storageos-daemonset.yaml`{{execute}}
 
-Verify service has started:
-
-`kubectl get svc kubernetes`{{execute}}
-
 Check that a one-node StorageOS cluster has started successfully:
 
 `storageos node ls`{{execute}}
@@ -35,4 +31,4 @@ Create Redis pod:
 
 All files:
 
-`kubectl apply -f storageos-pvc.yaml -f storageos-service.yaml -f storageos-pod.yaml -f storageos-secret.yaml -f storageos-storageclass.yaml`{{execute}}
+`kubectl apply -f storageos-pvc.yaml -f storageos-pod.yaml -f storageos-secret.yaml -f storageos-storageclass.yaml`{{execute}}
