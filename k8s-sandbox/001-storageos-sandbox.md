@@ -47,5 +47,3 @@ Create Redis pod:
 All files:
 
 `kubectl apply -f storageos-pvc.yaml -f storageos-service.yaml -f storageos-pod.yaml -f storageos-secret.yaml -f storageos-storageclass.yaml`{{execute}}
-
-`ssh root@node01`{{execute}}
