@@ -22,7 +22,7 @@ metadata:
   name: storageos-api
 subsets:
   - addresses:
-      - ip: status.podIP
+      - ip: NODE_IP
     ports:
       - port: 5705
         name: http
