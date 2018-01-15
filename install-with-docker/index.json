@@ -19,8 +19,16 @@
         "text": "002-installation.md"
       },
       {
+        "title": "Second node",
+        "text": "003-second-node.md"
+      },
+      {
+        "title": "Third node",
+        "text": "004-third-node.md"
+      },
+      {
         "title": "Cluster health",
-        "text": "003-cluster-health.md"
+        "text": "005-cluster-health.md"
       }
     ]
   },

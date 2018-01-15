@@ -6,21 +6,11 @@ Create daemonset:
 
 `kubectl apply -f storageos-daemonset.yaml`{{execute}}
 
-You should have one pod running on `node1`:
-`kubectl get pods`{{execute}}
-
-Start service:
-
-`kubectl apply -f storageos-service.yaml`{{execute}}
-
-and verify that it is service running:
-
-`kubectl get svc storageos-api`{{execute}}
-
-
 Check that a one-node StorageOS cluster has started successfully:
 
 `storageos node ls`{{execute}}
+
+Create a secret containing the StorageOS API location and credentials:
 
 Encode the api address and create secret:
 
@@ -43,6 +33,4 @@ Create Redis pod:
 
 All files:
 
-`kubectl apply -f storageos-pvc.yaml -f storageos-service.yaml -f storageos-pod.yaml -f storageos-secret.yaml -f storageos-storageclass.yaml`{{execute}}
-
-`ssh root@node01`{{execute}}
+`kubectl apply -f storageos-pvc.yaml -f storageos-pod.yaml -f storageos-secret.yaml -f storageos-storageclass.yaml`{{execute}}

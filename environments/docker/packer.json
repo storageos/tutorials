@@ -127,15 +127,13 @@
     {
       "type": "shell",
       "inline": [
-        "echo nbd | sudo tee -a /etc/modules",
-        "echo options nbd nbds_max=1024 | sudo tee /etc/modprobe.d/nbd.conf",
-        "sudo mkdir -p /var/lib/storageos; sudo mkdir -p /etc/docker/plugins/; sudo mkdir -p /run/docker/plugins/storageos/",
-        "sudo curl -L https://docs.storageos.com/assets/storageos.json -o /etc/docker/plugins/storageos.json ",
-        "sudo curl -sSL https://github.com/storageos/go-cli/releases/download/0.0.11/storageos_linux_amd64 -o /usr/local/bin/storageos",
-        "sudo chmod +x /usr/local/bin/storageos",
-        "sudo docker pull soegarots/node:uuid-bc403991",
-        "sudo docker pull storageos/cli:0.0.10",
-        "sudo docker pull postgres:latest"
+	"echo nbd | sudo tee -a /etc/modules",
+	"echo options nbd nbds_max=1024 | sudo tee /etc/modprobe.d/nbd.conf",
+	"sudo curl -sSL https://github.com/storageos/go-cli/releases/download/0.9.2/storageos_linux_amd64 -o /usr/local/bin/storageos",
+	"sudo chmod +x /usr/local/bin/storageos",
+        "sudo docker pull storageos/node:0.9.0",
+        "sudo docker pull postgres:latest",
+        "sudo docker pull microsoft/mssql-server-linux:2017-latest"
       ]
     }
   ]
