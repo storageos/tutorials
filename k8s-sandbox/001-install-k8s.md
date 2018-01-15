@@ -12,7 +12,7 @@ You should also install the StorageOS CLI:
 
 and set the environment variables so you can connect to the cluster:
 
-`export STORAGEOS_USERNAME=storageos STORAGEOS_PASSWORD=storageos STORAGEOS_HOST=[[HOST_IP]]`{{execute}}
+`export STORAGEOS_USERNAME=storageos STORAGEOS_PASSWORD=storageos STORAGEOS_HOST=[[HOST2_IP]]`{{execute}}
 
 Check that a one-node StorageOS cluster has started successfully:
 
