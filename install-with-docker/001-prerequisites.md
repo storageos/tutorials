@@ -15,7 +15,7 @@ Enable the module on each host in turn:
 
 You should also install the StorageOS CLI:
 
-`curl -sSLo storageos https://github.com/storageos/go-cli/releases/download/0.9.4/storageos_linux_amd64 && chmod +x storageos && sudo mv storageos /usr/local/bin/`{{execute}}
+`curl -sSLo storageos https://github.com/storageos/go-cli/releases/download/0.9.3/storageos_linux_amd64 && chmod +x storageos && sudo mv storageos /usr/local/bin/`{{execute}}
 
 and set the environment variables so you can connect to the cluster:
 
