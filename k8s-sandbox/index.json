@@ -12,8 +12,12 @@
     },
     "steps": [
       {
-        "title": "StorageOS sandbox",
-        "text": "001-storageos-sandbox.md"
+        "title": "Install on Kubernetes",
+        "text": "001-install-k8s.md"
+      },
+      {
+        "title": "Create PersistentVolumeClaim",
+        "text": "002-create-pvc.md"
       }
     ],
     "assets": {
