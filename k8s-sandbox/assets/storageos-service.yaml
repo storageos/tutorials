@@ -13,16 +13,3 @@ spec:
     name: storageos
   externalIPs:
   - 80.11.12.10
-
----
-apiVersion: v1
-kind: Endpoints
-apiVersion: v1
-metadata:
-  name: storageos-api
-subsets:
-  - addresses:
-      - ip: NODE_IP
-    ports:
-      - port: 5705
-        name: http
