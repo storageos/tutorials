@@ -1,10 +1,7 @@
 Verify that you have a master and a worker node (`node01`) running:
 
 `kubectl get nodes`{{execute}}
-
-Create daemonset:
-
-`kubectl apply -f storageos-daemonset.yaml`{{execute}}
+`ssh root@node01`{{execute T2}}
 
 You should also install the StorageOS CLI:
 
