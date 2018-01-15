@@ -8,4 +8,4 @@ Confirm that the installation was successful:
 
 You should now have three nodes in your cluster:
 
-`storageos node ls`{{execute T2}}
+`storageos node ls`{{execute T3}}
