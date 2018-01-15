@@ -4,7 +4,7 @@ Create a secret containing the StorageOS API location and credentials:
 `kubectl create -f storageos-secret.yaml`{{execute}}
 
 Create service:
-`kubectl create -f storageos-secret.yaml`{{execute}}
+`kubectl create -f storageos-service.yaml`{{execute}}
 
 Create StorageClass:
 
