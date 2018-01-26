@@ -10,6 +10,8 @@ Check that Kubernetes has started the StorageOS pod:
 
 `kubectl get pods`{{execute}}
 
+(StorageOS will take a few minutes to initialize. )
+
 Encode the api address and create secret:
 
 `APIADDRESS=$(echo -n "tcp://[[HOST2_IP]]:5705" | base64); sed -i "s/REPLACE/$APIADDRESS/g" storageos-secret.yaml`{{execute}}
