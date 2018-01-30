@@ -1,6 +1,4 @@
-You finished! Go you!
-
-<div id="id">
+<div id="id">You finished! Go you!</div>
 
 <script>
 var elem = document.getElementById('id');
