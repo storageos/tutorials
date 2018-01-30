@@ -1,6 +1,6 @@
 You finished! Go you!
 
-<div id="divid">
+<div id="id">
 
 <script>
 var elem = document.getElementById('id');
