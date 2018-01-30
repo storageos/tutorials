@@ -16,6 +16,9 @@
         "text": "001-storageos-sandbox.md"
       }
     ],
+    "finish": {
+        "text": "finish.md"
+    },
     "assets": {
       "host01": [{
         "file": "verify-healthy.sh",
