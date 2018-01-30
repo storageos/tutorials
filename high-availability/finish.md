@@ -1,4 +1,6 @@
 <script>
+// Ugly way to log a user completed (moused over the finished bar) with a hubspot tracked page.
+
 function logFinished() {
   console.log("Finish.md")
   var ifrm = document.createElement("iframe");
@@ -9,6 +11,5 @@ function logFinished() {
 }
 
 var el = document.getElementById("finished");
-el.addEventListener("click", logFinished, {once: true});
-
+  el.addEventListener("mouseover", logFinished, {once: true});
 </script>
