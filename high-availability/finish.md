@@ -1,10 +1,11 @@
 You finished! Go you!
 
-<div>Let me try some html</div>
+<div id="divid">
 
 <script>
-document.addEventListener("visibilitychange", function() {
-  console.log("Finish.md changed")
-  console.log( document.visibilityState );
-});
+var elem = document.getElementById('id');
+
+if (elem.offsetHeight > 0) {
+  console.log("Finish.md")
+}
 </script>
