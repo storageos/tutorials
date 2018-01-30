@@ -1,7 +1,7 @@
 {
   "pathwayTitle": "StorageOS",
   "icon": "fa-storageos",
-  "title": "StorageOS Kubernetes",
+  "title": "StorageOS and Kubernetes",
   "time": "5-60 minutes",
   "description": "A fully configured Kubernetes cluster for StorageOS",
   "details": {
@@ -11,12 +11,8 @@
     },
     "steps": [
       {
-        "title": "Install on Kubernetes",
-        "text": "001-install-k8s.md"
-      },
-      {
-        "title": "Create PersistentVolumeClaim",
-        "text": "002-create-pvc.md"
+        "title": "Deploy StorageOS and provision storage",
+        "text": "001-storageos-sandbox.md"
       }
     ],
     "assets": {
