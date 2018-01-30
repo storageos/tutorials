@@ -3,7 +3,7 @@
 <script>
 var elem = document.getElementById('finished');
 
-if (elem.style.left == 0) {
+if (elem.style.left == "0px") {
   console.log("Finish.md")
 }
 </script>
