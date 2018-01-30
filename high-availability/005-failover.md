@@ -5,3 +5,7 @@ StorageOS polls every ten seconds to check the state of the nodes. Check Storage
 StorageOS will create a new replica on the remaining node and sync the data to it within ~30 seconds:
 
 `storageos volume inspect default/testvol`{{execute}}
+
+<script>
+console.log("failover.md")
+</script>
