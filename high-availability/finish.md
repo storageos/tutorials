@@ -3,7 +3,12 @@
 <script>
 var elem = document.getElementById('finished');
 
-if (elem.style.left == "0px") {
-  console.log("Finish.md")
+function logFinished() {
+    console.log("Finish.md")
+  }
 }
+
+var el = document.getElementById("finished");
+el.addEventListener("click", logFinished, false);
+
 </script>
