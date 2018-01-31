@@ -1,4 +1,9 @@
-Once StorageOS has installed, you can create a StorageClass and persistent volume claims as below:
+Verify that StorageOS has installed correctly by logging into the worker node:
+
+`export STORAGEOS_USERNAME=storageos STORAGEOS_PASSWORD=storageos STORAGEOS_HOST=[[HOST2_IP]]`{{execute}}
+`storageos node ls`
+
+Now create a volume using the StorageOS provisioner.
 
 Encode the api address and create secret:
 
@@ -20,11 +25,5 @@ Create a Redis pod which references `fast0001`:
 `kubectl create -f storageos-pod.yaml`{{execute}}
 `kubectl get pv`{{execute}}
 
-Confirm that StorageOS has created the volume:
+Confirm the volume was created:
 `storageos volume ls`{{execute}}
-
-============================================================
-
-Alternatively, you can apply all files at once (you will still need to encode the API address above):
-
-`kubectl apply -f storageos-pvc.yaml -f storageos-pod.yaml -f storageos-secret.yaml -f storageos-storageclass.yaml`{{execute}}
