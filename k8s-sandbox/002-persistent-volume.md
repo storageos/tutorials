@@ -1,17 +1,14 @@
 Now, a developer is able to request storage via persistent volume claims.
 
-Create PersistentVolumeClaim which references the `fast` StorageClass:
+Create PersistentVolumeClaim and a Redis pod which references the `fast` StorageClass:
 
 `kubectl create -f storageos-pvc.yaml`{{execute}}
-`kubectl describe pvc`{{execute}}
-
-Create a Redis pod which references `fast0001`:
-
 `kubectl create -f storageos-pod.yaml`{{execute}}
+
+You should see a persistent volume, backed by a StorageOS volume:
+
 `kubectl describe pv`{{execute}}
 
-The persistent volume should be backed by the `fast` StorageClass.
-
-Confirm the volume was created and provisioned on `node01`:
+Confirm StorageOS provisioned the volume on `node01`:
 
 `storageos volume ls`{{execute}}
