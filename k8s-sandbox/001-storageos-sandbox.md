@@ -1,16 +1,4 @@
-Verify that you have a master and a worker node (`node01`) running:
-
-`kubectl get nodes`{{execute}}
-
-Create daemonset:
-
-`kubectl apply -f storageos-daemonset.yaml`{{execute}}
-
-Check that Kubernetes has started the StorageOS pod:
-
-`kubectl get pods`{{execute}}
-
-(StorageOS will take a few minutes to initialize. )
+Once StorageOS has installed, you can create a StorageClass and persistent volume claims as below:
 
 Encode the api address and create secret:
 
@@ -31,6 +19,9 @@ Create a Redis pod which references `fast0001`:
 
 `kubectl create -f storageos-pod.yaml`{{execute}}
 `kubectl get pv`{{execute}}
+
+Confirm that StorageOS has created the volume:
+`storageos volume ls`{{execute}}
 
 ============================================================
 
