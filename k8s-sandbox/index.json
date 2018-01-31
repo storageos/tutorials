@@ -11,8 +11,12 @@
     },
     "steps": [
       {
-        "title": "Deploy StorageOS and provision storage",
-        "text": "001-storageos-sandbox.md"
+        "title": "Dynamic provisioning",
+        "text": "001-dynamic-provisioning.md"
+      },
+      {
+        "title": "Provision storage",
+        "text": "002-persistent-volume.md"
       }
     ],
     "assets": {
