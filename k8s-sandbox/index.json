@@ -7,8 +7,7 @@
   "details": {
     "intro": {
       "text": "000-introduction.md",
-      "code": "000-verify-healthy.sh",
-      "courseData": "000-install-storageos.sh"
+      "code": "000-install-storageos.sh"
     },
     "steps": [
       {

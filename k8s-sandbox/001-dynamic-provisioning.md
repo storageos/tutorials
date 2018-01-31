@@ -1,5 +1,5 @@
-In this tutorial, we'll look at how an administrator would dynamically provision
-storage using the StorageOS provisioner.
+In this tutorial, we'll look at how you would dynamically provision
+storage using StorageOS.
 
 Verify that you have a healthy installation with one worker node, `node01`:
 
