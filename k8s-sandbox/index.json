@@ -20,7 +20,7 @@
       }
     ],
     "assets": {
-      "host01": [{"file": "*", "target": "/root", "chmod": "+x"}]
+      "host01": [{"file": "*", "target": "/root"}]
     }
   },
   "environment": {
