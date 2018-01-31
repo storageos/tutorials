@@ -16,6 +16,6 @@ Encode the api address and create secret:
 Create `fast` StorageClass:
 
 `kubectl create -f storageos-storageclass.yaml`{{execute}}
-`kubectl get storageclass`{{execute}}
+`kubectl describe storageclass`{{execute}}
 
 The `fast` StorageClass should be backed by `kubernetes.io/storageos`.
