@@ -30,7 +30,10 @@
         "title": "Cluster health",
         "text": "005-cluster-health.md"
       }
-    ]
+    ],
+    "finish": {
+        "text": "finish.md"
+    },
   },
   "environment": {
     "uilayout": "terminal",

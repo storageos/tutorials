@@ -19,6 +19,9 @@
         "text": "002-persistent-volume.md"
       }
     ],
+    "finish": {
+        "text": "finish.md"
+    },
     "assets": {
       "host01": [{"file": "*", "target": "/root"}]
     }

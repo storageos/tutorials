@@ -36,6 +36,9 @@
         "text": "006-global-namespace.md"
       }
     ],
+    "finish": {
+        "text": "finish.md"
+    },
     "assets": {
       "host01": [{
         "file": "verify-healthy.sh",

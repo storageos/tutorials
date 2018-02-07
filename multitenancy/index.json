@@ -28,6 +28,9 @@
         "text": "004-checking-acls.md"
       }
     ],
+    "finish": {
+        "text": "finish.md"
+    },
     "assets": {
       "host01": [{
         "file": "verify-healthy.sh",
