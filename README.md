@@ -1,6 +1,6 @@
 ## Where do I view StorageOS tutorials?
 
-The StorageOS interactive scenarios can be viewed at https://www.katacoda.com/storageos.
+The StorageOS interactive scenarios can be viewed at https://demo.storageos.cloud.
 
 ## Contributing to the docs
 
@@ -38,6 +38,7 @@ For errors in the tutorials or requests:
 
 For help with StorageOS:
 * [Public documentation](docs.storageos.com)
+* [Slack channel](https://slack.storageos.com/)
 * [Contact support](mailto:support@storageos.com)
 
 For help with Katacoda:
