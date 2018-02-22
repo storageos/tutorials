@@ -1,0 +1,33 @@
+{
+  "pathwayTitle": "StorageOS",
+  "icon": "fa-storageos",
+  "title": "StorageOS and OpenShift",
+  "time": "5-60 minutes",
+  "description": "Installing StorageOS on an OpenShift cluster",
+  "details": {
+    "intro": {
+      "text": "000-introduction.md",
+      "code": "000-install-storageos.sh"
+    },
+    "steps": [
+      {
+        "title": "Dynamic provisioning",
+        "text": "001-dynamic-provisioning.md"
+      },
+      {
+        "title": "Provision storage",
+        "text": "002-persistent-volume.md"
+      }
+    ],
+    "assets": {
+      "host01": [{"file": "*", "target": "/root"}]
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal. A safe place to learn and execute commands.\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "openshift"
+  }
+}
