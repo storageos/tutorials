@@ -3,7 +3,7 @@ StorageOS.
 
 Verify that you have a healthy installation with one worker node, `node01`:
 
-`export STORAGEOS_USERNAME=storageos STORAGEOS_PASSWORD=storageos STORAGEOS_HOST=[[HOST2_IP]]`{{execute}}
+`export STORAGEOS_USERNAME=storageos STORAGEOS_PASSWORD=storageos STORAGEOS_HOST=[[HOST_IP]]`{{execute}}
 `storageos node ls`{{execute}}
 
 Now an administrator can create a Storage Class to describe the storage that can
