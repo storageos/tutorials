@@ -16,7 +16,7 @@ Notes:
 Each tutorial should be self contained, without dependencies on other tutorials.
 
 High priority tutorials:
-* [High availability volumes/node failover](http://docs.storageos.com/docs/manage/features/replication)
+* [High availability volumes/node failover](http://docs.storageos.com/docs/manage/features/high-availability)
 * [Installing databases](http://docs.storageos.com/docs/applications/databases/)
 * [Managing storage with namespaces](http://docs.storageos.com/docs/manage/volumes/namespaces)
 * [Managing storage with labels](http://docs.storageos.com/docs/manage/volumes/labels)
