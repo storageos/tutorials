@@ -1,7 +1,7 @@
 For this tutorial we will use the StorageOS CLI to explore the cluster. This is
 already installed; run `storageos --version`{{execute}} to check.
 
-Open terminals on the second and third hosts (type `yes` when prompted):
+Open terminals on the second and third hosts:
 
 `ssh root@host02`{{execute T2}}
 `ssh root@host03`{{execute T3}}
