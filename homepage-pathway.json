@@ -3,37 +3,37 @@
   "description": "",
   "courses": [
     {
-      "external_link": "https://learn.storageos.com/main/tutorial/install-with-docker",
+      "external_link": "https://play.storageos.com/main/tutorial/install-with-docker",
       "course_id": "install-with-docker",
       "title": "Install StorageOS with Docker"
     },
     {
-      "external_link": "https://learn.storageos.com/main/tutorial/provisioning-storage",
+      "external_link": "https://play.storageos.com/main/tutorial/provisioning-storage",
       "course_id": "provisioning-storage",
       "title": "Provision StorageOS volumes"
     },
     {
-      "external_link": "https://learn.storageos.com/main/tutorial/high-availability",
+      "external_link": "https://play.storageos.com/main/tutorial/high-availability",
       "course_id": "high-availability",
       "title": "Provision highly available volumes"
     },
     {
-      "external_link": "https://learn.storageos.com/main/tutorial/multitenancy",
+      "external_link": "https://play.storageos.com/main/tutorial/multitenancy",
       "course_id": "multitenancy",
       "title": "Multi-tenancy and ACLS"
     },
     {
-      "external_link": "https://learn.storageos.com/main/tutorial/postgres",
+      "external_link": "https://play.storageos.com/main/tutorial/postgres",
       "course_id": "postgres",
       "title": "Postgres, HA and failover"
     },
     {
-      "external_link": "https://learn.storageos.com/main/tutorial/docker-sandbox",
+      "external_link": "https://play.storageos.com/main/tutorial/docker-sandbox",
       "course_id": "docker-sandbox",
       "title": "Sandbox - Docker cluster"
     },
     {
-      "external_link": "https://learn.storageos.com/main/tutorial/k8s-sandbox",
+      "external_link": "https://play.storageos.com/main/tutorial/k8s-sandbox",
       "course_id": "k8s-sandbox",
       "title": "Deploy StorageOS on Kubernetes"
     }
