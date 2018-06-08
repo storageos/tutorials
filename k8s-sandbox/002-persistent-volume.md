@@ -3,7 +3,7 @@ Developers can request storage using persistent volume claims.
 Create PersistentVolumeClaim and a Redis pod which references the `fast` StorageClass:
 
 `kubectl create -f storageos-pvc.yaml`{{execute}}
-`kubectl create -f storageos-pod.yaml`{{execute}}
+`kubectl create -f redis-pod.yaml`{{execute}}
 
 You should see a StorageOS persistent volume:
 
