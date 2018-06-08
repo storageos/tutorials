@@ -11,4 +11,4 @@ You should see a StorageOS persistent volume:
 
 Confirm StorageOS provisioned the volume on `node01`:
 
-`storageos volume ls`{{execute}}
+`storageos volume ls --format "table {{.Name}}\t{{.Size}}\t{{.Location}}"`{{execute}}
