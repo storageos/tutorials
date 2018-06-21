@@ -1,8 +1,8 @@
 ## Prepare host
 
-Required kernel modules will be enabled by running the following `./enable-lio.sh`
+First, install the required kernel modules will be enabled by running the following.
 
-``chmod +x enable-lio.sh && ./enable-lio.sh``{{execute}}
+``./enable-lio.sh``{{execute}}
 
 ## Install StorageOS
 

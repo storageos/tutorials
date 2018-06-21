@@ -1,3 +1,3 @@
 ~/.launch.sh
 
-export STORAGEOS_USER=storageos STORAGEOS_PASSWORD=storageos
+export STORAGEOS_USERNAME=storageos STORAGEOS_PASSWORD=storageos

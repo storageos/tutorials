@@ -44,7 +44,7 @@
             "text": "finish.md"
         },
         "assets": {
-          "host01": [{"file": "*", "target": "~/"}]
+          "host01": [{"file": "*", "target": "~/", "chmod": "+x"}]
         }
     }
 }
