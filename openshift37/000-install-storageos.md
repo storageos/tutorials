@@ -27,7 +27,7 @@ docker run -d --name storageos \
 
 ## Create StorageClass
 
-First, it is required to create a secret that sets the api endpoint of StorageOS
+First, create a secret that specifies the StorageOS api endpoint.
 
 `APIADDRESS=$(echo -n "tcp://127.0.0.1:5705" | base64); sed -i "s/REPLACE/$APIADDRESS/g" secret.yaml`{{execute}}
 
