@@ -1,12 +1,12 @@
 ## Prepare host
 
-First, install the required kernel modules will be enabled by running the following.
+First, ensure all the pre-req kernel modules are enabled by running the following.
 
 ``./enable-lio.sh``{{execute}}
 
 ## Install StorageOS
 
-(Until openshift version 3.9, feature gates such as mount propagation are not supported. Because of that, the installation of StorageOS is done by container installation rather than DaemonSet)
+(Openshift 3.9 supports feature gates such as mount propagation, but this is not available in Openshift 3.7. As a result, the install of StorageOS in this scenario is done by container install rather than using a DaemonSet)
 
 ``
 docker run -d --name storageos \

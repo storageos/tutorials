@@ -24,6 +24,6 @@ Check the output of the read pod coming from the persisted volume.
 
 `oc logs read`{{execute}}
 
-You can see that the string `Testing StorageOS` with Openshift has been persisted between executions. Any pods can access the data from any host, as volumes are globally namespaced across the cluster.
+You can see that the string `Testing StorageOS with Openshift` has been persisted between executions. Any pods can access the data from any host, as volumes are globally namespaced across the cluster.
 
 Mind that it doesn't matter if the pod `read` would run in a different host of the pod `write` as StorageOS takes care of it.
