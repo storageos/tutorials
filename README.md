@@ -1,6 +1,6 @@
 ## Where do I view StorageOS tutorials?
 
-The StorageOS interactive scenarios can be viewed at https://demo.storageos.cloud.
+The StorageOS interactive scenarios can be viewed at https://play.storageos.com.
 
 ## Contributing to the docs
 
