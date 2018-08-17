@@ -15,16 +15,6 @@ Notes:
 
 Each tutorial should be self contained, without dependencies on other tutorials.
 
-High priority tutorials:
-* [High availability volumes/node failover](http://docs.storageos.com/docs/manage/features/high-availability)
-* [Installing databases](http://docs.storageos.com/docs/applications/databases/)
-* [Managing storage with namespaces](http://docs.storageos.com/docs/manage/volumes/namespaces)
-* [Managing storage with labels](http://docs.storageos.com/docs/manage/volumes/labels)
-* [Managing users and policies](http://docs.storageos.com/docs/manage/users/)
-* [Policy engine](http://docs.storageos.com/docs/operations/rules)
-* [Install StorageOS with Docker Swarm](http://docs.storageos.com/docs/install/schedulers/dockerswarm)
-* [Use databases with Kubernetes](http://docs.storageos.com/docs/install/schedulers/kubernetes)
-
 Use short, readable, but full English sentences throughout.
 
 ### Testing changes
