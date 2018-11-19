@@ -1,9 +1,11 @@
 In this tutorial, we'll look at how you dynamically provision storage using
 StorageOS.
 
-Verify that you have a healthy installation with one worker node, `node01`:
-
+First we need to set the environment variables that allow us to connect to the
+StorageOS cluster. 
 `export STORAGEOS_USERNAME=storageos STORAGEOS_PASSWORD=storageos STORAGEOS_HOST=[[HOST2_IP]]`{{execute}}
+
+Verify that you have a healthy installation with one worker node, `node01`:
 `storageos node ls`{{execute}}
 
 Now an administrator can create a Storage Class to describe the storage that can

@@ -16,4 +16,4 @@ Start a Postgres container specifying StorageOS as the volume driver:
 
 Note that StorageOS has dynamically provisioned the new volume `pgdata`:
 
-`storageos volume ls --format "table {{.Name}}\t{{.Size}}\t{{.Status}}"`{{execute}}
+`storageos volume ls --format "table {{.Name}}\t{{.Size}}\t{{.Status}}\t{{.MountedBy}}\t{{.Location}}"`{{execute}}

@@ -20,3 +20,11 @@ Insert more data, then check that there are four records in the table:
 `INSERT INTO FRUIT (ID,INVENTORY,QUANTITY) VALUES (4, 'Peaches', 203);`{{execute T2}}
 
 `SELECT * FROM FRUIT;`{{execute T2}}
+
+If you check the location of the volume you will see it has not changed,
+despite the volume now being mounted by a different host.
+
+`storageos volume ls --format "table {{.Name}}\t{{.Size}}\t{{.Status}}\t{{.MountedBy}}\t{{.Location}}"`{{execute}}
+
+In this way you can see that the location of the volume is transparent to the
+pod that mounts the volume.

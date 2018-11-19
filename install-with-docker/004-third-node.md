@@ -1,8 +1,33 @@
-Now start StorageOS on the last node:
+Now switch to the second node and install the init container again:
 
-`docker run -d --name storageos -e HOSTNAME=host03 -e ADVERTISE_IP=[[HOST3_IP]] -e JOIN=[[HOST_IP]] --net=host --pid=host --privileged --cap-add SYS_ADMIN --device /dev/fuse -v /var/lib/storageos:/var/lib/storageos:rshared -v /run/docker/plugins:/run/docker/plugins storageos/node:0.10.0 server `{{execute T3}}
+`docker run --name enable_lio                \
+           --privileged                      \
+           --rm                              \
+           --cap-add=SYS_ADMIN               \
+           -v /lib/modules:/lib/modules      \
+           -v /sys:/sys:rshared              \
+           storageos/init:0.1`{{execute T3}}
 
-Confirm that the installation was successful:
+Now you can install the StorageOS node container on the host.
+
+In the third host terminal:
+
+`docker run -d                                           \
+  --name=storageos                                       \
+  --env=HOSTNAME=host03                                  \
+  --env=ADVERTISE_IP=[[HOST3_IP]]                        \
+  --env=JOIN=[[HOST_IP]]                                 \
+  --net=host                                             \
+  --pid=host                                             \
+  --privileged                                           \
+  --cap-add=SYS_ADMIN                                    \
+  --device=/dev/fuse                                     \
+  --volume=/var/lib/storageos:/var/lib/storageos:rshared \
+  --volume=/run/docker/plugins:/run/docker/plugins       \
+  --volume=/sys:/sys                                     \
+  storageos/node:1.0.0 server`{{execute T3}}`
+
+Wait until the container reports that it is healthy:
 
 `docker ps`{{execute T3}}
 

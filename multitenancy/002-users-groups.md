@@ -15,3 +15,4 @@ and viewing all users:
 
 Users with the `user` role can only access namespaces granted to them, and
 change their own password.
+

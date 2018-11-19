@@ -1,8 +1,37 @@
-Now you can install the StorageOS node container on each host.
+Linux-IO is an open source implementation of the SCSI target. It and other
+kernel modules are required for StorageOS to function. For more information
+please see our
+[documentation](https://docs.storageos.com/docs/prerequisites/systemconfiguration).
+StorageOS provides a docker container that will ensure the appropriate modules
+are loaded.
+
+`docker run --name enable_lio                \
+           --privileged                      \
+           --rm                              \
+           --cap-add=SYS_ADMIN               \
+           -v /lib/modules:/lib/modules      \
+           -v /sys:/sys:rshared              \
+           storageos/init:0.1`{{execute T1}}
+
+Now you can install the StorageOS node container on the host.
 
 In the first terminal:
 
-`docker run -d --name storageos -e HOSTNAME=host01 -e ADVERTISE_IP=[[HOST_IP]] -e JOIN=[[HOST_IP]] --net=host --pid=host --privileged --cap-add SYS_ADMIN --device /dev/fuse -v /var/lib/storageos:/var/lib/storageos:rshared -v /run/docker/plugins:/run/docker/plugins storageos/node:0.10.0 server `{{execute T1}}
+`docker run -d                                           \
+  --name=storageos                                       \
+  --env=HOSTNAME=host01                                  \
+  --env=ADVERTISE_IP=[[HOST_IP]]                         \
+  --env=JOIN=[[HOST_IP]]                                 \
+  --env=LOG_LEVEL=debug                                  \
+  --net=host                                             \
+  --pid=host                                             \
+  --privileged                                           \
+  --cap-add=SYS_ADMIN                                    \
+  --device=/dev/fuse                                     \
+  --volume=/var/lib/storageos:/var/lib/storageos:rshared \
+  --volume=/run/docker/plugins:/run/docker/plugins       \
+  --volume=/sys:/sys                                     \
+  storageos/node:1.0.2 server`{{execute T1}}`
 
 Wait until the container reports that it is healthy:
 
