@@ -25,6 +25,7 @@ docker run -d --name storageos                              \
            -e ADVERTISE_IP=[[HOST_IP]]                      \
            -e JOIN=[[HOST_IP]]                              \
            -e LOG_LEVEL=DEBUG                               \
+           -e DISABLE_TELEMETRY=true                        \
            --pid=host                                       \
            --network=host                                   \
            --privileged                                     \

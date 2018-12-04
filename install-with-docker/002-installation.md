@@ -23,6 +23,7 @@ In the first terminal:
   --env=ADVERTISE_IP=[[HOST_IP]]                         \
   --env=JOIN=[[HOST_IP]]                                 \
   --env=LOG_LEVEL=debug                                  \
+  --env=DISABLE_TELEMETRY=true                           \
   --net=host                                             \
   --pid=host                                             \
   --privileged                                           \
