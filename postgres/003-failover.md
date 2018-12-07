@@ -21,6 +21,12 @@ Insert more data, then check that there are four records in the table:
 
 `SELECT * FROM FRUIT;`{{execute T2}}
 
+Quit the Postgres container:
+
+`\q`{{execute T2}}
+
+`exit`{{execute T2}}
+
 If you check the location of the volume you will see it has not changed,
 despite the volume now being mounted by a different host.
 
