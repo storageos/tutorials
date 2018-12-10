@@ -4,8 +4,8 @@ Now switch to the second node and install the init container again:
            --privileged                      \
            --rm                              \
            --cap-add=SYS_ADMIN               \
-           -v /lib/modules:/lib/modules      \
-           -v /sys:/sys:rshared              \
+           --volume /lib/modules:/lib/module \
+           --volume /sys:/sys:rshared        \
            storageos/init:0.1`{{execute T3}}
 
 Now you can install the StorageOS node container on the host.
@@ -25,7 +25,7 @@ In the third host terminal:
   --volume=/var/lib/storageos:/var/lib/storageos:rshared \
   --volume=/run/docker/plugins:/run/docker/plugins       \
   --volume=/sys:/sys                                     \
-  storageos/node:1.0.0 server`{{execute T3}}`
+  storageos/node:1.0.2 server`{{execute T3}}`
 
 Wait until the container reports that it is healthy:
 

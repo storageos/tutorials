@@ -8,11 +8,11 @@ availability and failover.
 
 Start a Postgres container specifying StorageOS as the volume driver:
 
-`docker run -d --name postgres-dev \
---volume-driver=storageos \
--v pgdata:/var/lib/postgresql/data \
--e PGDATA=/var/lib/postgresql/data/pgdata \
--e POSTGRES_PASSWORD=storageos postgres`{{execute}}
+`docker run -d --name postgres-dev           \
+--volume-driver=storageos                    \
+--volume pgdata:/var/lib/postgresql/data     \
+--env PGDATA=/var/lib/postgresql/data/pgdata \
+--env POSTGRES_PASSWORD=storageos postgres`{{execute}}
 
 Note that StorageOS has dynamically provisioned the new volume `pgdata`:
 

@@ -17,11 +17,11 @@ https://[[HOST_SUBDOMAIN]]-5705-[[KATACODA_HOST]].environments.katacoda.com/
 
 Mount the volume in a container
 
-`docker run                 \
-  --interactive             \
-  --tty                     \
+`docker run \
+  --interactive \
+  --tty \
   --volume-driver=storageos \
-  --volume=myvol:/data      \
+  --volume=myvol:/data \
   busybox sh
 `{{execute T1}}
 

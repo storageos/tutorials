@@ -1,4 +1,4 @@
-{
+
   "builders": [
     {
       "type": "qemu",
@@ -131,7 +131,7 @@
 	       "echo options nbd nbds_max=1024 | sudo tee /etc/modprobe.d/nbd.conf",
 	       "sudo curl -sSL https://github.com/storageos/go-cli/releases/download/1.0.0/storageos_linux_amd64 -o /usr/local/bin/storageos",
 	      "sudo chmod +x /usr/local/bin/storageos",
-        "sudo docker pull storageos/node:1.0.0",
+        "sudo docker pull storageos/node:1.0.2",
         "sudo docker pull postgres:latest",
         "sudo docker pull microsoft/mssql-server-linux:2017-latest"
       ]

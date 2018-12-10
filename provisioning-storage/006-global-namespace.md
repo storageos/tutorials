@@ -8,7 +8,9 @@ Check the container can see myfile
 
 `cat /data/myfile`{{execute T2}}
 
+`exit`{{execute T2}}
+
 You can confirm that the volume is located on one host while being mounted by
 another host the following command:
 
-`storageos volume ls --format "table {{.Name}}\t{{.MountedBy}}\t{{.Location}}"`
+`storageos volume ls --format "table {{.Name}}\t{{.MountedBy}}\t{{.Location}}"`{{execute T2}}

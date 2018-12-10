@@ -4,12 +4,12 @@ First, ensure all the pre-req kernel modules are enabled using the following
 Docker container.
 
 ``
-docker run --name enable_lio                  \
-           --privileged                       \
-           --rm                               \
-           --cap-add=SYS_ADMIN                \
-           -v /lib/modules:/lib/modules       \
-           -v /sys:/sys:rshared               \
+docker run --name enable_lio                   \
+           --privileged                        \
+           --rm                                \
+           --cap-add=SYS_ADMIN                 \
+           --volume /lib/modules:/lib/modules  \
+           --volume /sys:/sys:rshared          \
            storageos/init:0.1
 ``{{execute}}
 
@@ -20,20 +20,19 @@ available in Openshift 3.7. As a result, the installation of StorageOS in this
 scenario is done via container install rather than using a DaemonSet
 
 ``
-docker run -d --name storageos                              \
-           -e HOSTNAME                                      \
-           -e ADVERTISE_IP=[[HOST_IP]]                      \
-           -e JOIN=[[HOST_IP]]                              \
-           -e LOG_LEVEL=DEBUG                               \
-           -e DISABLE_TELEMETRY=true                        \
-           --pid=host                                       \
-           --network=host                                   \
-           --privileged                                     \
-           --cap-add SYS_ADMIN                              \
-           --device /dev/fuse                               \
-           -v /sys:/sys                                     \
-           -v /var/lib/storageos:/var/lib/storageos:rshared \
-           -v /run/docker/plugins:/run/docker/plugins       \
+docker run -d --name storageos                                    \
+           --env HOSTNAME                                         \
+           --env ADVERTISE_IP=[[HOST_IP]]                         \
+           --env JOIN=[[HOST_IP]]                                 \
+           --env DISABLE_TELEMETRY=true                           \
+           --pid=host                                             \
+           --network=host                                         \
+           --privileged                                           \
+           --cap-add SYS_ADMIN                                    \
+           --device /dev/fuse                                     \
+           --volume /sys:/sys                                     \
+           --volume /var/lib/storageos:/var/lib/storageos:rshared \
+           --volume /run/docker/plugins:/run/docker/plugins       \
            storageos/node:1.0.2 server
 ``{{execute}}
 
