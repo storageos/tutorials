@@ -5,7 +5,12 @@ Start by removing the Postgres container:
 
 Switch to another node with `ssh root@host02`{{execute T2}} and start a new Postgres instance with `pgdata` mounted:
 
-`docker run -d --name postgres-dev -v pgdata:/var/lib/postgresql/data --volume-driver=storageos -e POSTGRES_PASSWORD=storageos -e PGDATA=/var/lib/postgresql/data/pgdata postgres`{{execute T2}}
+`docker run -d --name postgres-dev           \
+--volume pgdata:/var/lib/postgresql/data     \
+--volume-driver=storageos                    \
+--env POSTGRES_PASSWORD=storageos            \
+--env PGDATA=/var/lib/postgresql/data/pgdata \
+ postgres`{{execute T2}}
 
 Connect to your test database:
 
@@ -20,3 +25,17 @@ Insert more data, then check that there are four records in the table:
 `INSERT INTO FRUIT (ID,INVENTORY,QUANTITY) VALUES (4, 'Peaches', 203);`{{execute T2}}
 
 `SELECT * FROM FRUIT;`{{execute T2}}
+
+Quit the Postgres container:
+
+`\q`{{execute T2}}
+
+`exit`{{execute T2}}
+
+If you check the location of the volume you will see it has not changed,
+despite the volume now being mounted by a different host.
+
+`storageos volume ls --format "table {{.Name}}\t{{.Size}}\t{{.Status}}\t{{.MountedBy}}\t{{.Location}}"`{{execute}}
+
+In this way you can see that the location of the volume is transparent to the
+pod that mounts the volume.

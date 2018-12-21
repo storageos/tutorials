@@ -16,7 +16,11 @@ Now connect to the database and insert some sample data:
   QUANTITY       INT      NOT NULL
 );`{{execute}}
 
-`INSERT INTO FRUIT (ID,INVENTORY,QUANTITY) VALUES (1, 'Bananas', 132), (2, 'Apples', 165), (3, 'Oranges', 219);`{{execute}}
+`INSERT INTO FRUIT (ID,INVENTORY,QUANTITY) 
+VALUES 
+(1, 'Bananas', 132), 
+(2, 'Apples', 165), 
+(3, 'Oranges', 219);`{{execute}}
 
 Check your commands succeeded:
 

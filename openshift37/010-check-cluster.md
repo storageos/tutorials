@@ -3,7 +3,7 @@
 The StorageOS CLI presents useful information regarding the cluster and its volumes. 
 
 
-1. Using StorageOS CLI: ``storageos cluster health``{{execute}}
+1. Using StorageOS CLI: ``storageos node ls``{{execute}}
 
 2. Check the health REST API endpoint directly by: ``curl 127.0.0.1:5706/health``{{execute}}
 

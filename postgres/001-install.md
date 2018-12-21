@@ -10,10 +10,10 @@ Start a Postgres container specifying StorageOS as the volume driver:
 
 `docker run -d --name postgres-dev \
 --volume-driver=storageos \
--v pgdata:/var/lib/postgresql/data \
--e PGDATA=/var/lib/postgresql/data/pgdata \
--e POSTGRES_PASSWORD=storageos postgres`{{execute}}
+--volume pgdata:/var/lib/postgresql/data \
+--env PGDATA=/var/lib/postgresql/data/pgdata \
+--env POSTGRES_PASSWORD=storageos postgres`{{execute}}
 
 Note that StorageOS has dynamically provisioned the new volume `pgdata`:
 
-`storageos volume ls --format "table {{.Name}}\t{{.Size}}\t{{.Status}}"`{{execute}}
+`storageos volume ls --format "table {{.Name}}\t{{.Size}}\t{{.Status}}\t{{.MountedBy}}\t{{.Location}}"`{{execute}}

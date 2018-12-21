@@ -1,27 +1,39 @@
 ## Prepare host
 
-First, ensure all the pre-req kernel modules are enabled by running the following.
+First, ensure all the pre-req kernel modules are enabled using the following
+Docker container.
 
-``./enable-lio.sh``{{execute}}
+``
+docker run --name enable_lio                   \
+           --privileged                        \
+           --rm                                \
+           --cap-add=SYS_ADMIN                 \
+           --volume /lib/modules:/lib/modules  \
+           --volume /sys:/sys:rshared          \
+           storageos/init:0.1
+``{{execute}}
 
 ## Install StorageOS
 
-(Openshift 3.9 supports feature gates such as mount propagation, but this is not available in Openshift 3.7. As a result, the install of StorageOS in this scenario is done by container install rather than using a DaemonSet)
+Openshift 3.9 supports feature gates such as mount propagation, but this is not
+available in Openshift 3.7. As a result, the installation of StorageOS in this
+scenario is done via container install rather than using a DaemonSet
 
 ``
-docker run -d --name storageos \
-           -e HOSTNAME \
-           -e ADVERTISE_IP=[[HOST_IP]] \
-           -e JOIN=[[HOST_IP]] \
-           --pid=host \
-           --network=host \
-           --privileged \
-           --cap-add SYS_ADMIN \
-           --device /dev/fuse \
-           -v /sys:/sys \
-           -v /var/lib/storageos:/var/lib/storageos:rshared \
-           -v /run/docker/plugins:/run/docker/plugins \
-           storageos/node:1.0.0-rc2 server
+docker run -d --name storageos                                    \
+           --env HOSTNAME                                         \
+           --env ADVERTISE_IP=[[HOST_IP]]                         \
+           --env JOIN=[[HOST_IP]]                                 \
+           --env DISABLE_TELEMETRY=true                           \
+           --pid=host                                             \
+           --network=host                                         \
+           --privileged                                           \
+           --cap-add SYS_ADMIN                                    \
+           --device /dev/fuse                                     \
+           --volume /sys:/sys                                     \
+           --volume /var/lib/storageos:/var/lib/storageos:rshared \
+           --volume /run/docker/plugins:/run/docker/plugins       \
+           storageos/node:1.0.2 server
 ``{{execute}}
 
 

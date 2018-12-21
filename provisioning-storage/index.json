@@ -41,12 +41,10 @@
     },
     "assets": {
       "host01": [{
-        "file": "verify-healthy.sh",
+        "file": "*",
         "target": "/opt/",
         "chmod": "+x"
-      }
-    ]
-    }
+      }]}
   },
   "environment": {
     "uilayout": "terminal",
