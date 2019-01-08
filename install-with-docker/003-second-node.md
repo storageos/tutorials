@@ -25,7 +25,7 @@ In the second host terminal:
   --volume=/var/lib/storageos:/var/lib/storageos:rshared \
   --volume=/run/docker/plugins:/run/docker/plugins       \
   --volume=/sys:/sys                                     \
-  storageos/node:1.0.2 server`{{execute T2}}`
+  storageos/node:1.1.0 server`{{execute T2}}`
 
 Wait until the container reports that it is healthy:
 

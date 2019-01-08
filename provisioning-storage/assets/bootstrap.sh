@@ -27,7 +27,7 @@ for HOST in ${HOST_ARRAY[@]}; do
         -e HOSTNAME="$HOST" -e ADVERTISE_IP=$(grep -m 1 "172.* $HOST" /etc/hosts | cut -d " " -f1 ) \
         -e JOIN=$CLUSTER_ID --net=host --pid=host --privileged --cap-add SYS_ADMIN                  \
         --device /dev/fuse -v /var/lib/storageos:/var/lib/storageos:rshared                         \
-        -v/run/docker/plugins:/run/docker/plugins -v /sys:/sys storageos/node:1.0.2                 \
+        -v/run/docker/plugins:/run/docker/plugins -v /sys:/sys storageos/node:1.1.0                 \
         server"; then
 
         # On success print success out to console

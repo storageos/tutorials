@@ -33,7 +33,7 @@ docker run -d --name storageos                                    \
            --volume /sys:/sys                                     \
            --volume /var/lib/storageos:/var/lib/storageos:rshared \
            --volume /run/docker/plugins:/run/docker/plugins       \
-           storageos/node:1.0.2 server
+           storageos/node:1.1.0 server
 ``{{execute}}
 
 
