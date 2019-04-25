@@ -21,9 +21,13 @@ spec:
 END
 ``{{execute}}
 
-Verify that the pod enters a running state
+Verify that the pod enters a 1/1 running state. StorageOS pods take
+65s to enter the running state as the node bootstraps and tries to
+discover other cluster members.
+
 `oc get pods -n storageos -w`{{execute}}
 
+Once the pod is running use Ctrl+C to return to the shell. 
 ## Check StorageOS status
 
 There are other ways to check the health of the StorageOS cluster 
