@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: read
+spec:
+  containers:
+    - name: test
+      image: centos:7
+      command: [ "/bin/sh" ]
+      args:
+      - "-c"
+      - "cat  /mnt/data"
+      volumeMounts:
+        - mountPath: /mnt
+          name: vol
+  volumes:
+    - name: vol
+      persistentVolumeClaim:
+        claimName: pvc001
+
