@@ -1,140 +1,148 @@
-
-  "builders": [
-    {
-      "type": "qemu",
-      "output_directory": "output-qemu-docker",
-      "vm_name": "storageos-docker",
-      "disk_size": 19168,
-      "format": "qcow2",
-      "accelerator": "kvm",
-      "headless": "true",
-      "iso_checksum_type": "md5",
-      "iso_checksum": "2bce60d18248df9980612619ff0b34e6",
-      "iso_url": "ubuntu-16.04.2-server-amd64.iso",
-      "ssh_username": "packer",
-      "ssh_password": "packer",
-      "ssh_port": 22,
-      "ssh_wait_timeout": "20m",
-      "ssh_pty" : "true",
-      "boot_wait": "5s",
-      "boot_command": [
-        "<esc><f6><esc>",
-        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
-        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
-        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
-        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
-        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
-        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
-        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
-        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
-        "<bs><bs><bs><bs>",
-        "initrd=/install/initrd.gz ",
-        "auto=true ",
-        "passwd/user-fullname=packer ",
-        "passwd/user-password=packer ",
-        "passwd/user-password-again=packer ",
-        "passwd/username=packer ",
-        "file=/floppy/preseed.cfg ",
-        "language=en ",
-        "country=CA ",
-        "locale=en_CA.UTF-8 ",
-        "hostname=host01 ",
-        "domain= ",
-        "console-setup/ask_detect=false ",
-        "keyboard-configuration/layoutcode=us ",
-        "vga=788 noprompt quiet --<enter>"
-      ],
-      "floppy_files": [
-        "http/preseed.cfg"
-      ],
-      "shutdown_command": "echo 'packer' |sudo -S shutdown -P now",
-      "qemuargs": [
-        [
-          "-m", "4024M"
-        ]
+"builders": [
+  {
+    "type": "qemu",
+    "output_directory": "output-qemu-docker",
+    "vm_name": "storageos-docker",
+    "disk_size": 19168,
+    "format": "qcow2",
+    "accelerator": "kvm",
+    "headless": "true",
+    "iso_checksum_type": "md5",
+    "iso_checksum": "2bce60d18248df9980612619ff0b34e6",
+    "iso_url": "ubuntu-16.04.2-server-amd64.iso",
+    "ssh_username": "packer",
+    "ssh_password": "packer",
+    "ssh_port": 22,
+    "ssh_wait_timeout": "20m",
+    "ssh_pty": "true",
+    "boot_wait": "5s",
+    "boot_command": [
+      "<esc><f6><esc>",
+      "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+      "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+      "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+      "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+      "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+      "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+      "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+      "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+      "<bs><bs><bs><bs>",
+      "initrd=/install/initrd.gz ",
+      "auto=true ",
+      "passwd/user-fullname=packer ",
+      "passwd/user-password=packer ",
+      "passwd/user-password-again=packer ",
+      "passwd/username=packer ",
+      "file=/floppy/preseed.cfg ",
+      "language=en ",
+      "country=CA ",
+      "locale=en_CA.UTF-8 ",
+      "hostname=host01 ",
+      "domain= ",
+      "console-setup/ask_detect=false ",
+      "keyboard-configuration/layoutcode=us ",
+      "vga=788 noprompt quiet --<enter>"
+    ],
+    "floppy_files": [
+      "http/preseed.cfg"
+    ],
+    "shutdown_command": "echo 'packer' |sudo -S shutdown -P now",
+    "qemuargs": [
+      [
+        "-m",
+        "4024M"
       ]
-    }
-  ],
-  "provisioners": [
-    {
-      "type": "shell",
-      "execute_command": "echo 'packer' | {{ .Vars }} sudo -E -S sh '{{ .Path }}'",
-      "inline": [
-        "echo '%sudo    ALL=(ALL)  NOPASSWD:ALL' >> /etc/sudoers"
-      ]
-    },
-    {
-      "type": "shell",
-      "scripts": [
-        "scripts/packages.sh"
-      ]
-    },
-    {
-      "type": "shell",
-      "execute_command": "echo 'packer' | {{ .Vars }} sudo -E -S sh '{{ .Path }}'",
-      "inline": [
-        "sudo locale-gen en_GB.UTF-8",
-        "sudo echo Storage=none | sudo tee -a /etc/systemd/journald.conf && sudo systemctl restart systemd-journald.service",
-        "echo 'export PS1=\"$ \"' >> /root/.bashrc",
-        "touch /root/.hushlogin",
-        "sudo sed -i 's/prohibit-password/yes/' /etc/ssh/sshd_config",
-        "sudo sed -i 's/without-password/yes/' /etc/ssh/sshd_config",
-        "sudo sed -i 's/forced-commands-only/yes/' /etc/ssh/sshd_config",
-        "cat /etc/ssh/sshd_config",
-        "cat /root/.ssh/authorized_keys",
-        "sudo mkdir -p /root/.ssh/",
-        "sudo rm -rf /root/.ssh/authorized_keys",
-        "systemctl stop apt-daily.service",
-        "systemctl kill --kill-who=all apt-daily.service",
-        "systemctl disable apt-daily.service",
-        "echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCqogWTBOZvsLcz7Zxz7i4+Z00WA01Y+xpNsvUiC6bkB8F4PhuVkKMn+ww7F/UtLcQ9qO6U1K8f5FpkDmeQQLvV7uYCnG7X63ia+njPgF8euF5rpWvmjG5Zz/6gLGf8+wFNC4yXyjU7G7Vce59/JdbaPUdOmA3aL2WKMxoea/IDOTEAORFcyMLNNJdy0yYNxLfEl7w3IY12po/cPb2VKeqJqi3UqwJroDYjCOt5fS4Fp0tvzvbiXP8+nbhd0uTTEkgtl3/FU0ozQBAHgO6UlbSV1sJEIjZG+543FtRfV0tbmUyT7+N0NGOZYJ3FQ1B/MrP6H8O/8YhiaQDLwkL5zhxPqW9cyAZw207uZbM26ohfCQUMmFoYJ9fBA/dt7aXbw5rb0lihFYZMq94NUi3ABLDBEsT9J5+mJomdlUHDwHxztcjO8JnThP5iBcYmNiqAnhbn71Avr8Zz1vHVP0TFC8f40NnK/A7nwTQw0aQ+H0u+EGrx+2gVmSUlwQyDDUlHJpEI0IefWtdmBqYvMyfVDf8SGSolkcXUJxX63iCFEyPMyMLUWLbPcwRhlUn6G6NVDI6sLwfveeXFJppuSMx+Wqc3ZmyEHIj/mVuEuygVke3Bd4/v8e4o6adR93yF/Fuq0Q0bMhgf2xCwVFSaqlta/o5m0wMNwCO3NuDLCZjIFj3+vw== course@katacoda.com' | sudo tee -a /root/.ssh/authorized_keys"
-      ]
-    },
-    {
-      "type": "shell",
-      "execute_command": "echo 'packer' | {{ .Vars }} sudo -E -S sh '{{ .Path }}'",
-      "inline": [
-        "echo '127.0.0.1 host01' >> /etc/hosts",
-        "hostname host01 && echo host01 > /etc/hostname"
-      ]
-    },
-    {
-      "type": "shell",
-      "inline": [
-        "curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -",
-        "echo 'deb http://apt.kubernetes.io/ kubernetes-xenial main' | sudo tee -a /etc/apt/sources.list.d/kubernetes.list",
-        "sudo apt-get update",
-        "sudo curl -L https://github.com/docker/compose/releases/download/1.11.1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose; sudo chmod +x /usr/local/bin/docker-compose",
-        "sudo curl -L https://raw.githubusercontent.com/docker/compose/$(docker-compose version --short)/contrib/completion/bash/docker-compose | sudo tee -a /etc/bash_completion.d/docker-compose",
-        "sudo apt-get install -y bash-completion",
-        "sudo curl -fsSL https://get.docker.com | sh -"
-      ]
-    },
-    { "type": "file", "destination": "~/daemon.json", "source": "./daemon.json" },
-    { "type": "file", "destination": "~/docker.service", "source": "./docker.service" },
-    {
-      "type": "shell",
-      "inline": [
-        "sudo mv ~/daemon.json /etc/docker/daemon.json;",
-        "sudo mv ~/docker.service /lib/systemd/system/docker.service",
-        "sudo systemctl daemon-reload",
-        "sudo systemctl restart docker",
-        "sleep 10",
-        "sudo usermod -aG docker packer",
-        "sudo docker images"
-      ]
-    },
-    {
-      "type": "shell",
-      "inline": [
-	       "echo nbd | sudo tee -a /etc/modules",
-	       "echo options nbd nbds_max=1024 | sudo tee /etc/modprobe.d/nbd.conf",
-	       "sudo curl -sSL https://github.com/storageos/go-cli/releases/download/1.0.0/storageos_linux_amd64 -o /usr/local/bin/storageos",
-	      "sudo chmod +x /usr/local/bin/storageos",
-        "sudo docker pull storageos/node:1.2.0",
-        "sudo docker pull postgres:latest",
-        "sudo docker pull microsoft/mssql-server-linux:2017-latest"
-      ]
-    }
-  ]
+    ]
+  }
+],
+"provisioners": [
+  {
+    "type": "shell",
+    "execute_command": "echo 'packer' | {{ .Vars }} sudo -E -S sh '{{ .Path }}'",
+    "inline": [
+      "echo '%sudo    ALL=(ALL)  NOPASSWD:ALL' >> /etc/sudoers"
+    ]
+  },
+  {
+    "type": "shell",
+    "scripts": [
+      "scripts/packages.sh"
+    ]
+  },
+  {
+    "type": "shell",
+    "execute_command": "echo 'packer' | {{ .Vars }} sudo -E -S sh '{{ .Path }}'",
+    "inline": [
+      "sudo locale-gen en_GB.UTF-8",
+      "sudo echo Storage=none | sudo tee -a /etc/systemd/journald.conf && sudo systemctl restart systemd-journald.service",
+      "echo 'export PS1=\"$ \"' >> /root/.bashrc",
+      "touch /root/.hushlogin",
+      "sudo sed -i 's/prohibit-password/yes/' /etc/ssh/sshd_config",
+      "sudo sed -i 's/without-password/yes/' /etc/ssh/sshd_config",
+      "sudo sed -i 's/forced-commands-only/yes/' /etc/ssh/sshd_config",
+      "cat /etc/ssh/sshd_config",
+      "cat /root/.ssh/authorized_keys",
+      "sudo mkdir -p /root/.ssh/",
+      "sudo rm -rf /root/.ssh/authorized_keys",
+      "systemctl stop apt-daily.service",
+      "systemctl kill --kill-who=all apt-daily.service",
+      "systemctl disable apt-daily.service",
+      "echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCqogWTBOZvsLcz7Zxz7i4+Z00WA01Y+xpNsvUiC6bkB8F4PhuVkKMn+ww7F/UtLcQ9qO6U1K8f5FpkDmeQQLvV7uYCnG7X63ia+njPgF8euF5rpWvmjG5Zz/6gLGf8+wFNC4yXyjU7G7Vce59/JdbaPUdOmA3aL2WKMxoea/IDOTEAORFcyMLNNJdy0yYNxLfEl7w3IY12po/cPb2VKeqJqi3UqwJroDYjCOt5fS4Fp0tvzvbiXP8+nbhd0uTTEkgtl3/FU0ozQBAHgO6UlbSV1sJEIjZG+543FtRfV0tbmUyT7+N0NGOZYJ3FQ1B/MrP6H8O/8YhiaQDLwkL5zhxPqW9cyAZw207uZbM26ohfCQUMmFoYJ9fBA/dt7aXbw5rb0lihFYZMq94NUi3ABLDBEsT9J5+mJomdlUHDwHxztcjO8JnThP5iBcYmNiqAnhbn71Avr8Zz1vHVP0TFC8f40NnK/A7nwTQw0aQ+H0u+EGrx+2gVmSUlwQyDDUlHJpEI0IefWtdmBqYvMyfVDf8SGSolkcXUJxX63iCFEyPMyMLUWLbPcwRhlUn6G6NVDI6sLwfveeXFJppuSMx+Wqc3ZmyEHIj/mVuEuygVke3Bd4/v8e4o6adR93yF/Fuq0Q0bMhgf2xCwVFSaqlta/o5m0wMNwCO3NuDLCZjIFj3+vw== course@katacoda.com' | sudo tee -a /root/.ssh/authorized_keys"
+    ]
+  },
+  {
+    "type": "shell",
+    "execute_command": "echo 'packer' | {{ .Vars }} sudo -E -S sh '{{ .Path }}'",
+    "inline": [
+      "echo '127.0.0.1 host01' >> /etc/hosts",
+      "hostname host01 && echo host01 > /etc/hostname"
+    ]
+  },
+  {
+    "type": "shell",
+    "inline": [
+      "curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -",
+      "echo 'deb http://apt.kubernetes.io/ kubernetes-xenial main' | sudo tee -a /etc/apt/sources.list.d/kubernetes.list",
+      "sudo apt-get update",
+      "sudo curl -L https://github.com/docker/compose/releases/download/1.11.1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose; sudo chmod +x /usr/local/bin/docker-compose",
+      "sudo curl -L https://raw.githubusercontent.com/docker/compose/$(docker-compose version --short)/contrib/completion/bash/docker-compose | sudo tee -a /etc/bash_completion.d/docker-compose",
+      "sudo apt-get install -y bash-completion",
+      "sudo curl -fsSL https://get.docker.com | sh -"
+    ]
+  },
+  {
+    "type": "file",
+    "destination": "~/daemon.json",
+    "source": "./daemon.json"
+  },
+  {
+    "type": "file",
+    "destination": "~/docker.service",
+    "source": "./docker.service"
+  },
+  {
+    "type": "shell",
+    "inline": [
+      "sudo mv ~/daemon.json /etc/docker/daemon.json;",
+      "sudo mv ~/docker.service /lib/systemd/system/docker.service",
+      "sudo systemctl daemon-reload",
+      "sudo systemctl restart docker",
+      "sleep 10",
+      "sudo usermod -aG docker packer",
+      "sudo docker images"
+    ]
+  },
+  {
+    "type": "shell",
+    "inline": [
+      "echo nbd | sudo tee -a /etc/modules",
+      "echo options nbd nbds_max=1024 | sudo tee /etc/modprobe.d/nbd.conf",
+      "sudo curl -sSL https://github.com/storageos/go-cli/releases/download/1.0.0/storageos_linux_amd64 -o /usr/local/bin/storageos",
+      "sudo chmod +x /usr/local/bin/storageos",
+      "sudo docker pull storageos/node:1.2.1",
+      "sudo docker pull postgres:latest",
+      "sudo docker pull microsoft/mssql-server-linux:2017-latest"
+    ]
+  }
+]
 }

@@ -16,7 +16,7 @@ spec:
   secretRefName: "storageos-api"
   secretRefNamespace: "default"
   images:
-    nodeContainer: "storageos/node:1.2.0"
+    nodeContainer: "storageos/node:1.2.1"
   disableTelemetry: true
 END
 ``{{execute}}
@@ -27,10 +27,10 @@ discover other cluster members.
 
 `oc get pods -n storageos -w`{{execute}}
 
-Once the pod is running use Ctrl+C to return to the shell. 
+Once the pod is running use Ctrl+C to return to the shell.
 ## Check StorageOS status
 
-There are other ways to check the health of the StorageOS cluster 
+There are other ways to check the health of the StorageOS cluster
 
 1. Using StorageOS CLI: ``storageos node ls``{{execute}}
 

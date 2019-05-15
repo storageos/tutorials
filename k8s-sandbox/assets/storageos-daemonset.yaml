@@ -13,7 +13,7 @@ spec:
       hostNetwork: true
       containers:
       - name: storageos
-        image: storageos/node:1.2.0
+        image: storageos/node:1.2.1
         args:
         - server
         env:
