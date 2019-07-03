@@ -10,7 +10,7 @@ docker run --name enable_lio                   \
            --cap-add=SYS_ADMIN                 \
            --volume /lib/modules:/lib/modules  \
            --volume /sys:/sys:rshared          \
-           storageos/init:0.1
+           storageos/init:0.2
 ``{{execute}}
 
 ## Install StorageOS
@@ -33,7 +33,7 @@ docker run -d --name storageos                                    \
            --volume /sys:/sys                                     \
            --volume /var/lib/storageos:/var/lib/storageos:rshared \
            --volume /run/docker/plugins:/run/docker/plugins       \
-           storageos/node:1.2.0 server
+           storageos/node:1.3.0 server
 ``{{execute}}
 
 
