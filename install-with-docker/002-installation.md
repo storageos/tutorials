@@ -11,7 +11,7 @@ are loaded.
            --cap-add=SYS_ADMIN \
            --volume /lib/modules:/lib/modules \
            --volume /sys:/sys:rshared \
-           storageos/init:0.1`{{execute T1}}
+           storageos/init:0.2`{{execute T1}}
 
 Now you can install the StorageOS node container on the host.
 
@@ -31,7 +31,7 @@ In the first terminal:
   --volume=/var/lib/storageos:/var/lib/storageos:rshared \
   --volume=/run/docker/plugins:/run/docker/plugins \
   --volume=/sys:/sys \
-  storageos/node:1.2.0 server`{{execute T1}}`
+  storageos/node:1.3.0 server`{{execute T1}}`
 
 Wait until the container reports that it is healthy:
 

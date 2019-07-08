@@ -16,7 +16,7 @@ spec:
   secretRefName: "storageos-api"
   secretRefNamespace: "default"
   images:
-    nodeContainer: "storageos/node:1.2.0"
+    nodeContainer: "storageos/node:1.3.0"
   disableTelemetry: true
 END
 ``{{execute}}
