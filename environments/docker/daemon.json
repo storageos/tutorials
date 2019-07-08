@@ -1,5 +1,5 @@
 {
-    "bip":"1.3.08.0.1/24",
+    "bip":"172.18.0.1/24",
     "debug": true,
     "storage-driver": "overlay",
     "hosts": ["unix:///var/run/docker.sock", "tcp://0.0.0.0:2375", "tcp://0.0.0.0:2345", "fd://"],
