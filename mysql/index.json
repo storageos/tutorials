@@ -1,8 +1,9 @@
 {
     "pathwayTitle": "StorageOS",
+    "title": "MySQL",
     "icon": "fa-storageos",
     "time": "10 minutes",
-    "difficulty": "beginner",
+    "difficulty": "Beginner",
     "description": "Learn how to run MySQL with StorageOS volumes for high availability",
     "details": {
         "intro": {
