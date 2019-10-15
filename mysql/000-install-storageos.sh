@@ -1,4 +1,4 @@
-CLUSTER_ID=$(ssh root@host01 "storageos cluster create")
+CLUSTER_ID=$(storageos cluster create)
 
 docker -H host01:2345 run -d --name storageos -e DISABLE_TELEMETRY=true -e HOSTNAME=host01 -e ADVERTISE_IP=[[HOST_IP]] -e JOIN=$CLUSTER_ID --net=host --pid=host --privileged --cap-add SYS_ADMIN --device /dev/fuse -v /sys:/sys -v /var/lib/storageos:/var/lib/storageos:rshared -v /run/docker/plugins:/run/docker/plugins storageos/node:1.4.0 server
 

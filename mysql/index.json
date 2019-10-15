@@ -15,6 +15,14 @@
             {
                 "title": "Installation",
                 "text": "001-install.md"
+            },
+            {
+                "title": "Insert test data",
+                "text": "002-test-data.md"
+            },
+            {
+                "title": "Failover",
+                "text": "003-failover.md"
             }
         ],
         "finish": {
