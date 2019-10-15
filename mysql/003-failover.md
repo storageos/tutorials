@@ -1,6 +1,6 @@
 Now, let's check that the data was persisted and is accessible on another node.
 
-Start by removing the Postgres container:
+Start by removing the MySQL container:
 `docker kill mysql-dev`{{execute}}
 
 Switch to another node with `ssh root@host02`{{execute T2}} and start a new MySQL instance with `mysqldata` mounted:
