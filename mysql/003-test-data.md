@@ -1,8 +1,8 @@
 Connect to MySQL and create a test database (your prompt will change):
 
-`docker exec -it mysql-dev bash`{{execute}}
+`kubectl exec -it mysql-client -- bash`{{execute}}
 
-`mysql -u root -pstorageos;`{{execute}}
+`mysql -u root;`{{execute}}
 
 `CREATE DATABASE testdb;`{{execute}}
 
