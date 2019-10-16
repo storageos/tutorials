@@ -16,7 +16,7 @@ Confirm StorageOS provisioned the volume on `node01`:
 The link between the PersistentVolumeClaim and the Pod comes from the pod
 referencing the PersistentVolumeClaim in the pods yaml definition.
 
-Run the command to see the redis-pod definition. 
+Run the command to see the mysql-pod definition. 
 
 `cat mysql-pod.yaml`{{execute}}
 
@@ -27,4 +27,8 @@ Run the command to see the PersistentVolumeClaim definition.
 `cat storageos-pvc.yaml`{{execute}}
 
 Notice that the PersistentVolumeClaim name is fast0001.
+
+Now create a mysql-client pod for connecting to MySQL
+`kubectl create -f mysql-client-pod.yaml`{{execute}}
+
 
