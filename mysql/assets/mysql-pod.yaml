@@ -18,7 +18,7 @@ spec:
         limits:
           cpu: "0.1"
       volumeMounts:
-        - name: data
+        - name: mysql-data
           mountPath: /var/lib/mysql
           subPath: mysql
   volumes:
