@@ -8,9 +8,8 @@ Start a MySQL container specifying StorageOS as the volume driver:
 `docker run -d --name mysql-dev \
 --volume-driver=storageos \
 --volume myslqdata:/var/lib/mysql \
---volume myslconfig:/etc/mysql/mysql.conf.d \
 --env MYSQLDATA=/var/lib/mysql \
---env MYSQL_PASSWORD=storageos mysql`{{execute}} 
+--env MYSQL_ROOT_PASSWORD=storageos mysql`{{execute}}
 
 Note that StorageOS has dynamically provisioned the new volume `mysqldata`:
 
