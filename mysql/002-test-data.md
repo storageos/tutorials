@@ -8,7 +8,7 @@ Connect to MySQL and create a test database (your prompt will change):
 
 Now connect to the database and insert some sample data:
 
-`USE DATABASE testdb;`{{execute}}
+`USE testdb;`{{execute}}
 
 `CREATE TABLE FRUIT(
   ID INT PRIMARY KEY      NOT NULL,
