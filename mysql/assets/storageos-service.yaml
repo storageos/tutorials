@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: storageos-api
+spec:
+  ports:
+  - port: 5705
+    targetPort: 5705
+    name: http
+  type: LoadBalancer
+  selector:
+    name: storageos
+  externalIPs:
+  - 80.11.12.10

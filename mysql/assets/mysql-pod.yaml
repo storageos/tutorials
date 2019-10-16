@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    name: mysql
+  name: test-storageos-mysql-sc-pvc
+spec:
+  containers:
+    - name: mysql
+      image: mysql:5.7
+      env:
+      - name: MYSQL_ALLOW_EMPTY_PASSWORD
+        value: "1"
+      ports:
+      - name: mysql
+        containerPort: 3306
+      resources:
+        limits:
+          cpu: "0.1"
+      volumeMounts:
+        - name: data
+          mountPath: /var/lib/mysql
+          subPath: mysql
+  volumes:
+    - name: mysql-data
+      persistentVolumeClaim:
+        claimName: fast0001
