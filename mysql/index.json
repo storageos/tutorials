@@ -4,46 +4,29 @@
     "icon": "fa-storageos",
     "time": "10 minutes",
     "difficulty": "Beginner",
-    "description": "Learn how to run MySQL with StorageOS volumes for high availability",
+    "description": "Learn how to run MySQL with StorageOS volumes in Kubernetes for high availability",
     "details": {
         "intro": {
             "text": "000-introduction.md",
-            "code": "000-verify-healthy.sh",
-            "courseData": "000-install-storageos.sh"
+            "code": "000-install-storageos.sh"
         },
         "steps": [
             {
-                "title": "Installation",
-                "text": "001-install.md"
-            },
-            {
-                "title": "Insert test data",
-                "text": "002-test-data.md"
-            },
-            {
-                "title": "Failover",
-                "text": "003-failover.md"
-            }
+                "title": "Dynamic provisioning",
+                "text": "001-dynamic-provisioning.md"
+              },
+              {
+                "title": "Provision storage",
+                "text": "002-persistent-volume.md"
+              }
         ],
         "finish": {
             "text": "finish.md"
         },
         "assets": {
-            "host01": [{
-              "file": "*",
-              "target": "/opt/",
-              "chmod": "+x"
-            }],
-            "host02": [{
-              "file": "*",
-              "target": "/opt/",
-              "chmod": "+x"
-            }],
-            "host03": [{
-              "file": "*",
-              "target": "/opt/",
-              "chmod": "+x"
-            }]
+            "host01": [{"file": "*", "target": "/root"}],
+            "host02": [{"file": "*", "target": "/root"}],
+            "host03": [{"file": "*", "target": "/root"}]
         }
     },
     "environment": {
@@ -51,6 +34,6 @@
         "uimessage1": "\u001b[32mYour Interactive Bash Terminal. A safe place to learn and execute commands.\u001b[m\r\n"
     },
     "backend": {
-        "imageid": "storageos-docker-3node"
+        "imageid": "storageos-kubernetes"
     }
 }
