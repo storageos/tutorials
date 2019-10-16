@@ -2,7 +2,7 @@ Connect to MySQL and create a test database (your prompt will change):
 
 `docker exec -it mysql-dev bash;`{{execute}}
 
-`mysql -u root -p;`{{exectue}}
+`mysql -u root -pstorageos;`{{execute}}
 
 `CREATE DATABASE testdb;`{{execute}}
 

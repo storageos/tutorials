@@ -8,17 +8,16 @@ Switch to another node with `ssh root@host02`{{execute T2}} and start a new MySQ
 `docker run -d --name mysql-dev \
 --volume-driver=storageos \
 --volume myslqdata:/var/lib/mysql \
---volume myslconfig:/etc/mysql/mysql.conf.d \
 --env MYSQLDATA=/var/lib/mysql \
---env MYSQL_PASSWORD=storageos mysql`{{execute T2}} 
+--env MYSQL_ROOT_PASSWORD=storageos mysql`{{execute T2}}
 
 Connect to your test database:
 
 `docker exec -it mysql-dev bash`{{execute T2}}
 
-`mysql -u root -p;`{{execute T2}}
+`mysql -u root -pstorageos;`{{execute T2}}
 
-`USE DATABASE testdb;`{{execute T2}}
+`USE testdb;`{{execute T2}}
 
 Insert more data, then check that there are four records in the table:
 
