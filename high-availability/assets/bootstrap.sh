@@ -30,4 +30,8 @@ for HOST in ${HOST_ARRAY[@]}; do
         --device /dev/fuse -v /sys:/sys -v /var/lib/storageos:/var/lib/storageos:rshared            \
         -v/run/docker/plugins:/run/docker/plugins -v /sys:/sys storageos/node:1.4.0                 \
         server"; then
+
+        # On success print success out to console
+        echo "Container started on $HOST";
+    fi
 done

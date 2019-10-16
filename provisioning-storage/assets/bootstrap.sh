@@ -1,3 +1,4 @@
+
 function ssh_check {
     if ssh root@$HOST 'ls /' &> /dev/null; then
         echo "$HOST is up"
