@@ -22,6 +22,10 @@
               {
                   "title": "Insert test data",
                   "text": "003-test-data.md"
+              },
+              {
+                  "title": "Failover",
+                  "text": "004-failover.md"
               }
         ],
         "finish": {
