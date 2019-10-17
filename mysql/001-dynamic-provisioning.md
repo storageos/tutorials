@@ -3,7 +3,7 @@ StorageOS.
 
 First we need to set the environment variables that allow us to connect to the
 StorageOS cluster. 
-`export STORAGEOS_USERNAME=storageos STORAGEOS_PASSWORD=storageos STORAGEOS_HOST=[[HOST1_IP]]`{{execute}}
+`export STORAGEOS_USERNAME=storageos STORAGEOS_PASSWORD=storageos STORAGEOS_HOST=[[HOST2_IP]]`{{execute}}
 
 Verify that you have a healthy installation with one worker node, `node01`:
 `storageos node ls`{{execute}}
@@ -13,7 +13,7 @@ be provisioned.
 
 Encode the api address of the worker node in a secret:
 
-`APIADDRESS=$(echo -n "tcp://[[HOST1_IP]]:5705" | base64); sed -i "s/REPLACE/$APIADDRESS/g" storageos-secret.yaml`{{execute}}
+`APIADDRESS=$(echo -n "tcp://[[HOST2_IP]]:5705" | base64); sed -i "s/REPLACE/$APIADDRESS/g" storageos-secret.yaml`{{execute}}
 
 `kubectl create -f storageos-secret.yaml`{{execute}}
 
