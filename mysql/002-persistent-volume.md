@@ -11,7 +11,7 @@ You should see a StorageOS persistent volume:
 
 Confirm StorageOS provisioned the volume on `node01` with 1 replica:
 
-`storageos volume ls --format "table {{.Name}}\t{{.Size}}\t{{.Replicas}}\t{{.Location}}""`{{execute}}
+`storageos volume ls --format "table {{.Name}}\t{{.Size}}\t{{.Replicas}}\t{{.Location}}"`{{execute}}
 
 The link between the PersistentVolumeClaim and the Pod comes from the pod
 referencing the PersistentVolumeClaim in the pods yaml definition.
