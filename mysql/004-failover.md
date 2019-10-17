@@ -45,3 +45,8 @@ despite the volume now being mounted by a different host.
 
 In this way you can see that the location of the volume is transparent to the
 pod that mounts the volume.
+
+
+
+storageos volume update --label-add storageos.com/replicas=1 default/fast001
+storageos volume ls --format "table {{.Name}}\t{{.Size}}\t{{.Replicas}}\t{{.Location}}"
