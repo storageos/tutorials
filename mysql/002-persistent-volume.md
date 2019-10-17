@@ -31,4 +31,5 @@ Notice that the PersistentVolumeClaim name is fast0001.
 Now create a mysql-client pod for connecting to MySQL
 `kubectl create -f mysql-client-pod.yaml`{{execute}}
 
-
+Check the pods are in RUNNING state:
+`kubectl get pods -w`{{execute}}

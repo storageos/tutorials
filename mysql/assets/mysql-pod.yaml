@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   labels:
     name: mysql
-  name: test-storageos-mysql-sc-pvc
+  name: mysql
 spec:
   containers:
     - name: mysql
@@ -24,4 +24,4 @@ spec:
   volumes:
     - name: mysql-data
       persistentVolumeClaim:
-        claimName: fast0001
+        claimName: mysql-pvc
