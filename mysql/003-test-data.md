@@ -1,6 +1,6 @@
 Connect to MySQL and create a test database (your prompt will change):
 
-`kubectl exec -it mysql --mysql`{{execute}}
+`kubectl exec -it mysql -- mysql`{{execute}}
 
 `mysql -u root;`{{execute}}
 

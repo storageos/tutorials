@@ -1,10 +1,14 @@
 Now, let's check that the data was persisted and is accessible on another node.
 
+
+Make a note of the location on which the volume got initially prosioned on:
+`storageos volume ls --format "table {{.Name}}\t{{.Size}}\t{{.Replicas}}\t{{.Location}}"`{{execute}}
+
 Start by removing the MySQL pod:
 `kubectl delete pod mysql`{{execute}}
 
 Get the names and labels of the the cluster's nodes:
-`kubectl get nodes --show-labels`
+`kubectl get nodes --show-labels`{{execute}}
 
 Add a label to the Pod
 `kubectl edit pod/mysql`{{execute}}
@@ -20,23 +24,23 @@ Switch to another node with `ssh root@host02`{{execute T2}} and start a new MySQ
 
 Connect to your test database:
 
-`docker exec -it mysql-dev bash`{{execute T2}}
+`docker exec -it mysql-dev bash`{{execute T0}}
 
-`mysql -u root -pstorageos;`{{execute T2}}
+`mysql -u root -p;`{{execute T0}}
 
-`USE testdb;`{{execute T2}}
+`USE testdb;`{{execute T0}}
 
 Insert more data, then check that there are four records in the table:
 
-`INSERT INTO FRUIT (ID,INVENTORY,QUANTITY) VALUES (4, 'Peaches', 203);`{{execute T2}}
+`INSERT INTO FRUIT (ID,INVENTORY,QUANTITY) VALUES (4, 'Peaches', 203);`{{execute T0}}
 
-`SELECT * FROM FRUIT;`{{execute T2}}
+`SELECT * FROM FRUIT;`{{execute T0}}
 
 Quit the MySQL container:
 
-`\q`{{execute T2}}
+`\q`{{execute T0}}
 
-`exit`{{execute T2}}
+`exit`{{execute T0}}
 
 If you check the location of the volume you will see it has not changed,
 despite the volume now being mounted by a different host.
