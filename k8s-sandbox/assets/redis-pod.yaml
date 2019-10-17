@@ -8,7 +8,7 @@ metadata:
 spec:
   containers:
     - name: master
-      image: kubernetes/redis:v1
+      image: redis:5.0.4
       env:
         - name: MASTER
           value: "true"
