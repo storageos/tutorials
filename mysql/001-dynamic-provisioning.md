@@ -13,7 +13,7 @@ be provisioned.
 
 Encode the api address of the worker node in a secret:
 
-`APIADDRESS=$(echo -n "tcp://[[HOST2_IP]]:5705" | base64); sed -i "s/REPLACE/$APIADDRESS/g" storageos-secret.yaml`{{execute}}
+`APIADDRESS=$(echo -n "tcp://[[HOST1_IP]]:5705" | base64); sed -i "s/REPLACE/$APIADDRESS/g" storageos-secret.yaml`{{execute}}
 
 `kubectl create -f storageos-secret.yaml`{{execute}}
 
