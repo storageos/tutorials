@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: mysql-pvc
+  name: mysqlpvc
   annotations:
     volume.beta.kubernetes.io/storage-class: fast
 spec:
