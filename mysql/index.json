@@ -32,8 +32,7 @@
             "text": "finish.md"
         },
         "assets": {
-            "host01": [{"file": "*", "target": "/root"}],
-            "host02": [{"file": "*", "target": "/root"}]
+            "host01": [{"file": "*", "target": "/root"}]
         }
     },
     "environment": {
