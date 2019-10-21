@@ -2,25 +2,11 @@ Now, let's check that the data was persisted and is accessible on another node.
 
 
 Make a note of the location on which the volume got initially prosioned on:
-`storageos volume ls --format "table {{.Name}}\t{{.Size}}\t{{.Replicas}}\t{{.Location}}"`{{execute}}
-
-Start by removing the MySQL pod:
-`kubectl delete pod mysql`{{execute}}
-
-Get the names and labels of the the cluster's nodes:
-`kubectl get nodes --show-labels`{{execute}}
-
-Add a label to the Pod
-`kubectl edit pod/mysql`{{execute}}
+`storageos volume ls --format "table {{.Name}}\t{{.Size}}\t{{.Replicas}}\t{{.MountedBy}}\t{{.Location}}"`{{execute}}
 
 
-Switch to another node with `ssh root@host02`{{execute T2}} and start a new MySQL instance with `mysqldata` mounted:
+Add a label to the Volume to create a replica
 
-`docker run -d --name mysql-dev \
---volume-driver=storageos \
---volume myslqdata:/var/lib/mysql \
---env MYSQLDATA=/var/lib/mysql \
---env MYSQL_ROOT_PASSWORD=storageos mysql`{{execute T2}}
 
 Connect to your test database:
 
@@ -49,8 +35,3 @@ despite the volume now being mounted by a different host.
 
 In this way you can see that the location of the volume is transparent to the
 pod that mounts the volume.
-
-
-
-storageos volume update --label-add storageos.com/replicas=1 default/fast001
-storageos volume ls --format "table {{.Name}}\t{{.Size}}\t{{.Replicas}}\t{{.Location}}"
