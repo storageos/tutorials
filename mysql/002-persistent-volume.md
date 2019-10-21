@@ -26,10 +26,7 @@ Run the command to see the PersistentVolumeClaim definition.
 
 `cat storageos-pvc.yaml`{{execute}}
 
-Notice that the PersistentVolumeClaim name is fast0001.
-
-Now create a mysql-client pod for connecting to MySQL
-`kubectl create -f mysql-client-pod.yaml`{{execute}}
+Notice that the PersistentVolumeClaim name is mysqlpvc.
 
 Check the pods are in RUNNING state:
 `kubectl get pods -w`{{execute}}
