@@ -10,23 +10,22 @@ Add a label to the Volume to create a replica
 
 Connect to your test database:
 
-`docker exec -it mysql-dev bash`{{execute T0}}
+`docker exec -it mysql-dev bash`{{execute}}
 
-`mysql -u root -p;`{{execute T0}}
+`mysql -u root -p;`{{execute}}
 
-`USE testdb;`{{execute T0}}
+`USE testdb;`{{execute}}
 
 Insert more data, then check that there are four records in the table:
 
-`INSERT INTO FRUIT (ID,INVENTORY,QUANTITY) VALUES (4, 'Peaches', 203);`{{execute T0}}
+`INSERT INTO FRUIT (ID,INVENTORY,QUANTITY) VALUES (4, 'Peaches', 203);`{{execute}}
 
-`SELECT * FROM FRUIT;`{{execute T0}}
+`SELECT * FROM FRUIT;`{{execute}}
 
 Quit the MySQL container:
 
-`\q`{{execute T0}}
+`\q`{{execute}}
 
-`exit`{{execute T0}}
 
 If you check the location of the volume you will see it has not changed,
 despite the volume now being mounted by a different host.

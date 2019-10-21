@@ -29,5 +29,3 @@ Check your commands succeeded:
 Quit the MySQL container:
 
 `\q`{{execute}}
-
-`exit`{{execute}}
