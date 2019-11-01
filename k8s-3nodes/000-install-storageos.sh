@@ -1,1 +1,1 @@
-echo "test"
+launch.sh
