@@ -1,1 +1,2 @@
 launch.sh
+echo "test"

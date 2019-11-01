@@ -1,4 +1,4 @@
-In this tutorial, we'll look how to install Tthe StorageOS Cluster Operator. It is a Kubernetes native application developed to deploy and configure StorageOS clusters, and assist with maintenance operations. The operator will deploy a StorageOS cluster based on the configuration specified in the cluster definition.
+In this tutorial, we'll look how to install the StorageOS Cluster Operator. It is a Kubernetes native application developed to deploy and configure StorageOS clusters, and assist with maintenance operations. The operator will deploy a StorageOS cluster based on the configuration specified in the cluster definition.
 
 
 First we need to install the StorageOS operator using the following yaml manifest.
@@ -16,4 +16,4 @@ StorageOS Installation
 `kubectl create -f storageos-cluster.yaml`{{execute}}
 
 Verify StorageOS Installation
-kubectl -n storageos get pods -w
+`kubectl -n storageos get pods -w`{{execute}}
