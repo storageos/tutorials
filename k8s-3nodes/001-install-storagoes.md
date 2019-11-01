@@ -1,0 +1,1 @@
+In this tutorial, we'll look how to install StorageOS.
