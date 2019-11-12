@@ -9,7 +9,7 @@ You should see a StorageOS persistent volume:
 
 `kubectl describe pv`{{execute}}
 
-Confirm StorageOS provisioned the volume on `node01` with 1 replica:
+Confirm StorageOS provisioned the volume with 1 replica:
 
 `storageos volume ls --format "table {{.Name}}\t{{.Size}}\t{{.Replicas}}\t{{.Location}}"`{{execute}}
 
@@ -20,13 +20,13 @@ Run the command to see the mysql-pod definition.
 
 `cat mysql-pod.yaml`{{execute}}
 
-You can see that the PersistentVolumeClaim claimName has been set to fast0001
+You can see that the PersistentVolumeClaim claimName has been set to `fast0001`.
 
 Run the command to see the PersistentVolumeClaim definition. 
 
 `cat storageos-pvc.yaml`{{execute}}
 
-Notice that the PersistentVolumeClaim name is mysqlpvc.
+Notice that the PersistentVolumeClaim name is `mysqlpvc`.
 
 Check the pods are in RUNNING state:
-`kubectl get pods -w`{{execute}}
+`kubectl get pods`{{execute}}

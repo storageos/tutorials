@@ -5,23 +5,13 @@ First we need to set the environment variables that allow us to connect to the
 StorageOS cluster. 
 `export STORAGEOS_USERNAME=storageos STORAGEOS_PASSWORD=storageos STORAGEOS_HOST=[[HOST2_IP]]`{{execute}}
 
-Verify that you have a healthy installation with one worker node, `node01`:
+Verify that you have a healthy installation with three nodes:
 `storageos node ls`{{execute}}
 
-Now an administrator can create a Storage Class to describe the storage that can
-be provisioned.
+We are going to use the default StorageClass that was created when StorageOS was installed, called `fast`.
 
-Encode the api address of the worker node in a secret:
 
-`APIADDRESS=$(echo -n "tcp://[[HOST2_IP]]:5705" | base64); sed -i "s/REPLACE/$APIADDRESS/g" storageos-secret.yaml`{{execute}}
-
-`kubectl create -f storageos-secret.yaml`{{execute}}
-
-Create `fast` StorageClass:
-
-`kubectl create -f storageos-storageclass.yaml`{{execute}}
-
-The `fast` StorageClass should be backed by the `kubernetes.io/storageos`
+The `fast` StorageClass is backed by the `storageos`
 provisioner:
 
-`kubectl describe storageclass`{{execute}}
+`kubectl describe storageclass fast`{{execute}}
