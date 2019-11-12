@@ -33,9 +33,9 @@
             "text": "finish.md"
         },
         "assets": {
-            "host01": [{"file": "*", "target": "/root"}],
-            "host02": [{"file": "*", "target": "/root"}],
-            "host03": [{"file": "*", "target": "/root"}]
+            "host01": [{"file": "*", "target": "/root"},{ "file": "verify-healthy.sh", "target": "/opt/", "chmod": "+x"}],
+            "host02": [{"file": "*", "target": "/root"},{ "file": "verify-healthy.sh", "target": "/opt/", "chmod": "+x"}],
+            "host03": [{"file": "*", "target": "/root"},{ "file": "verify-healthy.sh", "target": "/opt/", "chmod": "+x"}]
         }
     },
     "environment": {
