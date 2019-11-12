@@ -1,12 +1,9 @@
 Now, let's check that the data was persisted and is accessible on another node.
 
-
 Make a note of the location on which the volume got initially prosioned on:
 `storageos volume ls --format "table {{.Name}}\t{{.Size}}\t{{.Replicas}}\t{{.MountedBy}}\t{{.Location}}"`{{execute}}
 
-
-Add a label to the Volume to create a replica
-
+Add a label to the Volume to create a replica.
 
 Connect to your test database:
 
