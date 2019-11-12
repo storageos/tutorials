@@ -13,13 +13,23 @@
         {
           "title": "Install StorageOS",
           "text": "001-install-storageos.md"
+        },
+        {
+          "title": "Dynamic provisioning",
+          "text": "002-dynamic-provisioning.md"
+        },
+        {
+          "title": "Dynamic provisioning",
+          "text": "003-persistent-volume.md"
         }
       ],
       "finish": {
           "text": "finish.md"
       },
       "assets": {
-        "host01": [{"file": "*", "target": "/root"}]
+        "host01": [{"file": "*", "target": "/root"}],
+        "host02": [{"file": "*", "target": "/root"}],
+        "host03": [{"file": "*", "target": "/root"}]
       }
     },
     "environment": {
