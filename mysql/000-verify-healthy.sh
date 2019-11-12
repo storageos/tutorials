@@ -1,5 +1,4 @@
-
-while [ ! -f /opt/verify-healthy.sh ]; do
+while [ ! -f /root/verify-healthy.sh ]; do
     sleep 1;
 done
 
