@@ -12,8 +12,10 @@ Verify the Cluster Operator Pod Status
 Create a Secret defining the StorageOS API Username and Password.
 `kubectl create -f storageos-secret.yaml`{{execute}}
 
-StorageOS Installation
+StorageOS Installation.
 `kubectl create -f storageos-cluster.yaml`{{execute}}
 
-Verify StorageOS Installation
+Verify StorageOS Installation.
 `kubectl -n storageos get pods -w`{{execute}}
+
+> The above command watches the Pods created by the Cluster Definition example. Note that pods typically take approximately 65 seconds to enter the Running Phase.

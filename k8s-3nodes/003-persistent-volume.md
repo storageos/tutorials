@@ -9,7 +9,7 @@ You should see a StorageOS persistent volume:
 
 `kubectl describe pv`{{execute}}
 
-Confirm StorageOS provisioned the volume on `node01`:
+Confirm StorageOS provisioned the volume:
 
 `storageos volume ls --format "table {{.Name}}\t{{.Size}}\t{{.Location}}"`{{execute}}
 
@@ -20,11 +20,10 @@ Run the command to see the redis-pod definition.
 
 `cat redis-pod.yaml`{{execute}}
 
-You can see that the PersistentVolumeClaim claimName has been set to fast0001
+You can see that the PersistentVolumeClaim claimName has been set to redispvc
 
 Run the command to see the PersistentVolumeClaim definition. 
 
 `cat storageos-pvc.yaml`{{execute}}
 
-Notice that the PersistentVolumeClaim name is fast0001.
-
+Notice that the PersistentVolumeClaim name is redispvc and the storage class used is fast001.
