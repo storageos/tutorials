@@ -4,7 +4,7 @@ StorageOS.
 An administrator can create a Storage Class to describe the storage that can
 be provisioned.
 
-Create `fast` StorageClass:
+Create `fast001` StorageClass:
 
 `kubectl create -f storageos-storageclass.yaml`{{execute}}
 
