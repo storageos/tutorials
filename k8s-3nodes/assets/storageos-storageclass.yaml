@@ -1,0 +1,11 @@
+kind: StorageClass
+apiVersion: storage.k8s.io/v1beta1
+metadata:
+  name: fast001
+provisioner: kubernetes.io/storageos
+parameters:
+  pool: default
+  description: Kubernetes volume fast001
+  fsType: ext4
+  adminSecretNamespace: "storageos-operator"
+  adminSecretName: storageos-api
