@@ -3,7 +3,7 @@
 declare -A hosts=( ["host01"]="node01" ["host02"]="node02" ["host03"]="node03")
 
 for host in ${!hosts[@]}; do
-    echo "Waiting for StorageOS to initialise on $hosts... this will take a minute."
+    echo "Waiting for StorageOS to initialise on $host... this will take a minute."
 
 #Use the nodes endpoint rather than health because it takes longer for nodes
 #endpoint to come up and it seems to more accurately reflect when the cluster is
