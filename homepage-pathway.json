@@ -1,46 +1,10 @@
 {
   "title": "Introduction to StorageOS",
   "description": "",
-  "courses": [
-    {
-      "external_link": "https://play.storageos.com/install-with-docker",
-      "course_id": "install-with-docker",
-      "title": "Install StorageOS with Docker"
-    },
-    {
-      "external_link": "https://play.storageos.com/provisioning-storage",
-      "course_id": "provisioning-storage",
-      "title": "Provision StorageOS volumes"
-    },
-    {
-      "external_link": "https://play.storageos.com/high-availability",
-      "course_id": "high-availability",
-      "title": "Provision highly available volumes"
-    },
-    {
-      "external_link": "https://play.storageos.com/multitenancy",
-      "course_id": "multitenancy",
-      "title": "Multi-tenancy and ACLS"
-    },
-    {
-      "external_link": "https://play.storageos.com/postgres",
-      "course_id": "postgres",
-      "title": "Postgres, HA and failover"
-    },
-    {
-      "external_link": "https://play.storageos.com/docker-sandbox",
-      "course_id": "docker-sandbox",
-      "title": "Sandbox - Docker cluster"
-    },
-    {
-      "external_link": "https://play.storageos.com/k8s-sandbox",
-      "course_id": "k8s-sandbox",
-      "title": "Deploy StorageOS on Kubernetes"
-    },
-    {
-      "external_link": "https://play.storageos.com/openshift37",
-      "course_id": "openshift37",
-      "title": "StorageOS with OpenShift 3.7"
-    }
-  ]
+  "courses": [{      
+    "external_link": "https://play.storageos.com/k8s-3nodes",
+    "course_id": "k8s-3nodes",
+    "description": "Install StorageOS on a 3 Nodes Kubernetes Cluster",
+    "title": "StorageOS and Kubernetes"
+  }]
 }
