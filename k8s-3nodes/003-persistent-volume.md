@@ -31,3 +31,5 @@ Run the following command to see the PersistentVolumeClaim definition.
 `cat storageos-pvc.yaml`{{execute}}
 
 Notice that the PersistentVolumeClaim name is `redispvc` and the storage class used is `fast001`.
+
+Congratulations, you have successfully installed StorageOS on Kubernetes, created a volume, and bound that volume to an application!
