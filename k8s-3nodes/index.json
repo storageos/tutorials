@@ -15,11 +15,11 @@
           "text": "001-install-storageos.md"
         },
         {
-          "title": "Dynamic provisioning",
-          "text": "002-dynamic-provisioning.md"
+          "title": "Storage Class",
+          "text": "002-storage-class.md"
         },
         {
-          "title": "Dynamic provisioning",
+          "title": "Persistent Volume",
           "text": "003-persistent-volume.md"
         }
       ],

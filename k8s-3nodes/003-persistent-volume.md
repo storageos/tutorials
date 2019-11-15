@@ -4,6 +4,7 @@ we will deploy a Redis Server on Kubernetes (as Redis can persist its state to a
 Create PersistentVolumeClaim and a Redis pod which references the `fast001` StorageClass:
 
 `kubectl create -f storageos-pvc.yaml`{{execute}}
+
 `kubectl create -f redis-pod.yaml`{{execute}}
 
 You should see a StorageOS persistent volume:
