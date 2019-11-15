@@ -3,14 +3,9 @@
   "description": "",
   "courses": [
     {
-      "external_link": "https://play.storageos.com/k8s-sandbox",
-      "course_id": "k8s-sandbox",
+      "external_link": "https://play.storageos.com/k8s-3nodes",
+      "course_id": "k8s-3nodes",
       "title": "Deploy StorageOS on Kubernetes"
-    },
-    {
-      "external_link": "https://play.storageos.com/postgres",
-      "course_id": "postgres",
-      "title": "Postgres, HA and failover"
     }
   ]
 }
