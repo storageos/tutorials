@@ -3,7 +3,7 @@
     "icon": "fa-storageos",
     "title": "StorageOS and Kubernetes",
     "time": "5-60 minutes",
-    "description": "A three node Kubernetes cluster to Install StorageOS",
+    "description": "Install StorageOS on a 3 Nodes Kubernetes Cluster",
     "details": {
       "intro": {
         "text": "000-introduction.md",

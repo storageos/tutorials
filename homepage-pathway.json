@@ -5,6 +5,7 @@
     {
       "external_link": "https://play.storageos.com/k8s-3nodes",
       "course_id": "k8s-3nodes",
+      "description": "Install StorageOS on a 3 Nodes Kubernetes Cluster",
       "title": "StorageOS and Kubernetes"
     }
   ]
