@@ -4,6 +4,9 @@ Make a note of the location on which the volume got initially prosioned on:
 `storageos volume ls --format "table {{.Name}}\t{{.Size}}\t{{.Replicas}}\t{{.MountedBy}}\t{{.Location}}"`{{execute}}
 
 Add a label to the Volume to create a replica.
+`storageos volume update --label-add storageos.com/replicas=1 $vol`{{execute}}
+
+storageos volume ls --format "table {{.Name}}\t{{.Replicas}}"  | grep '0/0' | awk '{ print $1  }' > volume-0-replicas.txt
 
 Connect to your test database:
 
