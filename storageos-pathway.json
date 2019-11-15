@@ -1,0 +1,11 @@
+{
+  "title": "storageos",
+  "description": "",
+  "courses": [
+    {
+      "course_id": "k8s-3nodes",
+      "title": "StorageOS and Kubernetes",
+      "description": "Install StorageOS on a 3 Nodes Kubernetes Cluster"
+    }
+  ]
+}
