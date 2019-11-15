@@ -20,5 +20,8 @@ Verify StorageOS Installation.
 
 > The above command watches the pods created by the Cluster Definition example. Note that pods typically take approximately 65 seconds to enter the Running Phase. Press `Ctrl+C` to continue once the pods are up.
 
+Moreover, you can see more information about the StorageOS Cluster.
+`kubectl -n storageos-operator describe storageoscluster`{{execute}}
+
 You can also verify that StorageOS was installed succesfully using the StorageOS CLI.
 `storageos node ls`{{execute}}
