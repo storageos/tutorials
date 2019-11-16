@@ -2,9 +2,8 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: redispvc
-  annotations:
-    volume.beta.kubernetes.io/storage-class: fast001
 spec:
+  storageClassName: fast001
   accessModes:
     - ReadWriteOnce
   resources:
