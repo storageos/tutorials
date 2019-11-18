@@ -18,7 +18,7 @@ Check that the replica was created.
 
 > Usually takes ~10 seconds to create the replica in this example.
 
-In order to keep this tutorial simple, we are going to delete the MySQL pod and create it on a different in our cluster
+In order to keep this tutorial simple, we are going to delete the MySQL pod and create it on a different node in our cluster.
 
 `kubectl delete pod mysql`{{execute}}
 
