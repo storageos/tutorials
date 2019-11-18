@@ -4,16 +4,15 @@ Make a note of the location on which the volume got initially prosioned on:
 
 `storageos volume ls --format "table {{.Name}}\t{{.Size}}\t{{.Replicas}}\t{{.MountedBy}}\t{{.Location}}"`{{execute}}
 
-Add a label to the Volume to create a replica.
-`storageos volume update --label-add storageos.com/replicas=1 $vol`{{execute}}
+Save the namespace/volume into a variable.
+`volume=$(storageos volume ls --format "table {{.Name}}\t{{.Replicas}}" | grep '0/0' | awk '{ print $1 }')`{{execute}}
 
-storageos volume ls --format "table {{.Name}}\t{{.Replicas}}"  | grep '0/0' | awk '{ print $1  }' > volume-0-replicas.txt
+Create 1 replica for the volume, by adding a label to the volume
+`storageos volume update --label-add storageos.com/replicas=1 $volume`{{execute}}
 
 Connect to your test database:
 
-`docker exec -it mysql-dev bash`{{execute}}
-
-`mysql -u root -p;`{{execute}}
+`kubectl exec -it mysql -- mysql`{{execute}}
 
 `USE testdb;`{{execute}}
 
@@ -27,7 +26,6 @@ Quit the MySQL container:
 
 `\q`{{execute}}
 
-
 If you check the location of the volume you will see it has not changed,
 despite the volume now being mounted by a different host.
 
@@ -35,3 +33,5 @@ despite the volume now being mounted by a different host.
 
 In this way you can see that the location of the volume is transparent to the
 pod that mounts the volume.
+
+Congratulations, you have successfully installed StorageOS on Kubernetes, created a volume, and bound that volume to an application!

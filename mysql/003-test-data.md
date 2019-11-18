@@ -2,8 +2,6 @@ Connect to MySQL and create a test database (your prompt will change):
 
 `kubectl exec -it mysql -- mysql`{{execute}}
 
-`mysql -u root;`{{execute}}
-
 `CREATE DATABASE testdb;`{{execute}}
 
 Now connect to the database and insert some sample data:
