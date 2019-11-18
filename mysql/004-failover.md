@@ -18,38 +18,42 @@ Check that the replica was created.
 
 In order to keep this tutorial simple, we are going to delete the MySQL pod and create it on a different in our cluster
 
-`kubectl delete mysql`{{execute}}
+`kubectl delete pod mysql`{{execute}}
 
 Switch to another node in the cluster and create the MySQL pod again.
 
-`kubectl create -f mysql-pod.yaml`{{execute T3}}
+`kubectl create -f mysql-pod2.yaml`{{execute}}
 
 set the environment variables that allow us to connect to the
 StorageOS cluster on the new terminal tab.
 
-`export STORAGEOS_USERNAME=storageos STORAGEOS_PASSWORD=storageos STORAGEOS_HOST=[[HOST2_IP]]`{{execute T3}}
+`export STORAGEOS_USERNAME=storageos STORAGEOS_PASSWORD=storageos STORAGEOS_HOST=[[HOST2_IP]]`{{execute}}
+
+`kubectl get pods -w`{{execute}}
+
+> The above command watches the pod created in the default namespace. Press `Ctrl+C` to continue once the pods are up.
 
 Connect to your test database:
 
-`kubectl exec -it mysql -- mysql`{{execute T3}}
+`kubectl exec -it mysql -- mysql`{{execute}}
 
-`USE testdb;`{{execute T3}}
+`USE testdb;`{{execute}}
 
 Insert more data, then check that there are four records in the table:
 
-`INSERT INTO FRUIT (ID,INVENTORY,QUANTITY) VALUES (4, 'Peaches', 203);`{{execute T3}}
+`INSERT INTO FRUIT (ID,INVENTORY,QUANTITY) VALUES (4, 'Peaches', 203);`{{execute}}
 
-`SELECT * FROM FRUIT;`{{execute T3}}
+`SELECT * FROM FRUIT;`{{execute}}
 
 Quit the MySQL container:
 
-`\q`{{execute T3}}
+`\q`{{execute}}
 
 Now we are going to cordon and drain the node which the 
 If you check the location of the volume you will see it has not changed,
 despite the volume now being mounted by a different host.
 
-`storageos volume ls --format "table {{.Name}}\t{{.Size}}\t{{.Status}}\t{{.MountedBy}}\t{{.Location}}"`{{execute T3}}
+`storageos volume ls --format "table {{.Name}}\t{{.Size}}\t{{.Status}}\t{{.MountedBy}}\t{{.Location}}"`{{execute}}
 
 In this way you can see that the location of the volume is transparent to the
 pod that mounts the volume.
