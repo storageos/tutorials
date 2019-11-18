@@ -26,6 +26,7 @@ Quit the MySQL container:
 
 `\q`{{execute}}
 
+Now we are going to cordon and drain the node which the 
 If you check the location of the volume you will see it has not changed,
 despite the volume now being mounted by a different host.
 
