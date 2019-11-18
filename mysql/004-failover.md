@@ -16,18 +16,20 @@ Check that the replica was created.
 
 `storageos volume ls --format "table {{.Name}}\t{{.Replicas}}"`{{execute}}
 
+> Usually takes ~10 seconds to come up after it's been created.
+
 In order to keep this tutorial simple, we are going to delete the MySQL pod and create it on a different in our cluster
 
 `kubectl delete pod mysql`{{execute}}
 
-Switch to another node in the cluster and create the MySQL pod again.
+Now, you can see the mount was removed but the location is still the same.
+
+`storageos volume ls --format "table {{.Name}}\t{{.Size}}\t{{.Replicas}}\t{{.MountedBy}}\t{{.Location}}"`{{execute}}
+
+
+Create the MySQL pod again but on a different node this time.
 
 `kubectl create -f mysql-pod2.yaml`{{execute}}
-
-set the environment variables that allow us to connect to the
-StorageOS cluster on the new terminal tab.
-
-`export STORAGEOS_USERNAME=storageos STORAGEOS_PASSWORD=storageos STORAGEOS_HOST=[[HOST2_IP]]`{{execute}}
 
 `kubectl get pods -w`{{execute}}
 
@@ -39,17 +41,16 @@ Connect to your test database:
 
 `USE testdb;`{{execute}}
 
-Insert more data, then check that there are four records in the table:
+Insert more data, then check that there are four records in the table.
 
 `INSERT INTO FRUIT (ID,INVENTORY,QUANTITY) VALUES (4, 'Peaches', 203);`{{execute}}
 
 `SELECT * FROM FRUIT;`{{execute}}
 
-Quit the MySQL container:
+Quit the MySQL container.
 
 `\q`{{execute}}
 
-Now we are going to cordon and drain the node which the 
 If you check the location of the volume you will see it has not changed,
 despite the volume now being mounted by a different host.
 
