@@ -16,7 +16,7 @@ Check that the replica was created.
 
 `storageos volume ls --format "table {{.Name}}\t{{.Replicas}}"`{{execute}}
 
-> Usually takes ~10 seconds to come up after it's been created.
+> Usually takes ~10 seconds to create the replica in this example.
 
 In order to keep this tutorial simple, we are going to delete the MySQL pod and create it on a different in our cluster
 
@@ -35,11 +35,11 @@ Create the MySQL pod again but on a different node this time.
 
 > The above command watches the pod created in the default namespace. Press `Ctrl+C` to continue once the pods are up.
 
-Connect to your test database:
+Connect to the database.
 
 `kubectl exec -it mysql -- mysql`{{execute}}
 
-`USE testdb;`{{execute}}
+`USE shop;`{{execute}}
 
 Insert more data, then check that there are four records in the table.
 
