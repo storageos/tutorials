@@ -2,13 +2,11 @@ Connect to MySQL and create a test database (your prompt will change):
 
 `kubectl exec -it mysql -- mysql`{{execute}}
 
-`mysql -u root;`{{execute}}
-
-`CREATE DATABASE testdb;`{{execute}}
+`CREATE DATABASE shop;`{{execute}}
 
 Now connect to the database and insert some sample data:
 
-`USE testdb;`{{execute}}
+`USE shop;`{{execute}}
 
 `CREATE TABLE FRUIT(
   ID INT PRIMARY KEY      NOT NULL,

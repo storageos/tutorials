@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    name: mysql
+  name: mysql
+spec:
+  containers:
+    - name: mysql
+      image: mysql:5.7
+      env:
+      - name: MYSQL_ALLOW_EMPTY_PASSWORD
+        value: "1"
+      ports:
+      - name: mysql
+        containerPort: 3306
+      volumeMounts:
+        - name: mysql-data
+          mountPath: /var/lib/mysql
+          subPath: mysql
+  volumes:
+    - name: mysql-data
+      persistentVolumeClaim:
+        claimName: mysqlpvc
+  nodeSelector:
+    kubernetes.io/hostname: node02
