@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Setting up the environment, please wait until you see the prompt."
+
 declare -A hosts=( ["host01"]="node01" ["host02"]="node02" ["host03"]="node03")
 
 for host in ${!hosts[@]}; do
