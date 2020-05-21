@@ -39,9 +39,10 @@
           "text": "finish.md"
       },
       "assets": {
-        "host01": [{"file": "*", "target": "/root"}],
-        "host02": [{"file": "*", "target": "/root"}],
-        "host03": [{"file": "*", "target": "/root"}]
+        "master": [{"file": "deploy-etcd.sh", "target": "/root/"}],
+        "node01": [{"file": "*", "target": "/root/"}],
+        "node02": [{"file": "*", "target": "/root/"}],
+        "node03": [{"file": "*", "target": "/root/"}]
       }
     },
     "environment": {
