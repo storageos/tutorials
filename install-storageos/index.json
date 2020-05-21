@@ -1,7 +1,7 @@
 {
     "pathwayTitle": "StorageOS",
     "icon": "fa-storageos",
-    "title": "StorageOS and Kubernetes",
+    "title": "StorageOS v2 and Kubernetes",
     "time": "5-60 minutes",
     "description": "Install StorageOS on a 3 Nodes Kubernetes Cluster",
     "details": {
