@@ -39,11 +39,7 @@
           "text": "finish.md"
       },
       "assets": {
-        "master": [{"file": "deploy-etcd.sh", "target": "/root/", "chmod": "+x"}],
-        "host01": [ {"file": "*", "target": "/root"} ],
-        "node01": [{"file": "*", "target": "/root/"}],
-        "node02": [{"file": "*", "target": "/root/"}],
-        "node03": [{"file": "*", "target": "/root/"}]
+        "host01": [ {"file": "deploy-etcd.sh", "target": "/root/", "chmod": "+x"} ]
       }
     },
     "environment": {
