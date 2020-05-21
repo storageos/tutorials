@@ -1,0 +1,56 @@
+{
+    "pathwayTitle": "StorageOS",
+    "icon": "fa-storageos",
+    "title": "StorageOS and Kubernetes",
+    "time": "5-60 minutes",
+    "description": "Install StorageOS on a 3 Nodes Kubernetes Cluster",
+    "details": {
+      "intro": {
+        "text": "000-introduction.md",
+        "code": "000-install-storageos.sh"
+      },
+      "steps": [
+        {
+          "title": "Install prerequisite (etcd)",
+          "text": "010-install-etcd.md"
+        },
+        {
+          "title": "Install StorageOS",
+          "text": "020-install-storageos.md"
+        },
+        {
+          "title": "Install StorageOS CLI",
+          "text": "030-install-storageos-cli.md"
+        },
+        {
+          "title": "Use StorageClasses",
+          "text": "040-storage-class.md"
+        },
+        {
+          "title": "Use persisted volumes",
+          "text": "050-persitent-volume.md"
+        },
+        {
+          "title": "Use the GUI",
+          "text": "060-access-ui.md"
+        }
+      ],
+      "finish": {
+          "text": "finish.md"
+      },
+      "assets": {
+        "host01": [{"file": "*", "target": "/root"}],
+        "host02": [{"file": "*", "target": "/root"}],
+        "host03": [{"file": "*", "target": "/root"}]
+      }
+    },
+    "environment": {
+      "uilayout": "terminal",
+      "uimessage1": "\u001b[32mYour Interactive Bash Terminal. A safe place to learn and execute commands.\u001b[m\r\n",
+      "showdashboard": true,
+      "dashboards": [{"name": "Display 5705", "port": 5705}],
+    },
+    "backend": {
+      "imageid": "storageos-kubernetes-3node"
+    }
+  }
