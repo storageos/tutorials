@@ -1,4 +1,3 @@
-In this tutorial, we'll look how to install the StorageOS Cluster Operator. It is a Kubernetes native application developed to deploy and configure StorageOS clusters, and assist with maintenance operations. The operator will deploy a StorageOS cluster based on the configuration specified in the cluster definition.
 
 StorageOS uses etcd to store its metadata. First we will install a cluster
 using the etcd operator. Which is used sole for testing purposes. Check
