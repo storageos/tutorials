@@ -40,7 +40,7 @@ spec:
               fieldPath: metadata.name
 END
 
-sleep 15
+sleep 10
 
 phase="$(kubectl -n $NAMESPACE get pod -lname=etcd-operator --no-headers -ocustom-columns=status:.status.phase)"
 while ! grep -q "Running" <(echo "$phase"); do
@@ -73,3 +73,7 @@ spec:
       runAsUser: 9000
       fsGroup: 9000
 END
+
+# DNS in Katacoda sometimes fails to start properly so etcd init container
+# to check the headless svc needs restarting
+kubectl -n kube-system delete pod -l k8s-app=kube-dns &>/dev/null
