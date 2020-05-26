@@ -40,7 +40,7 @@ spec:
               fieldPath: metadata.name
 END
 
-sleep 5
+sleep 15
 
 phase="$(kubectl -n $NAMESPACE get pod -lname=etcd-operator --no-headers -ocustom-columns=status:.status.phase)"
 while ! grep -q "Running" <(echo "$phase"); do

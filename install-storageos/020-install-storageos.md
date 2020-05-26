@@ -32,6 +32,7 @@ data:
   csiControllerPublishPassword: c3RvcmFnZW9z
   csiNodePublishUsername: c3RvcmFnZW9z
   csiNodePublishPassword: c3RvcmFnZW9z
+END
 ```{{execute}}
 
 This Secret is referenced from the StorageOS Cluster Resource below and will be used

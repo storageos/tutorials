@@ -1,8 +1,10 @@
-Developers can request storage using persistent volume claims. In order to demonstrate this
-we will deploy a Redis Server on Kubernetes (as Redis can persist its state to a persistent volume) with the data being written to a StorageOS persistent volume.
+Developers can request storage using Persistent Volume Claims. In order to
+demonstrate this we will deploy a Redis Server on Kubernetes (as Redis can
+persist its state to a persistent volume) with the data being written to a
+StorageOS persistent volume.
 
-We could use a Statefulset to deploy Redis with persistent storage. For didactic purposes, we are using
-a PVC and Pod.
+We could use a Statefulset to deploy Redis with persistent storage. For
+didactic purposes, we are just using a PVC and Pod.
 
 Create PersistentVolumeClaim and a Redis pod which references the `prod` StorageClass:
 
@@ -19,6 +21,7 @@ spec:
   resources:
     requests:
       storage: 5Gi
+END
 ``` {{execute}}
 
 Check the PVC and PV

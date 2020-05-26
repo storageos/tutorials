@@ -15,7 +15,9 @@ nodes for HA and quorum.
 
 Verify the Cluster Operator pod status
 
-`kubectl -n etcd get pod`{{execute}}
+`kubectl -n etcd get pod -w`{{execute}}
+
+> The above command watches the pods created by the Cluster Definition example. Note that the pods can typically take a while to enter the Running Phase. Press `Ctrl+C` to continue once the pods are up.
 
 Check the Services in the etcd namespace. We will need the etcd url to pass to
 StorageOS
