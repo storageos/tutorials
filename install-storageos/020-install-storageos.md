@@ -83,6 +83,8 @@ spec:
 END
 ```{{execute}}
 
+> You can find a Custom Resource definition in https://docs.storageos.com/docs/install/kubernetes/#3-trigger-a-storageos-installation
+
 
 Verify StorageOS Installation.
 

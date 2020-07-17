@@ -11,12 +11,15 @@ kubectl create namespace $NAMESPACE
 
 ./example/rbac/create_role.sh
 kubectl -n $NAMESPACE create -f- <<END
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: etcd-operator
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      name: etcd-operator
   template:
     metadata:
       labels:
