@@ -120,7 +120,7 @@ metadata:
   name: "storageos-etcd"
 spec:
   size: 3
-  version: "3.2.13"
+  version: "3.3.13"
   pod:
     # etcdEnv:
     # - name: ETCD_QUOTA_BACKEND_BYTES
@@ -140,6 +140,7 @@ spec:
       requests:
         cpu: 200m
         memory: 300Mi
+    dnsPolicy: Default
     securityContext:
       runAsNonRoot: true
       runAsUser: 9000
