@@ -120,15 +120,15 @@ metadata:
   name: "storageos-etcd"
 spec:
   size: 3
-  version: "3.3.13"
+  version: "3.4.9"
   pod:
-    # etcdEnv:
-    # - name: ETCD_QUOTA_BACKEND_BYTES
-    #   value: "2589934592"  # ~2 GB
-    # - name: ETCD_AUTO_COMPACTION_MODE
-    #   value: "revision"
-    # - name: ETCD_AUTO_COMPACTION_RETENTION
-    #   value: "1200"
+    etcdEnv:
+    - name: ETCD_QUOTA_BACKEND_BYTES
+      value: "2589934592"  # ~2 GB
+    - name: ETCD_AUTO_COMPACTION_MODE
+      value: "revision"
+    - name: ETCD_AUTO_COMPACTION_RETENTION
+      value: "100"
 #  For relevant clusters, you want guaranteed QoS "requests == limits"
 #    requests:
 #      cpu: 2
@@ -140,7 +140,6 @@ spec:
       requests:
         cpu: 200m
         memory: 300Mi
-    dnsPolicy: Default
     securityContext:
       runAsNonRoot: true
       runAsUser: 9000
