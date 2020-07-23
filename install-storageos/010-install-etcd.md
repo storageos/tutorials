@@ -28,3 +28,11 @@ The Service url we are going to use is
 `http://storageos-etcd-client.etcd:2379`{{copy}}
 
 Where `storageos-etcd-client` is the Service and `etcd` is the Namespace.
+
+`echo export ETCD_HOST=${ETCD_HOST} | cat - install-etcd.sh > temp && mv temp install-etcd.sh` {{execute}}
+
+`scp install-etcd.sh node01:~/install-etcd.sh` {{execute}}
+
+`ssh node01` {{execute}}
+
+`bash install-etcd.sh` {{execute}}

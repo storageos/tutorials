@@ -15,6 +15,10 @@
           "text": "010-install-etcd.md"
         },
         {
+          "title": "Install prerequisite2 (etcd)",
+          "text": "015-install-etcd.md"
+        },
+        {
           "title": "Install StorageOS",
           "text": "020-install-storageos.md"
         },
@@ -39,7 +43,7 @@
           "text": "finish.md"
       },
       "assets": {
-        "host01": [ {"file": "deploy-etcd.sh", "target": "/root/", "chmod": "+x"} ]
+        "host01": [ {"file": "deploy-etcd.sh", "target": "/root/", "chmod": "+x"},  {"file": "install-etcd.sh", "target": "/root/", "chmod": "+x"}, {"file": "etcd3.service", "target": "/root/"}]
       }
     },
     "environment": {
