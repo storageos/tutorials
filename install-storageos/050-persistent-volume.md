@@ -33,7 +33,7 @@ Check the PVC and PV
 
 Check the Volume in StorageOS
 
-`storageos get volumes`{{execute}}
+`kubectl exec -ti cli -n kube-system -- storageos get volumes`{{execute}}
 
 Because we set the replication to 1 for the `prod` StorageClass, we can see in
 the output that the volume has `1/1` replicas. One replica healthy and ready
