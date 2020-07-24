@@ -28,7 +28,7 @@ Check the PVC and PV
 
 `kubectl get pvc`{{execute}} and `kubectl get pv`{{execute}}
 
-> StorageOS dynamically provisions a PV (Persistent Volume) that bounds to
+> StorageOS dynamically provisions a PV (Persistent Volume) that binds to
 > the PVC(Persistent Volume Claim).
 
 Check the Volume in StorageOS
@@ -36,8 +36,7 @@ Check the Volume in StorageOS
 `kubectl exec -ti cli -n kube-system -- storageos get volumes`{{execute}}
 
 Because we set the replication to 1 for the `prod` StorageClass, we can see in
-the output that the volume has `1/1` replicas. One replica healthy and ready
-out of one replica requested.
+the output that the volume has `1/1` replicas. This means that the replica is healthy and ready.
 
 Lets create a Pod that uses the Volume.
 
@@ -76,9 +75,9 @@ Check the Pod
 
 `kubectl get pod`{{execute}}
 
-During the Pod provisioning, the StorageOS Volume is mounted in
+During Pod provisioning, the StorageOS Volume is mounted in
 `/redis-master-data`. You can exec into the container and see the standard
-Linux device being used. A device created dynamically by StorageOS.
+Linux device being used, the device created dynamically by StorageOS.
 
 `kubectl exec redis-persisted -- /bin/sh -c "cd /redis-master-data && df -h
 ."`{{execute}}
@@ -86,7 +85,7 @@ Linux device being used. A device created dynamically by StorageOS.
 Congratulations, you have successfully installed StorageOS on Kubernetes, created a volume, and bound that volume to an application!
 
 StorageOS feature Labels can be passed in the StorageClass as shown with the
-`prod` StorageClass, or you can set it by PVC. 
+`prod` StorageClass, or you can set labels on the PVC. 
 
 For instance, the following would create a Volume with 2 replicas.
 
