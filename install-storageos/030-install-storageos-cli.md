@@ -1,24 +1,22 @@
 StorageOS has a CLI and GUI. We are using the CLI to verify the installation.
 
 
-Install StorageOS CLI
+Run the StorageOS CLI pod:
 
-```curl -sSLo storageos https://github.com/storageos/go-cli/releases/download/v2.0.0/storageos_linux_amd64 && chmod +x storageos && sudo mv storageos /usr/local/bin/```{{execute}}
+`kubectl -n kube-system run \
+--image storageos/cli:v2.1.0 \
+--restart=Never                          \
+--env STORAGEOS_ENDPOINTS=[[HOST2_IP]]:5705 \
+--env STORAGEOS_USERNAME=storageos       \
+--env STORAGEOS_PASSWORD=storageos       \
+--command cli                            \
+-- /bin/sh -c "while true; do sleep 999999; done"`{{execute}}
 
-Configure the credentials for the CLI to be able to authenticate to the cluster
+Run the following commands to check the nodes and make sure the CLI is working:
 
-The credentials are defined in the Secret from the previous steps.
-```
-export STORAGEOS_USERNAME=storageos 
-export STORAGEOS_PASSWORD=storageos
-export STORAGEOS_ENDPOINTS=http://[[HOST2_IP]]:5705
-```{{execute}}
+`kubectl exec -ti cli -n kube-system -- storageos get nodes`{{execute}}
 
-Check the nodes
+`kubectl exec -ti cli -n kube-system -- storageos describe nodes`{{execute}}
 
-`storageos get nodes`{{execute}}
-
-`storageos describe nodes`{{execute}}
-
-`storageos get nodes -oyaml`{{execute}}
+`kubectl exec -ti cli -n kube-system -- storageos get nodes -oyaml`{{execute}}
 
