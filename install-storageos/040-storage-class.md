@@ -1,8 +1,8 @@
 Lets check how to use dynamically provisioned storage using
 StorageOS.
 
-StorageOS creates a StorageClass by default, called `fast`. Many more can be
-created to define different behaviour or concern.
+StorageOS creates a StorageClass by default, called `fast`. Other StorageClasses can be
+created to define different behaviours or apply feature labels by default.
 
 Lets create a StorageClass for development
 
@@ -42,7 +42,7 @@ provisioner: csi.storageos.com
 parameters:
   csi.storage.k8s.io/fstype: ext4
   pool: default
-  storageos.com/replicas: "1" # Enforces 1 replica for the Volume
+  storageos.com/replicas: "1" # Enforces 1 replica for any Volume created by this StorageClass
 
   # Change the Namespace below if StorageOS doesn't run in kube-system
   csi.storage.k8s.io/node-publish-secret-namespace: kube-system       # Namespace that runs StorageOS Daemonset

@@ -1,7 +1,7 @@
 
 First we need to install the StorageOS Operator using the following yaml manifest.
 
-`kubectl create -f https://github.com/storageos/cluster-operator/releases/download/v2.0.0/storageos-operator.yaml`{{execute}}
+`kubectl create -f https://github.com/storageos/cluster-operator/releases/download/v2.1.0/storageos-operator.yaml`{{execute}}
 
 Verify the Cluster Operator pod status
 
@@ -9,7 +9,7 @@ Verify the Cluster Operator pod status
 
 > The READY 1/1 indicates that `storageoscluster` resources can be created. Press `Ctrl+C` to continue once the pod is up.
 
-Create a Secret defining the StorageOS credentials.
+Create a Secret defining the StorageOS credentials. The username and password are just `storageos` encoded in base64.
 
 ```
 kubectl create -f- <<END
@@ -37,16 +37,16 @@ END
 
 This Secret is referenced from the StorageOS Cluster Resource below and will be used
 to create an admin user in StorageOS at bootstrap. Also to set up the CSI
-credentials that will be exchanged with the Kubernetes ControlPlane. So
+credentials that will be exchanged with the Kubernetes ControlPlane, so
 StorageOS and Kubernetes can communicate.
 
 StorageOS Installation.
 
-The following resorce defines the StorageOS Cluster. Many options are available
+The following resource defines the StorageOS Cluster. Many options are available
 for configuration. For instance, note the `.spec.kvBackend.address` that indicates
 the etcd url, or the `.spec.namespace` that indicates where StorageOS will be
 installed. Other options could be configured such as `nodeSelectors` to
-indicate that the StorageOS Daemonset should run on a subsection of nodes.
+indicate that the StorageOS Daemonset should run on a subset of nodes.
 
 ```
 kubectl create -f- <<END
