@@ -8,16 +8,20 @@ First, you need to add the ip of the ETCD host in the script file with this comm
 
 Then, you need to send the script to node01 to be able to execute it there.
 
-`scp install-etcd.sh node01:~/install-etcd.sh`{{execute}}
+`scp -o StrictHostKeyChecking=no install-etcd.sh node01:~/install-etcd.sh`{{execute}}
 
-Then, you need to ssh into the node to execute the installation script.
+Afterwards, you need to execute the installation script in the node.
 
-`ssh node01`{{execute}}
-
-Lastly, you execute the etcd installation script with the following command.
-
-`bash install-etcd.sh`{{execute}}
+`ssh node01 bash install-etcd.sh`{{execute}}
 
 The script will create all the necessary directories and configuration to run etcd on 1 node. This is only for testing purposes in this demo. It is recommended to have 3 etcd nodes for production and to provision them with a provisioning tool like Ansible. Check https://docs.storageos.com/docs/prerequisites/etcd/ for more information on how to do that.
 
-Now you need to go back to master to continue the demo. You can do that by pressing `CTRL + d` or typing `exit`{{execute}}. Once your terminal shows the current machine as master, you can continue to the next step of the demo.
+To make sure that etcd is running, you need to run a health check:
+
+`ssh node01 ETCDCTL_API=3 etcdctl --endpoints=http://127.0.0.1:2379 member list`{{execute}}
+
+The output should be something like this:
+
+`77956fff650359b8, started, etcd-172.17.0.18, http://172.17.0.18:2380, http://172.17.0.18:2379, false`
+
+It is important to monitor and defrag etcd often since it's a vital part of the cluster's operation. Here's link to our to our docs for more information on how to do that: https://docs.storageos.com/docs/operations/etcd/

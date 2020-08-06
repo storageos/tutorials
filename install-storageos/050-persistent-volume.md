@@ -36,7 +36,8 @@ Check the Volume in StorageOS
 `kubectl exec -ti cli -n kube-system -- storageos get volumes`{{execute}}
 
 Because we set the replication to 1 for the `prod` StorageClass, we can see in
-the output that the volume has `1/1` replicas. This means that the replica is healthy and ready.
+the output that the volume has `1/1` replicas. This means that the volume has 1 
+master (left value) and 1 replica (right value) and that are both healthy and ready.
 
 Lets create a Pod that uses the Volume.
 
@@ -73,7 +74,7 @@ END
 
 Check the Pod
 
-`kubectl get pod`{{execute}}
+`kubectl get pod -w`{{execute}}
 
 During Pod provisioning, the StorageOS Volume is mounted in
 `/redis-master-data`. You can exec into the container and see the standard

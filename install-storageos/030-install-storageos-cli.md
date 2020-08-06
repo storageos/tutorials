@@ -1,7 +1,7 @@
 StorageOS has a CLI and GUI. We are using the CLI to verify the installation.
 
 
-Run the StorageOS CLI pod:
+We can use a pod to access the CLI using kubectl exec:
 
 `kubectl -n kube-system run \
 --image storageos/cli:v2.1.0 \
