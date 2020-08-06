@@ -1,11 +1,7 @@
 
 First we need to install the StorageOS Operator using the following yaml manifest.
 
-`kubectl create -f https://github.com/storageos/cluster-operator/releases/download/v2.1.0/storageos-operator.yaml`{{execute}}
-
-Verify the Cluster Operator pod status
-
-`kubectl -n storageos-operator get pod -w`{{execute}}
+`kubectl create -f https://github.com/storageos/cluster-operator/releases/download/v2.1.0/storageos-operator.yaml && kubectl -n storageos-operator get pod -w`{{execute}}
 
 > The READY 1/1 indicates that `storageoscluster` resources can be created. Press `Ctrl+C` to continue once the pod is up.
 
@@ -32,6 +28,8 @@ data:
   csiControllerPublishPassword: c3RvcmFnZW9z
   csiNodePublishUsername: c3RvcmFnZW9z
   csiNodePublishPassword: c3RvcmFnZW9z
+  csiControllerExpandUsername: c3RvcmFnZW9z
+  csiControllerExpandPassword: c3RvcmFnZW9z
 END
 ```{{execute}}
 
@@ -61,7 +59,7 @@ spec:
   namespace: "kube-system"
   k8sDistro: "upstream"
   images:
-    nodeContainer: "storageos/node:v2.0.0" # StorageOS version
+    nodeContainer: "storageos/node:v2.1.0" # StorageOS version
   kvBackend:
     address: '${ETCD_HOST}:2379' # Example address, change for your etcd endpoint
   # address: '10.42.15.23:2379,10.42.12.22:2379,10.42.13.16:2379' # You can set ETCD server ips
@@ -71,6 +69,7 @@ spec:
     enableControllerPublishCreds: true
     enableNodePublishCreds: true
     enableProvisionCreds: true
+    enableControllerExpandCreds: true
   resources:
     requests:
     memory: "512Mi"
@@ -83,7 +82,7 @@ spec:
 END
 ```{{execute}}
 
-> You can find a Custom Resource definition in https://docs.storageos.com/docs/install/kubernetes/#3-trigger-a-storageos-installation
+> For additional information on the CR, see this link: https://docs.storageos.com/docs/install/kubernetes/#3-trigger-a-storageos-installation
 
 
 Verify StorageOS Installation.
@@ -98,3 +97,5 @@ csi-helper and storageos-scheduler.
 Moreover, you can see more information about the StorageOS Cluster.
 
 `kubectl -n storageos-operator describe storageoscluster my-storageos-cluster`{{execute}}
+
+We also have self-evaluation guide that clearly explains how to install, benchmark and feature test StorageOS for a production environment: https://docs.storageos.com/docs/self-eval/

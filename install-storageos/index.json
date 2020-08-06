@@ -27,7 +27,7 @@
           "text": "040-storage-class.md"
         },
         {
-          "title": "Use persisted volumes",
+          "title": "Use persistent volumes",
           "text": "050-persistent-volume.md"
         },
         {

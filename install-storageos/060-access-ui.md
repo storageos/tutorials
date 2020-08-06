@@ -8,3 +8,5 @@ Password: `storageos`
 
 We would recommend to check the Volumes, Nodes, Cluster and License sections to
 experiment with the GUI.
+
+If you see any issues, you should disable ad-block and privacy checkers on the new window.
