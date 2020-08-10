@@ -27,11 +27,11 @@ For errors in the tutorials or requests:
 * [Raise an issue](https://github.com/storageos/tutorials/issues/new)
 
 For help with StorageOS:
-* [Public documentation](docs.storageos.com)
+* [Public documentation](https://docs.storageos.com)
 * [Slack channel](https://slack.storageos.com/)
 * [Contact support](mailto:support@storageos.com)
 
 For help with Katacoda:
-* [Katacoda documentation](www.katacoda.com/docs)
+* [Katacoda documentation](https://www.katacoda.com/docs)
 * [Example scenarios](https://github.com/katacoda-scenarios)
 * Contact [ben@katacoda.com](mailto:ben@katacoda.com)
