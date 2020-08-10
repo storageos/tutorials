@@ -34,16 +34,15 @@ END
 ```{{execute}}
 
 This Secret is referenced from the StorageOS Cluster Resource below and will be used
-to create an admin user in StorageOS at bootstrap. Also to set up the CSI
-credentials that will be exchanged with the Kubernetes ControlPlane, so
-StorageOS and Kubernetes can communicate.
+to create an admin user in StorageOS during the bootstrap process. The secret also defines the CSI
+credentials that are used during StorageOS and Kubernetes communication.
 
 StorageOS Installation.
 
 The following resource defines the StorageOS Cluster. Many options are available
 for configuration. For instance, note the `.spec.kvBackend.address` that indicates
-the etcd url, or the `.spec.namespace` that indicates where StorageOS will be
-installed. Other options could be configured such as `nodeSelectors` to
+the etcd url, or the `.spec.namespace` that indicates which Kubernetes namespace StorageOS will be
+installed into. Other options could be configured such as `nodeSelectors` to
 indicate that the StorageOS Daemonset should run on a subset of nodes.
 
 ```
@@ -82,20 +81,22 @@ spec:
 END
 ```{{execute}}
 
-> For additional information on the CR, see this link: https://docs.storageos.com/docs/install/kubernetes/#3-trigger-a-storageos-installation
+> For additional information on the configuration options exposed by the StorageOSCluster resource, see: https://docs.storageos.com/docs/reference/cluster-operator/configuration/
 
 
 Verify StorageOS Installation.
 
 `kubectl -n kube-system get pods -lapp=storageos -w`{{execute}}
 
-> The above command watches the pods created by the Cluster Definition example. Note that pods typically take approximately 40 seconds to enter the Running Phase. Press `Ctrl+C` to continue once the pods are up.
+> The above command watches the pods created by the StorageOSCluster resource. Note that pods typically take approximately 40 seconds to enter the Running Phase. Press `Ctrl+C` to continue once the pods are up.
 
-StorageOS deploys 3 components. The main one is the Daemonset, then the
-csi-helper and storageos-scheduler.
+Once the pods are all in the Running state the installation is complete! You have created a StorageOS cluster.
 
-Moreover, you can see more information about the StorageOS Cluster.
+As shown by the `get pods` command above, a StorageOS cluster is comprised of 3 components; the storageos-daemonset, the
+csi-helper and the storageos-scheduler.
+
+You can see more information about the StorageOS Cluster using the command below.
 
 `kubectl -n storageos-operator describe storageoscluster my-storageos-cluster`{{execute}}
 
-We also have self-evaluation guide that clearly explains how to install, benchmark and feature test StorageOS for a production environment: https://docs.storageos.com/docs/self-eval/
+We also have self-evaluation guide that clearly explains how to install, benchmark and feature test StorageOS in your own cluster: https://docs.storageos.com/docs/self-eval/
