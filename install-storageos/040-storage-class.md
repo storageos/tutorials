@@ -22,7 +22,6 @@ provisioner: csi.storageos.com
 parameters:
   csi.storage.k8s.io/fstype: ext4
   pool: default
-
   csi.storage.k8s.io/node-publish-secret-namespace: kube-system
   csi.storage.k8s.io/provisioner-secret-namespace: kube-system
   csi.storage.k8s.io/controller-publish-secret-namespace: kube-system
@@ -47,7 +46,6 @@ parameters:
   csi.storage.k8s.io/fstype: ext4
   pool: default
   storageos.com/replicas: "1" # Enforces 1 replica for any Volume created by this StorageClass
-
   csi.storage.k8s.io/node-publish-secret-namespace: kube-system
   csi.storage.k8s.io/provisioner-secret-namespace: kube-system
   csi.storage.k8s.io/controller-publish-secret-namespace: kube-system
@@ -78,16 +76,16 @@ there are three StorageClasses with the provider: `csi.storageos.com`
 
 StorageOS feature labels can also be passed as labels in a PVC spec.
 
-For instance, the following would create a Volume with 2 replicas.
+For instance, the following would create a Volume with 1 replicas.
 
 ```
 kubectl create -f- <<END
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: pvc-1
+  name: pvc-0
   labels:
-    storageos.com/replicas: "2"
+    storageos.com/replicas: "1"
 spec:
   storageClassName: dev
   accessModes:
