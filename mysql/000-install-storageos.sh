@@ -1,6 +1,8 @@
 launch.sh
 export ETCD_HOST=[[HOST2_IP]]
 
+echo "Installing StorageOS and ETCD"
+
 sleep 5
 
 ssh node01 -o StrictHostKeyChecking=no wget https://raw.githubusercontent.com/aeroniero33/tutorials/master/mysql/assets/install-etcd.sh

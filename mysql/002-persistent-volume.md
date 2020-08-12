@@ -14,7 +14,7 @@ You should see a StorageOS persistent volume:
 
 You can also confirm StorageOS provisioned the volume with the CLI:
 
-`storageos volume ls --format "table {{.Name}}\t{{.Size}}\t{{.Replicas}}\t{{.Location}}"`{{execute}}
+`kubectl exec -ti cli -n kube-system -- storageos get volume`{{execute}}
 
 The link between the PersistentVolumeClaim and the pod comes from the pod
 referencing the PersistentVolumeClaim in the pod's yaml definition.

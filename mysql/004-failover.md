@@ -2,19 +2,19 @@ Now, let's check that the data was persisted and is accessible on another node.
 
 Make a note of the location on which the volume got initially prosioned on:
 
-`storageos volume ls --format "table {{.Name}}\t{{.Size}}\t{{.Replicas}}\t{{.MountedBy}}\t{{.Location}}"`{{execute}}
+`kubectl exec -ti cli -n kube-system -- storageos get volume`{{execute}}
 
 Save the namespace/volume into a variable.
 
-`volume=$(storageos volume ls --format "table {{.Name}}\t{{.Replicas}}" | grep '0/0' | awk '{ print $1 }')`{{execute}}
+`volume=$(kubectl exec -ti cli -n kube-system -- storageos get volume | grep '0/0' | awk '{ print $2 }')`{{execute}}
 
 Create 1 replica for the volume, by adding a label to the volume.
 
-`storageos volume update --label-add storageos.com/replicas=1 $volume`{{execute}}
+`kubectl exec -ti cli -n kube-system -- storageos update volume replicas $volume 1`{{execute}}
 
 Check that the replica was created.
 
-`storageos volume ls --format "table {{.Name}}\t{{.Replicas}}"`{{execute}}
+`kubectl exec -ti cli -n kube-system -- storageos get volume`{{execute}}
 
 > Usually takes ~10 seconds to create the replica in this example.
 
@@ -24,7 +24,7 @@ In order to keep this tutorial simple, we are going to delete the MySQL pod and 
 
 Now, you can see the mount was removed but the location is still the same.
 
-`storageos volume ls --format "table {{.Name}}\t{{.Size}}\t{{.Replicas}}\t{{.MountedBy}}\t{{.Location}}"`{{execute}}
+`kubectl exec -ti cli -n kube-system -- storageos get volume`{{execute}}
 
 
 Create the MySQL pod again but on a different node this time.
@@ -54,7 +54,7 @@ Quit the MySQL container.
 If you check the location of the volume you will see it has not changed,
 despite the volume now being mounted by a different host.
 
-`storageos volume ls --format "table {{.Name}}\t{{.Size}}\t{{.Status}}\t{{.MountedBy}}\t{{.Location}}"`{{execute}}
+`kubectl exec -ti cli -n kube-system -- storageos get volume`{{execute}}
 
 In this way you can see that the location of the volume is transparent to the
 pod that mounts the volume.
