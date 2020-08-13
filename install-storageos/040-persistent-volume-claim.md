@@ -1,12 +1,11 @@
-Lets check how to dynamically provision storage using
-StorageOS.
+Lets check how to dynamically provision storage using StorageOS.
 
 During cluster bootstrap StorageOS creates a StorageClass called `fast`. A
 StorageClass is a Kubernetes construct that describes different "classes" of
 Storage and their providers.
 
-In order to demonstrate this we will deploy an example Debian pod on Kubernetes with 
-a StorageOS persistent volume.
+In order to demonstrate this we will deploy an example Debian pod on Kubernetes
+with a StorageOS persistent volume.
 
 1. Create PersistentVolumeClaim
 
@@ -30,9 +29,9 @@ a StorageOS persistent volume.
 
     `kubectl get pvc`{{execute}} and `kubectl get pv`{{execute}}
 
-    > StorageOS dynamically provisions a PV (Persistent Volume) that matches the PVC(Persistent Volume Claim).
+    > StorageOS dynamically provisions a PV (Persistent Volume) that matches the PVC (Persistent Volume Claim).
 
-1. Check the Volume using the StorageOS cli
+1. Check the Volume using the StorageOS CLI
 
     `kubectl exec -ti cli -n kube-system -- storageos get volumes`{{execute}}
 

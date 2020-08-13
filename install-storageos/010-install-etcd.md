@@ -1,6 +1,6 @@
 StorageOS uses etcd to store its metadata. We will install etcd on node01.
-Please check https://docs.storageos.com/docs/prerequisites/etcd/ production
-topology.
+Please check https://docs.storageos.com/docs/prerequisites/etcd/ for a
+production topology.
 
 1. Add the ip of the Etcd host in the script
 
@@ -14,10 +14,7 @@ topology.
 
     `ssh node01 bash install-etcd.sh`{{execute}}
 
-    Etcd is installed in one node. For production topologies, check
-    https://docs.storageos.com/docs/prerequisites/etcd/.
-
-1. Verify Etcd is running
+1. Verify that Etcd is running
 
     `ssh node01 ETCDCTL_API=3 etcdctl --endpoints=http://127.0.0.1:2379 member list`{{execute}}
 

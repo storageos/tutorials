@@ -5,8 +5,7 @@
 
     Wait until the Pod is ready `kubectl -n storageos-operator get pod -w`{{execute}}
 
-
-    > The READY 1/1 indicates that `storageoscluster` resources can be created. Press `Ctrl+C` to continue once the pod is up.
+    The READY 1/1 indicates that `storageoscluster` resources can be created. Press `Ctrl+C` to continue once the pod is up.
 
 1. Create a Secret defining the StorageOS credentials
 
@@ -65,7 +64,9 @@
    END
     ```{{execute}}
 
-    > For additional information on the configuration options exposed by the StorageOSCluster resource, see: https://docs.storageos.com/docs/reference/cluster-operator/configuration/
+    For additional information on the configuration options exposed by the
+    StorageOSCluster resource, see:
+    https://docs.storageos.com/docs/reference/cluster-operator/configuration/
 
 
 1. Verify StorageOS Installation.
@@ -75,7 +76,8 @@
     > Wait until StorageOS Pods are ready. Note that pods typically take approximately 40 seconds to enter the Running Phase. Press `Ctrl+C` to continue once the pods are up.
 
 
-Once the pods are all in the Running state the installation is complete! You have created a StorageOS cluster.
+Once the pods are all in the Running state the installation is complete! You
+have created a StorageOS cluster.
 
-The last step is to license the cluster. You will do in following steps using
-the StorageOS GUI.
+The last step is to license the cluster. You will license this cluster in
+following steps using the StorageOS GUI.
