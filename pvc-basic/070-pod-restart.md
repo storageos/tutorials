@@ -38,7 +38,7 @@
 
 1. Check content
 
-    `kubectl -n prod exec d2 -- cat /mnt/hello`{{execute}}
+    `kubectl -n prod exec d1 -- cat /mnt/hello`{{execute}}
 
 The data is persisted across container restarts and can be claimed by
 applications.
