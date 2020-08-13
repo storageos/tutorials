@@ -23,20 +23,16 @@
           "text": "030-install-storageos-cli.md"
         },
         {
-          "title": "Use StorageClasses",
-          "text": "040-storage-class.md"
-        },
-        {
-          "title": "Use persistent volumes",
-          "text": "050-persistent-volume.md"
+          "title": "Create pod with a PVC",
+          "text": "040-persistent-volume-claim.md"
         },
         {
           "title": "Use the GUI",
-          "text": "060-access-ui.md"
+          "text": "050-access-ui.md"
         },
         {
           "title": "Licence the Cluster",
-          "text": "070-cluster-licence.md"
+          "text": "060-cluster-licence.md"
         }
       ],
       "finish": {
