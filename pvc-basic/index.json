@@ -11,6 +11,7 @@
             "background": "000-install-storageos.sh",
             "code": "verify-healthy.sh"
         },
+        "steps": [
             {
                 "title": "Introduction and Setup Environment",
                 "text": "010-setup-env.md"
@@ -25,7 +26,7 @@
               },
               {
                   "title": "Labels in PVC spec",
-                  "text": "040-replication-in-pvc"
+                  "text": "040-replication-in-pvc.md"
               },
               {
                   "title": "StorageOS CLI",
@@ -38,7 +39,7 @@
               {
                   "title": "Restart Pod",
                   "text": "070-pod-restart.md"
-              },
+              }
         ],
         "finish": {
             "text": "finish.md"
