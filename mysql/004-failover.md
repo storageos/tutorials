@@ -1,6 +1,6 @@
 Now, let's check that the data was persisted and is accessible on another node.
 
-Make a note of the location on which the volume got initially prosioned on:
+Make a note of the location on which the volume got initially provisioned on:
 
 `kubectl exec -ti cli -n kube-system -- storageos get volume`{{execute}}
 

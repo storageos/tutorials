@@ -3,23 +3,13 @@ In this tutorial, we'll look how to install the StorageOS Cluster Operator. It i
 
 First we need to install the StorageOS operator using the following yaml manifest.
 
-`kubectl create -f https://github.com/storageos/cluster-operator/releases/download/v2.1.0/storageos-operator.yaml`{{execute}}
+`kubectl create -f https://github.com/storageos/cluster-operator/releases/download/1.5.0/storageos-operator.yaml`{{execute}}
 
 Verify the Cluster Operator pod status
 
 `kubectl -n storageos-operator get pod -w`{{execute}}
 
 > The READY 1/1 indicates that `storageoscluster` resources can be created. Press `Ctrl+C` to continue once the pod is up.
-
-For storageos v2, the clusters needs to have an extra ETCD datastore. Run this script to create a new ETCD datastore in the cluster.
-
-`bash ./deploy-etcd.sh`{{execute}}
-
-Verify the ETCD pod status
-
-`kubectl -n storageos-etcd get pod -w`{{execute}}
-
-> The READY 1/1 indicates that ETCD is setup. Press `Ctrl+C` to continue once the pod is up.
 
 Create a Secret defining the StorageOS API Username and Password.
 
