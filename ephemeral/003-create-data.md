@@ -2,7 +2,7 @@ Connect to each MySQL and create a test database (your prompt will change).
 
 Start with the ephemeral MySQL pod:
 
-`kubectl exec -it mysql -- mysql-ephemeral`{{execute}}
+`kubectl exec -it mysql-ephemeral -- mysql`{{execute}}
 
 `CREATE DATABASE shop;`{{execute}}
 
@@ -33,7 +33,7 @@ Quit the MySQL container:
 The continue with the persistent one:
 
 
-`kubectl exec -it mysql -- mysql-persistent`{{execute}}
+`kubectl exec -it mysql-persistent -- mysql`{{execute}}
 
 `CREATE DATABASE shop;`{{execute}}
 

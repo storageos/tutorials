@@ -25,7 +25,7 @@ referencing the PersistentVolumeClaim in the pod's yaml definition.
 
 Run the command to see the ephemeral mysql pod definition:
 
-`cat mysql-pod2.yaml`{{execute}}
+`cat mysql-pod1.yaml`{{execute}}
 
 Now compare it with the persistent mysql pod definition. 
 

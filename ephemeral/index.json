@@ -1,10 +1,10 @@
 {
     "pathwayTitle": "StorageOS",
-    "title": "MySQL",
+    "title": "Persistent vs Ephemeral Storage",
     "icon": "fa-storageos",
     "time": "10 minutes",
     "difficulty": "Beginner",
-    "description": "Learn how to run MySQL with StorageOS volumes in Kubernetes for high availability",
+    "description": "Learn how to run MySQL with StorageOS volumes in Kubernetes with ephemeral and persistent storage",
     "details": {
         "intro": {
             "text": "000-introduction.md",
