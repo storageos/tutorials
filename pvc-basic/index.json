@@ -1,0 +1,59 @@
+{
+    "pathwayTitle": "StorageOS",
+    "title": "PersistentVolumeClaims with StorageOS",
+    "icon": "fa-storageos",
+    "time": "15 minutes",
+    "difficulty": "Beginner",
+    "description": "Learn how to provision PersistentVolumeClaims with StorageOS",
+    "details": {
+        "intro": {
+            "text": "000-introduction.md",
+            "background": "000-install-storageos.sh",
+            "code": "verify-healthy.sh"
+        },
+            {
+                "title": "Introduction and Setup Environment",
+                "text": "010-setup-env.md"
+              },
+              {
+                "title": "Create Dev PVC",
+                "text": "020-development-pvc.md"
+              },
+              {
+                  "title": "Create Prod PVC",
+                  "text": "030-production-pvc.md"
+              },
+              {
+                  "title": "Labels in PVC spec",
+                  "text": "040-replication-in-pvc"
+              },
+              {
+                  "title": "StorageOS CLI",
+                  "text": "050-storageos-volume-check.md"
+              },
+              {
+                  "title": "Create Pod and write to Volume",
+                  "text": "060-create-pod.md"
+              },
+              {
+                  "title": "Restart Pod",
+                  "text": "070-pod-restart.md"
+              },
+        ],
+        "finish": {
+            "text": "finish.md"
+        },
+        "assets": {
+            "host01": [{"file": "*", "target": "/root"},{ "file": "verify-healthy.sh", "target": "/opt/", "chmod": "+x"}],
+            "host02": [{"file": "*", "target": "/root"},{ "file": "verify-healthy.sh", "target": "/opt/", "chmod": "+x"}],
+            "host03": [{"file": "*", "target": "/root"},{ "file": "verify-healthy.sh", "target": "/opt/", "chmod": "+x"}]
+        }
+    },
+    "environment": {
+        "uilayout": "terminal",
+        "uimessage1": "\u001b[32mYour Interactive Bash Terminal. A safe place to learn and execute commands.\u001b[m\r\n"
+    },
+    "backend": {
+        "imageid": "storageos-kubernetes-3node"
+    }
+}
