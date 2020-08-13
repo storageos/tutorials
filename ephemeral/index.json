@@ -14,19 +14,19 @@
         "steps": [
             {
                 "title": "Introduction and Setup Environment",
-                "text": "001-setup-environment.md"
+                "text": "010-setup-environment.md"
               },
               {
                 "title": "Provision Storage",
-                "text": "002-deploy-pods-volumes.md"
+                "text": "020-deploy-pods-volumes.md"
               },
               {
                   "title": "Create test data",
-                  "text": "003-create-data.md"
+                  "text": "030-create-data.md"
               },
               {
                   "title": "Failover",
-                  "text": "004-redeploy-pods.md"
+                  "text": "040-redeploy-pods.md"
               }
         ],
         "finish": {

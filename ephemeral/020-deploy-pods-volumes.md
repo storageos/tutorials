@@ -23,21 +23,13 @@ You can also confirm StorageOS provisioned the volume with the CLI:
 The link between the PersistentVolumeClaim and the pod comes from the pod
 referencing the PersistentVolumeClaim in the pod's yaml definition.
 
-Run the command to see the ephemeral mysql pod definition:
+Run the command to see the two mysql pod definitions:
 
 `cat mysql-pod1.yaml`{{execute}}
 
-Now compare it with the persistent mysql pod definition. 
-
 `cat mysql-pod2.yaml`{{execute}}
 
-You can see that the PersistentVolumeClaim claimName has been set to `mysqlpvc`.
-
-Run the command to see the PersistentVolumeClaim definition. 
-
-`cat storageos-pvc.yaml`{{execute}}
-
-Notice that the PersistentVolumeClaim name is `mysqlpvc`.
+You can see that the peristent mysql pod includes a PersistentVolumeClaim with the claimName set to `mysqlpvc`.
 
 Check the pods are in RUNNING state:
 

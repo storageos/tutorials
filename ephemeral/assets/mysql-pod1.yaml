@@ -14,4 +14,3 @@ spec:
       ports:
       - name: mysql
         containerPort: 3306
-        

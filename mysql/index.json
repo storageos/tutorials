@@ -8,8 +8,8 @@
     "details": {
         "intro": {
             "text": "000-introduction.md",
-            "background": "000-install-storageos.sh",
-            "code": "verify-healthy.sh"
+            "code": "000-verify-healthy.sh",
+            "courseData": "000-install-storageos.sh"
         },
         "steps": [
             {

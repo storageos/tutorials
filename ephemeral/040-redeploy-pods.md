@@ -28,6 +28,6 @@ As you can see, the database was lost in the mysql ephemeral pod but still exist
 
 `kubectl exec mysql-persistent -- mysql -e 'use shop; select * from FRUIT;'`{{execute}}
 
-Using persistent storage provisioned by StorageOS can persist data even after pod failover!
+Using persistent storage provisioned by StorageOS makes your data safe between pod restarts, even if the pod starts in a different node!
 
 Thank you for completing this demo!

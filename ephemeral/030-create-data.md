@@ -30,7 +30,7 @@ Quit the MySQL container:
 
 `\q`{{execute}}
 
-The continue with the persistent one:
+Then continue with the persistent one:
 
 
 `kubectl exec -it mysql-persistent -- mysql`{{execute}}
