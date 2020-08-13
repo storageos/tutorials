@@ -1,7 +1,7 @@
 Check the Volumes using the StorageOS CLI
 
 
-`kubectl exec cli -n kube-system -- storageos get volumes`{{execute}}
+`kubectl exec cli -n kube-system -- storageos get volumes --all-namespaces`{{execute}}
 
 Because we provisioned PVCs with replication factor of 1, we can see `1/1`.
 This means that the volume has one replica which is ready and healthy.
