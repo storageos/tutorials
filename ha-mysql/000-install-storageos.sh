@@ -5,7 +5,7 @@ echo "Installing StorageOS and ETCD"
 
 sleep 5
 
-wget https://raw.githubusercontent.com/aeroniero33/tutorials/master/mysql/assets/install-etcd.sh
+wget https://raw.githubusercontent.com/Arau/tutorials/mysql-ha/ha-mysql/assets/install-etcd.sh
 ./install-etcd.sh ${ETCD_HOST} .
 
 kubectl create -f https://github.com/storageos/cluster-operator/releases/download/v2.1.0/storageos-operator.yaml
