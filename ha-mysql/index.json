@@ -1,10 +1,10 @@
 {
     "pathwayTitle": "StorageOS",
-    "title": "MySQL",
+    "title": "High Available MySQL",
     "icon": "fa-storageos",
-    "time": "10 minutes",
-    "difficulty": "Beginner",
-    "description": "Learn how to run MySQL with StorageOS volumes in Kubernetes for high availability",
+    "time": "15 minutes",
+    "difficulty": "Intermediate",
+    "description": "Learn how StorageOS automatically fails over to ensure HA for Databases.",
     "details": {
         "intro": {
             "text": "000-introduction.md",
@@ -14,19 +14,19 @@
         "steps": [
             {
                 "title": "Introduction and Setup Environment",
-                "text": "001-setup-environment.md"
+                "text": "010-setup-environment.md"
               },
               {
                 "title": "Provision Storage",
-                "text": "002-persistent-volume.md"
+                "text": "020-persistent-volume.md"
               },
               {
                   "title": "Create test data",
-                  "text": "003-test-data.md"
+                  "text": "030-test-data.md"
               },
               {
                   "title": "Failover",
-                  "text": "004-failover.md"
+                  "text": "040-failover.md"
               }
         ],
         "finish": {
