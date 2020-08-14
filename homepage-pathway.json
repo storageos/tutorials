@@ -3,22 +3,23 @@
   "description": "",
   "courses": [
     {
-      "external_link": "https://play.storageos.com/k8s-3nodes",
-      "course_id": "k8s-3nodes",
-      "description": "Install StorageOS on a 3 Nodes Kubernetes Cluster",
-      "title": "StorageOS and Kubernetes"
-    },
-    {
       "external_link": "https://play.storageos.com/install-storageos",
       "course_id": "install-storageos",
       "description": "Install StorageOS on a 3 Nodes Kubernetes Cluster",
       "title": "StorageOS v2 and Kubernetes"
     },
     {
-      "external_link": "https://play.storageos.com/mysql",
-      "course_id": "mysql",
+      "external_link": "https://play.storageos.com/pvc-basic",
+      "course_id": "pvc-basic",
+      "title": "PersistentVolumeClaims with StorageOS",
+      "description": "Learn how to provision PersistentVolumeClaims with StorageOS"
+    },
+    {
+      "external_link": "https://play.storageos.com/ephemeral",
+      "course_id": "ephemeral",
       "description": "StorageOS and MySQL",
-      "title": "MySQL, HA and failover"
+      "description": "MySQL in Kubernetes when using containers with and without StorageOS Volumes",
+      "title": "Persistent vs Ephemeral Storage"
     }
   ]
 }
