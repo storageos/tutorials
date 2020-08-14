@@ -5,7 +5,7 @@ echo "Installing StorageOS and ETCD"
 
 sleep 5
 
-ssh node01 -o StrictHostKeyChecking=no wget https://raw.githubusercontent.com/aeroniero33/tutorials/master/mysql/assets/install-etcd.sh
+ssh node01 -o StrictHostKeyChecking=no wget https://raw.githubusercontent.com/storageos/tutorials/master/ephemeral/assets/install-etcd.sh
 echo ${ETCD_HOST} | ssh node01 bash install-etcd.sh
 
 kubectl create -f https://github.com/storageos/cluster-operator/releases/download/v2.1.0/storageos-operator.yaml
