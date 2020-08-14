@@ -14,7 +14,7 @@ Lets cause node downtime and see how StorageOS heals the Volume automatically.
     `kubectl -n kube-system run \
     --image storageos/cli:v2.1.0 \
     --restart=Never                          \
-    --env STORAGEOS_ENDPOINTS=[[HOST2_IP]]:5705 \
+    --env STORAGEOS_ENDPOINTS=http://storageos:5705 \
     --env STORAGEOS_USERNAME=storageos       \
     --env STORAGEOS_PASSWORD=storageos       \
     --command cli                            \
