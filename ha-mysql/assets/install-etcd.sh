@@ -4,8 +4,8 @@ do
 done < "${1:-/dev/stdin}"
 
 export ETCD_VERSION="3.4.9"
-export CLIENT_PORT="2379"
-export PEERS_PORT="2380"
+export CLIENT_PORT="22379"
+export PEERS_PORT="22380"
 export NODE_IP=${ETCD_HOST}
 export NODE1_IP=${ETCD_HOST}
 export CLIENT_PORT=${CLIENT_PORT}
