@@ -53,7 +53,7 @@ ExecStart=/usr/local/sbin/etcd3 --name etcd-${NODE_IP} \
     --auto-compaction-mode revision \
     --initial-cluster-state new \
     --initial-cluster-token etcd-token \
-    --listen-client-urls http://${NODE_IP}:${CLIENT_PORT},http://127.0.0.1:2379 \
+    --listen-client-urls http://${NODE_IP}:${CLIENT_PORT},http://127.0.0.1:${CLIENT_PORT} \
     --advertise-client-urls http://${NODE_IP}:${CLIENT_PORT} \
     --listen-peer-urls http://${NODE_IP}:${PEERS_PORT} \
     --initial-advertise-peer-urls http://${NODE_IP}:${PEERS_PORT} \
@@ -68,6 +68,6 @@ systemctl daemon-reload
 systemctl enable etcd3.service
 systemctl start  etcd3.service
 
-ETCDCTL_API=3 etcdctl --endpoints=http://127.0.0.1:2379 member list
+ETCDCTL_API=3 etcdctl --endpoints=http://127.0.0.1:${CLIENT_PORT} member list
 
 echo "ETCD has been installed"
