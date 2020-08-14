@@ -7,7 +7,7 @@ Lets cause node downtime and see how StorageOS heals the Volume automatically.
     If the CLI is scheduled in the node to be stopped, we should recreate a new
     CLI Pod.
 
-    `kubectl -n kube-system delete pod cli --force --grace-period 0`
+    `kubectl -n kube-system delete pod cli --force --grace-period 0`{{execute}}
 
     And recreate the Pod.
 
@@ -17,7 +17,7 @@ Lets cause node downtime and see how StorageOS heals the Volume automatically.
     --env STORAGEOS_ENDPOINTS=[[HOST2_IP]]:5705 \
     --env STORAGEOS_USERNAME=storageos       \
     --env STORAGEOS_PASSWORD=storageos       \
-    --command cli2                           \
+    --command cli                            \
     -- /bin/sh -c "while true; do sleep 999999; done"`{{execute}}
 
 1. The node $node1 holds the primary location
