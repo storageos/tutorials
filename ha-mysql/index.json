@@ -2,8 +2,8 @@
     "pathwayTitle": "StorageOS",
     "title": "High Available MySQL",
     "icon": "fa-storageos",
-    "time": "15 minutes",
-    "difficulty": "Intermediate",
+    "time": "20 minutes",
+    "difficulty": "Advanced",
     "description": "Learn how StorageOS automatically fails over to ensure HA for Databases.",
     "details": {
         "intro": {
@@ -25,8 +25,16 @@
                   "text": "030-test-data.md"
               },
               {
+                  "title": "Start Pod in a different Node",
+                  "text": "040-move-pod.md"
+              },
+              {
+                  "title": "Reboot Node",
+                  "text": "050-stop-node.md"
+              },
+              {
                   "title": "Failover",
-                  "text": "040-failover.md"
+                  "text": "060-failover.md"
               }
         ],
         "finish": {

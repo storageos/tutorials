@@ -6,10 +6,9 @@ demonstration purposes, we are using a PVC and a Pod.
 
     `kubectl create -f storageos-pvc.yaml`{{execute}}
 
-
     > Note the PVC definition has the label `storageos.com/replicas: 1`
-    > enforcing one synchronous replica of the volume in addition to the
-    > Primary
+    enforcing one synchronous replica of the volume in addition to the
+    Primary
 
 1. Create Pod
 

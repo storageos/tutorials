@@ -32,8 +32,3 @@ Verify that you have a healthy installation with three nodes:
 
 We are going to use the default StorageClass that was created when StorageOS
 was installed, called `fast`.
-
-The `fast` StorageClass is backed by the `storageos`
-provisioner:
-
-`kubectl describe storageclass fast`{{execute}}
