@@ -7,7 +7,7 @@ node downtime and see how StorageOS heals the Volume automatically.
 
 1. Check where the StorageOS replica is located
 
-    `kubectl exec -n kube-system -- storageos get volume -oyaml`{{execute}}
+    `kubectl exec -n kube-system cli -- storageos get volume -oyaml`{{execute}}
 
     > Note the section `replicas.nodeName`
 
@@ -26,13 +26,13 @@ node downtime and see how StorageOS heals the Volume automatically.
 
 1. Check that StorageOS sees the node as "Offline"
 
-    `kubectl exec -n kube-system -- storageos get node`{{execute}}
+    `kubectl exec -n kube-system cli -- storageos get node`{{execute}}
 
     > As soon as the Node is shutdown, StorageOS detects the node failure
 
 1. Check the location of the StorageOS Volume Primary and Replica
 
-    `kubectl exec -n kube-system -- storageos get volumes -oyaml`{{execute}}
+    `kubectl exec -n kube-system cli -- storageos get volumes -oyaml`{{execute}}
 
     > A previous replica has been promoted to master and keeps serving the
     > data.

@@ -16,12 +16,11 @@ demonstration purposes, we are using a PVC and a Pod.
 
 1. Check the PVC, PV and StorageOS Volume
 
-    `kubectl exec -ti cli -n kube-system -- storageos get volume`{{execute}}
+    `kubectl exec cli -n kube-system -- storageos get volume`{{execute}}
 
     `kubectl get pvc,pv`{{execute}}
 
     > StorageOS dynamically provisions the PV when the PVC is created
-
 
 1. Check the Pod status
 

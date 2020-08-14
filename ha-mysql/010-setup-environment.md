@@ -28,7 +28,7 @@ once the pod is running.
 
 Verify that you have a healthy installation with three nodes:
 
-`kubectl exec -ti cli -n kube-system -- storageos get node`{{execute}}
+`kubectl exec cli -n kube-system -- storageos get node`{{execute}}
 
 We are going to use the default StorageClass that was created when StorageOS
 was installed, called `fast`.

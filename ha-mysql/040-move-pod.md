@@ -5,7 +5,7 @@ Let see how the MySQL Pod can start in any node and access its data.
 
 1. Find the node holding the Volume Primary data
 
-    `node1=$(kubectl exec -n kube-system -- storageos get volume | grep pvc- | awk '{ print $5 }')`{{execute}}
+    `node1=$(kubectl exec -n kube-system cli -- storageos get volume | grep pvc- | awk '{ print $5 }')`{{execute}}
 
 1. Find the node where mysql is running
 
