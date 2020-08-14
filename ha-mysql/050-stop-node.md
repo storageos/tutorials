@@ -2,6 +2,24 @@ StorageOS implements synchronous replication and automatic failover.
 
 Lets cause node downtime and see how StorageOS heals the Volume automatically.
 
+1. Restart the StorageOS CLI (Optional)
+
+    If the CLI is scheduled in the node to be stopped, we should recreate a new
+    CLI Pod.
+
+    `kubectl -n kube-system delete pod cli --force --grace-period 0`
+
+    And recreate the Pod.
+
+    `kubectl -n kube-system run \
+    --image storageos/cli:v2.1.0 \
+    --restart=Never                          \
+    --env STORAGEOS_ENDPOINTS=[[HOST2_IP]]:5705 \
+    --env STORAGEOS_USERNAME=storageos       \
+    --env STORAGEOS_PASSWORD=storageos       \
+    --command cli2                           \
+    -- /bin/sh -c "while true; do sleep 999999; done"`{{execute}}
+
 1. The node $node1 holds the primary location
 
     `echo $node1`{{execute}}
@@ -20,30 +38,5 @@ Lets cause node downtime and see how StorageOS heals the Volume automatically.
 
     `reboot`{{execute}}
 
-
     > The promt goes back to the master shell cli
 
-    Wait a few seconds for the Node to stop
-
-1. Check that StorageOS sees the node as "Offline"
-
-    `kubectl exec -n kube-system cli -- storageos get node`{{execute}}
-
-    > As soon as the Node is shutdown, StorageOS detects the node failure
-
-1. Check the location of the StorageOS Volume Primary and Replica
-
-    `kubectl exec -n kube-system cli -- storageos get volumes -oyaml`{{execute}}
-
-    > A previous replica has been promoted to master and keeps serving the
-    > data.
-
-
-1. Check the MySQL Pod and its data
-
-    `kubectl get pod`{{execute}} 
-
-    `kubectl exec mysql -- /bin/sh -c "mysql -e \"select * from shop.fruit\""`{{execute}}
-
-
-Congratulations you have failedover a Volume without downtime!

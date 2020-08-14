@@ -22,5 +22,3 @@ spec:
     - name: mysql-data
       persistentVolumeClaim:
         claimName: mysqlpvc
-  nodeSelector:
-    kubernetes.io/hostname: node01
