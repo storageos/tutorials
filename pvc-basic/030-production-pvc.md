@@ -40,7 +40,7 @@ We can create a second StorageClass for production.
 
     `kubectl create namespace prod`{{execute}}
 
-3. Create the PVC in the prod namespace.
+3. Create a PVC in the prod namespace.
 
     ```
    kubectl create -f- <<END

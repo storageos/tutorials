@@ -37,7 +37,7 @@ Lets create a StorageClass and provision a PVC (Persistent Volume Claim).
 
     `kubectl create namespace dev`{{execute}}
 
-1. Create the PVC in the dev namespace.
+1. Create a PVC in the dev namespace.
 
     ```
    kubectl create -f- <<END

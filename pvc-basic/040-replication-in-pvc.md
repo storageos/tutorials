@@ -1,4 +1,4 @@
-It is often needed to define feature labels for each PVC instead of using the
+It can be useful to define feature labels for each PVC instead of using the
 StorageClass. You can define StorageOS labels such as replication in the PVC
 definition.
 
