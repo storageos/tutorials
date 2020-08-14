@@ -1,7 +1,7 @@
 StorageOS handles the IO of the Volume and manges all network traffic when the
 Pod and its data, the Volume primary location, are in separate nodes.
 
-Let see how the MySQL Pod can start in any node and access its data.
+Lets see how the MySQL Pod can start in any node and access its data.
 
 1. Find the node holding the Volume Primary data
 
@@ -9,7 +9,7 @@ Let see how the MySQL Pod can start in any node and access its data.
 
 1. Find the node where mysql is running
 
-    `node2=$(kubectl get pod mysql -ocustom-columns=_:.spec.nodeName --no-headers`{{execute}}
+    `node2=$(kubectl get pod mysql -ocustom-columns=_:.spec.nodeName --no-headers)`{{execute}}
 1. Cordon nodes
 
     `kubectl cordon $node1 $node2`{{execute}}
