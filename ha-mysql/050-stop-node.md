@@ -14,7 +14,7 @@ Lets cause node downtime and see how StorageOS heals the Volume automatically.
 
 1. Remove the node to be stopped from the StorageOS CLI endpoint
 
-    `$(echo export STORAGEOS_ENDPOINTS="http://[[HOST2_IP]]:5705,http://[[HOST3_IP]]:5705,http://[[HOST4_IP]]:5705"| sed 's#http://$node1:5705,##g')`{{execute}}
+    `$(echo export STORAGEOS_ENDPOINTS="http://[[HOST2_IP]]:5705,http://[[HOST3_IP]]:5705,http://[[HOST4_IP]]:5705" | sed "s#http://`kubectl get node -owide | grep $node1 | awk '{print $6}'`:5705,##g")`{{execute}}
 
 1. SSH into the node
 
