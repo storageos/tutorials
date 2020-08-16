@@ -37,3 +37,6 @@ Lets see how the MySQL Pod can start in any node and access its data.
 1. Check MySQL's data
 
     `kubectl exec mysql -- /bin/sh -c "mysql -e \"select * from shop.FRUIT\""`{{execute}}
+
+Congratulations, you have moved the application while its data remains
+accessible!
