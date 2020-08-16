@@ -1,6 +1,5 @@
 launch.sh
 export ETCD_HOST=[[HOST1_IP]]
-export STORAGEOS_ENDPOINTS=http://[[HOST2_IP]]:5705,http://[[HOST3_IP]]:5705,http://[[HOST4_IP]]:5705
 
 echo "Installing StorageOS and ETCD"
 

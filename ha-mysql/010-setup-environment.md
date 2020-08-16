@@ -12,6 +12,8 @@ First verify StorageOS Installation.
 
 Verify that you have a healthy installation with three nodes:
 
+`export STORAGEOS_ENDPOINTS="http://[[HOST2_IP]]:5705,http://[[HOST3_IP]]:5705,http://[[HOST4_IP]]:5705"`{{execute}}
+
 `storageos get node`{{execute}}
 
 We are going to use the default StorageClass that was created when StorageOS
