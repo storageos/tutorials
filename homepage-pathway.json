@@ -24,7 +24,7 @@
       "external_link": "https://play.storageos.com/ha-mysql",
       "course_id": "ha-myql",
       "title": "High Available MySQL",
-      "description": "Learn how StorageOS automatically fails over to ensure HA for Databases.",
+      "description": "Learn how StorageOS automatically fails over to ensure HA for Databases"
     }
   ]
 }
