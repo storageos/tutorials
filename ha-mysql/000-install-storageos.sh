@@ -70,3 +70,7 @@ spec:
 #        values:
 #        - "true"
 END
+
+# DNS needs restarting in some executions of the 
+# scenario
+kubectl -n kube-system delete pod -lk8s-app=kube-dns &
