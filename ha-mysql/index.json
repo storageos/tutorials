@@ -1,0 +1,56 @@
+{
+    "pathwayTitle": "StorageOS",
+    "title": "High Available MySQL",
+    "icon": "fa-storageos",
+    "time": "20 minutes",
+    "difficulty": "Advanced",
+    "description": "Learn how StorageOS automatically fails over to ensure HA for Databases.",
+    "details": {
+        "intro": {
+            "text": "000-introduction.md",
+            "background": "000-install-storageos.sh",
+            "code": "verify-healthy.sh"
+        },
+        "steps": [
+            {
+                "title": "Introduction and Setup Environment",
+                "text": "010-setup-environment.md"
+              },
+              {
+                "title": "Provision Storage",
+                "text": "020-persistent-volume.md"
+              },
+              {
+                  "title": "Create test data",
+                  "text": "030-test-data.md"
+              },
+              {
+                  "title": "Start Pod in a different Node",
+                  "text": "040-move-pod.md"
+              },
+              {
+                  "title": "Reboot Node",
+                  "text": "050-stop-node.md"
+              },
+              {
+                  "title": "Failover",
+                  "text": "060-failover.md"
+              }
+        ],
+        "finish": {
+            "text": "finish.md"
+        },
+        "assets": {
+            "host01": [{"file": "*", "target": "/root"},{ "file": "verify-healthy.sh", "target": "/opt/", "chmod": "+x"}],
+            "host02": [{"file": "*", "target": "/root"},{ "file": "verify-healthy.sh", "target": "/opt/", "chmod": "+x"}],
+            "host03": [{"file": "*", "target": "/root"},{ "file": "verify-healthy.sh", "target": "/opt/", "chmod": "+x"}]
+        }
+    },
+    "environment": {
+        "uilayout": "terminal",
+        "uimessage1": "\u001b[32mYour Interactive Bash Terminal. A safe place to learn and execute commands.\u001b[m\r\n"
+    },
+    "backend": {
+        "imageid": "storageos-kubernetes-3node"
+    }
+}
