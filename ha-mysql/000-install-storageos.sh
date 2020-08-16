@@ -5,6 +5,9 @@ echo "Installing StorageOS and ETCD"
 
 sleep 5
 
+# Deploy StorageOS cli
+curl -sSLo storageos https://github.com/storageos/go-cli/releases/download/v2.1.0/storageos_linux_amd64 && chmod +x storageos && sudo mv storageos /usr/local/bin/ &
+
 wget https://raw.githubusercontent.com/Arau/tutorials/mysql-ha/ha-mysql/assets/install-etcd.sh
 echo ${ETCD_HOST} | bash install-etcd.sh
 
@@ -67,49 +70,3 @@ spec:
 #        values:
 #        - "true"
 END
-
-## Deploy CLI
-kubectl create -f-<<END
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: storageos-cli
-  namespace: kube-system
-  labels:
-    app: storageos
-spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: storageos-cli
-  template:
-    metadata:
-      labels:
-        app: storageos-cli
-    spec:
-      containers:
-      - command:
-        - /bin/sh
-        - -c
-        - "while true; do sleep 3600; done"
-        env:
-        - name: STORAGEOS_ENDPOINTS
-          value: http://[[HOST2_IP]]:5705,http://[[HOST3_IP]]:5705,http://[[HOST4_IP]]:5705
-        - name: STORAGEOS_USERNAME
-          value: storageos
-        - name: STORAGEOS_PASSWORD
-          value: storageos
-        image: storageos/cli:v2.1.0
-        name: cli
-      affinity:
-        podAntiAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-          - labelSelector:
-              matchExpressions:
-              - key: app
-                operator: In
-                values:
-                - storageos-cli
-            topologyKey: "kubernetes.io/hostname"
-END
-

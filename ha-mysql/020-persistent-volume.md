@@ -16,7 +16,7 @@ demonstration purposes, we are using a PVC and a Pod.
 
 1. Check the PVC, PV and StorageOS Volume
 
-    `kubectl exec cli -n kube-system -- storageos get volume`{{execute}}
+    `storageos get volume`{{execute}}
 
     `kubectl get pvc,pv`{{execute}}
 
