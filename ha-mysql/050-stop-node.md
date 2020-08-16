@@ -32,7 +32,7 @@ Lets cause node downtime and see how StorageOS heals the Volume automatically.
 
 1. SSH into the node
 
-    `ssh $node1`{{execute}}
+    `ssh -o StrictHostKeyChecking=no $node1`{{execute}}
 
 1. Reboot the node
 
