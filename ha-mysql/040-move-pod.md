@@ -10,7 +10,10 @@ Lets see how the MySQL Pod can start in any node and access its data.
 1. Find the node where mysql is running
 
     `node2=$(kubectl get pod mysql -ocustom-columns=_:.spec.nodeName --no-headers)`{{execute}}
+
 1. Cordon nodes
+
+    `echo $node1 $node2`{{execute}}
 
     `kubectl cordon $node1 $node2`{{execute}}
 
@@ -24,9 +27,12 @@ Lets see how the MySQL Pod can start in any node and access its data.
 
     `kubectl create -f mysql-pod1.yaml`{{execute}}
 
+    > Because we cordoned the node where MySQL was running, the Pod is forced
+     to start in a different one.
+
 1. Check the new Pod location
 
-    `kubectl get pod mysql -owide`{{execute}}
+    `kubectl get pod mysql -owide -w`{{execute}}
 
 1. Check MySQL's data
 
