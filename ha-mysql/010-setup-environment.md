@@ -12,7 +12,7 @@ First verify StorageOS Installation.
 
 We can use a pod to access the CLI using kubectl exec:
 
-`kubectl -n kube-system create -f storgeos-cli.yaml`{{execute}}
+`kubectl -n kube-system create -f storageos-cli.yaml`{{execute}}
 
 Wait for the CLI pod to enter the Running state and press `Ctrl+C` to continue
 once the pod is running.
