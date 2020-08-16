@@ -17,9 +17,14 @@
     {
       "external_link": "https://play.storageos.com/ephemeral",
       "course_id": "ephemeral",
-      "description": "StorageOS and MySQL",
       "description": "MySQL in Kubernetes when using containers with and without StorageOS Volumes",
       "title": "Persistent vs Ephemeral Storage"
+    },
+    {
+      "external_link": "https://play.storageos.com/ha-mysql",
+      "course_id": "ha-myql",
+      "title": "High Available MySQL",
+      "description": "Learn how StorageOS automatically fails over to ensure HA for Databases.",
     }
   ]
 }
