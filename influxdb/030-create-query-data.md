@@ -6,8 +6,8 @@ Connect to the InfluxDB host.
 
 `influx -host influxdb-0.influxdb`{{execute}}
 
-Authenticate your user (use <em>admin</em> for both user and password when
-prompted:
+Authenticate your user (use "admin" for both user and password when
+prompted):
 
 `auth`{{execute}}
 
@@ -33,5 +33,5 @@ INSERT temperature,location=Paris value=30.0`{{execute}}
 You can now use the inserted values to generate statistical insights from the
 dataset.
 
-`SELECT MEAN(*) FROM "temperature" WHERE "location"='Paris'`{{execute}}
-`SELECT MEAN(*) FROM "temperature" WHERE "location"='London'`{{execute}}
+`SELECT MEAN(*) FROM "temperature" WHERE "location"='Paris'
+SELECT MEAN(*) FROM "temperature" WHERE "location"='London'`{{execute}}
