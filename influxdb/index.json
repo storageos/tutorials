@@ -23,10 +23,6 @@
               {
                   "title": "Create test data",
                   "text": "030-create-query-data.md"
-              },
-              {
-                  "title": "Failover",
-                  "text": "040-redeploy-pods.md"
               }
         ],
         "finish": {
