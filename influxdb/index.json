@@ -18,11 +18,11 @@
               },
               {
                 "title": "Provision Storage",
-                "text": "020-deploy-pods-volumes.md"
+                "text": "020-deploy-pods-service.md"
               },
               {
                   "title": "Create test data",
-                  "text": "030-create-data.md"
+                  "text": "030-create-query-data.md"
               },
               {
                   "title": "Failover",
