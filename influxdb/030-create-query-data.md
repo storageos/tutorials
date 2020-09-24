@@ -1,16 +1,21 @@
 Connect to the client pod (your prompt will change).
 
-`$ kubectl exec -it client -- bash`{{execute}}
+`kubectl exec -it client -- bash`{{execute}}
 
-Connect to the InfluxDB host and authenticate.
+Connect to the InfluxDB host.
 
 `influx -host influxdb-0.influxdb`{{execute}}
 
-Create a test database called <em>weather<em>.
+Authenticate your user (use <em>admin</em> for both user and password when
+prompted:
+
+`auth`{{execute}}
+
+Create a test database called <em>weather</em>.
 
 `CREATE DATABASE weather;`{{execute}}
 
-Now connect to the database and insert some sample data:
+Connect to the database and insert some sample data:
 
 `USE weather;`{{execute}}
 
