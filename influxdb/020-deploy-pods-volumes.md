@@ -1,8 +1,10 @@
-The next step is to create a MySQL pod that uses ephemeral storage and a MySQL pod that uses persistent storage provisioned by StorageOS.
+The next step is to create an InfluxDB host pod, a service that exposes port
+8086 on that pod, and a client pod for interaction with the host.
 
-Create a MySQL with ephemeral storage:
+Create the service account, service, StatefulSet and client pod from their
+respective yaml files:
 
-`kubectl create -f mysql-pod1.yaml`{{execute}}
+`kubectl create -f ./`{{execute}}
 
 Create PersistentVolumeClaim and a MySQL pod which references the `fast` StorageClass:
 
