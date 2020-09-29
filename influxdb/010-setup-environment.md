@@ -1,4 +1,4 @@
-First verify StorageOS Installation.
+First verify the StorageOS Installation.
 
 `kubectl -n kube-system get pods -lapp=storageos -w`{{execute}}
 

@@ -17,7 +17,7 @@
                 "text": "010-setup-environment.md"
               },
               {
-                "title": "Provision Storage",
+                "title": "Installing InfluxDB",
                 "text": "020-deploy-pods-service.md"
               },
               {
