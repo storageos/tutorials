@@ -11,8 +11,9 @@ for host in ${!hosts[@]}; do
 #endpoint to come up and it seems to more accurately reflect when the cluster is
 #ready
     while [[ "$(curl -s -o /dev/null -w ''%{http_code}'' http://${hosts[$host]}:5705 -u storageos:storageos)" != "200" ]]; do
-      printf '.'
+      printf '...'
       sleep 5;
+      clear;
     done
 
     printf "\nStorageOS is ready on $host\n"
