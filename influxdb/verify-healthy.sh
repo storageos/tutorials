@@ -12,7 +12,7 @@ for host in ${!hosts[@]}; do
     clear;
     while [[ "$(curl -s -o /dev/null -w ''%{http_code}'' http://${hosts[$host]}:5705 -u storageos:storageos)" != "200" ]]; do
       clear
-      printf 'Waiting for storageOS to initialise on %s. This will take around 2 minutes...' "$host"
+      printf 'Waiting for storageOS to initialise on %s. This will take around 2 minutes...' $host
       sleep 5;
     done
 
