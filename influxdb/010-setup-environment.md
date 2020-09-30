@@ -22,10 +22,3 @@ Wait for the CLI pod to enter the Running state and press `Ctrl+C` to continue o
 Verify that you have a healthy installation with three nodes:
 
 `kubectl exec -ti cli -n kube-system -- storageos get node`{{execute}}
-
-We are going to use the default StorageClass that was created when StorageOS was installed, called `fast`.
-
-The `fast` StorageClass is backed by the `storageos`
-provisioner:
-
-`kubectl describe storageclass fast`{{execute}}

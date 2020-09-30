@@ -41,6 +41,7 @@ metadata:
   name: "my-storageos-cluster"
   namespace: "storageos-operator"
 spec:
+  storageClassName: "storageos"
   secretRefName: "storageos-api" # Reference from the Secret created in the previous step
   secretRefNamespace: "storageos-operator"  # Namespace of the Secret
   namespace: "kube-system"
