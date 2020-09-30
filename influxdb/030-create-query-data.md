@@ -33,4 +33,4 @@ INSERT temperature,location=Paris value=30.0`{{execute}}
 You can now use the inserted values to generate statistical insights from the
 dataset.
 
-`SELECT MEAN(*) FROM "temperature" WHERE GROUP BY "location"'`{{execute}}
+`SELECT MEAN(*) FROM "temperature" GROUP BY "location"'`{{execute}}
