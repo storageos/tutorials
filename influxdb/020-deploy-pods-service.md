@@ -17,7 +17,16 @@ cd storageos-usecases
 
 These manifests are also the basis for the
 [InfluxDB usecase](https://docs.storageos.com/docs/usecases/influxdb/)
-which is available in the StorageOS documentation. 
+which is available in the StorageOS documentation.
+
+You will also need to change the storage class in the stateful set to
+"storageos", as this is the storage class we are using for this
+tutorial.
+
+`sed -i 's/fast/storageos/g' influxdb/20-statefulset.yaml`
+
+For more information about storage classes, visit the
+[StorageOS documentation](https://docs.storageos.com/docs/operations/storageclasses/).
 
 To build the resources for this stage of the tutorial, create the service
 account, service, StatefulSet and InfluxDB client pod from their respective
@@ -25,11 +34,6 @@ yaml files (the files in the influxdb directory).
 
 `kubectl create -f ./influxdb`{{execute}}
 
-You will also need to change the storage class in the stateful set to
-"storageos", as this is the storage class we are using for this
-tutorial.
-
-`sed -i 's/original/new/g' file.txt`
 
 You should now be able to view the running InfluxDB host and client pods:
 
