@@ -47,7 +47,7 @@ spec:
   namespace: "kube-system"
   k8sDistro: "upstream"
   images:
-    nodeContainer: "storageos/node:v2.1.0" # StorageOS version
+    nodeContainer: "storageos/node:v2.2.0" # StorageOS version
   kvBackend:
     address: '${ETCD_HOST}:2379' # Example address, change for your etcd endpoint
   # address: '10.42.15.23:2379,10.42.12.22:2379,10.42.13.16:2379' # You can set ETCD server ips

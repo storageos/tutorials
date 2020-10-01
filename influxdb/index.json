@@ -21,7 +21,7 @@
                 "text": "020-deploy-pods-service.md"
               },
               {
-                  "title": "Create test data",
+                  "title": "Using InfluxDB",
                   "text": "030-create-query-data.md"
               }
         ],

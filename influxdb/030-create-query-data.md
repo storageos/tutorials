@@ -1,8 +1,15 @@
-Connect to the client pod (your prompt will change).
+In this final stage of the tutorial, you will use the instance of InfluxDB
+that you have installed alongside StorageOS, to create and query time series
+data within the kubernetes cluster.
 
-`kubectl exec -it client -- bash`{{execute}}
+Begin by connect to the client pod (your prompt will change), which as
+previously stated offers a convenient method via which to interact with
+the InfluxDB host.
 
-Connect to the InfluxDB host.
+`kubectl exec -it influxdb-client -- bash`{{execute}}
+
+Once within the InfluxDB client pod, you can connect to the InfluxDB
+host with the following command.
 
 `influx -host influxdb-0.influxdb`{{execute}}
 
@@ -34,3 +41,7 @@ You can now use the inserted values to generate statistical insights from the
 dataset.
 
 `SELECT MEAN(*) FROM "temperature" GROUP BY "location"'`{{execute}}
+
+You have successfully installed InfluxDB in kubernetes
+with StorageOS, then used a separate client pod to connect to the database
+and to create and query data. Congratulations! 
