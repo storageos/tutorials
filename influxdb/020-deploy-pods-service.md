@@ -5,10 +5,9 @@ service that exposes port 8086 on that pod, and a client pod for interaction
 with the host.
 
 All these files are available in the the
-[StorageOS usecases GitHub repository]
-(https://github.com/storageos/use-cases/tree/master/mysql). Clone this
-into the local environment, then change directory into the newly-created
-`storageos-usecases`.
+[StorageOS usecases GitHub repository](https://github.com/storageos/use-cases/tree/master/mysql).
+Clone this into the local environment, then change directory into the
+newly-created `storageos-usecases`.
 
 `
 git clone https://github.com/storageos/use-cases.git storageos-usecases
@@ -22,9 +21,15 @@ which is available in the StorageOS documentation.
 
 To build the resources for this stage of the tutorial, create the service
 account, service, StatefulSet and InfluxDB client pod from their respective
-yaml files (i.e. the files in the current working directory).
+yaml files (the files in the influxdb directory).
 
 `kubectl create -f ./influxdb`{{execute}}
+
+You will also need to change the storage class in the stateful set to
+"storageos", as this is the storage class we are using for this
+tutorial.
+
+`sed -i 's/original/new/g' file.txt`
 
 You should now be able to view the running InfluxDB host and client pods:
 
