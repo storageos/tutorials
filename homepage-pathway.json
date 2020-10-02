@@ -25,6 +25,12 @@
       "course_id": "ha-myql",
       "title": "High Available MySQL",
       "description": "Learn how StorageOS automatically fails over to ensure HA for Databases"
+    },
+    {
+      "external_link": "https://play.storageos.com/influxdb",
+      "course_id": "influxdb",
+      "title": "InfluxDB",
+      "description": "Learn how to deploy InfluxDB with StorageOS volumes in Kubernetes"
     }
   ]
 }
