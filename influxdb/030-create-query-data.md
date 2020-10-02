@@ -6,12 +6,7 @@ Begin by connecting to the client pod:
 
 Use the InfluxDB client to connect to the host database.
 
-`influx -host influxdb-0.influxdb`{{execute}}
-
-Authenticate your user (use "admin" for both user and password when
-prompted):
-
-`auth`{{execute}}
+`influx -host influxdb-0.influxdb -username admin -password admin`{{execute}}
 
 Create a test database called <em>weather</em>.
 
