@@ -1,0 +1,44 @@
+{
+    "pathwayTitle": "StorageOS",
+    "title": "InfluxDB",
+    "icon": "fa-storageos",
+    "time": "10 minutes",
+    "difficulty": "Beginner",
+    "description": "Learn how to deploy InfluxDB with StorageOS volumes in Kubernetes",
+    "details": {
+        "intro": {
+            "text": "000-introduction.md",
+            "background": "000-install-storageos.sh",
+            "code": "verify-healthy.sh"
+        },
+        "steps": [
+            {
+                "title": "Introduction and Setup Environment",
+                "text": "010-setup-environment.md"
+              },
+              {
+                "title": "Installing InfluxDB",
+                "text": "020-deploy-pods-service.md"
+              },
+              {
+                  "title": "Using InfluxDB",
+                  "text": "030-create-query-data.md"
+              }
+        ],
+        "finish": {
+            "text": "finish.md"
+        },
+        "assets": {
+            "host01": [{"file": "*", "target": "/root"},{ "file": "verify-healthy.sh", "target": "/opt/", "chmod": "+x"}],
+            "host02": [{"file": "*", "target": "/root"},{ "file": "verify-healthy.sh", "target": "/opt/", "chmod": "+x"}],
+            "host03": [{"file": "*", "target": "/root"},{ "file": "verify-healthy.sh", "target": "/opt/", "chmod": "+x"}]
+        }
+    },
+    "environment": {
+        "uilayout": "terminal",
+        "uimessage1": "\u001b[32mYour Interactive Bash Terminal. A safe place to learn and execute commands.\u001b[m\r\n"
+    },
+    "backend": {
+        "imageid": "storageos-kubernetes-3node"
+    }
+}
