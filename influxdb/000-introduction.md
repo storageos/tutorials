@@ -1,6 +1,7 @@
 
 In this tutorial we will be installing InfluxDB inside Kubernetes using StorageOS volumes. InfluxDB is a time series database that is optimised
-for managing datasets consisting of many small measurements, for example through its ability to handle very high write and query loads. Its uses include
+for managing datasets consisting of many small measurements. Its advantages
+include the ability to handle very high write and query loads. Its uses include
 monitoring, analytics and the recording and analysis of data from sensors. It is a highly suitable workload to run on StorageOS.
 
 In the stages that follow, we will create a pod to serve InfluxDB requests, and a client pod with which to interact with the host. The scenario draws inspiration from our use case in the [StorageOS documentation](https://docs.storageos.com/docs/usecases/influxdb/). The yaml source files available
