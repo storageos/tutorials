@@ -8,15 +8,6 @@ git clone https://github.com/storageos/use-cases.git storageos-usecases
 cd storageos-usecases
 `{{execute}}
 
-You will also need to change the storage class in the stateful set to
-"storageos", as this is the storage class we are using for this
-tutorial.
-
-`sed -i 's/fast/storageos/g' influxdb/20-statefulset.yaml`{{execute}}
-
-For more information about storage classes, visit the
-[StorageOS documentation](https://docs.storageos.com/docs/operations/storageclasses/).
-
 Run the following command to install InfluxDB from the manifest files.
 
 `kubectl create -f ./influxdb`{{execute}}
