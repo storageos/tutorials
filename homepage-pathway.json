@@ -18,7 +18,7 @@
       "external_link": "https://play.storageos.com/ephemeral",
       "course_id": "ephemeral",
       "description": "MySQL in Kubernetes when using containers with and without StorageOS Volumes",
-      "title": "Ephemeral vs Persisted containers with StorageOS"
+      "title": "Ephemeral vs Persisted containers"
     },
     {
       "external_link": "https://play.storageos.com/ha-mysql",
